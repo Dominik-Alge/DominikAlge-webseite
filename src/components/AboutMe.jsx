@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 export default function AboutMe() {
   // State für die 3 Tabs ("focus", "cv" oder "education")
-  const [activeTab, setActiveTab] = useState('focus');
-
+  const [activeTab, setActiveTab] = useState('story');
+  
   return (
     <section id="ueber-mich" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
