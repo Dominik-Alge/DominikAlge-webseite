@@ -7,24 +7,24 @@ const experiences = [
     role: "Gruppenleiter CNC-Schleifen",
     company: "Bruderer AG, Frasnacht",
     category: "Führung & Technologie",
-    shortText: "Führung eines Produktionsteams (10 MA) in der hochpräzisen Industriefertigung.",
+    shortText: "Führung eines Produktionsteams (10 MA) und Einfahren stabiler Prozesse in der industriellen Kleinserienproduktion.",
     highlights: [
       { label: "Soziale Verantwortung", text: "Fachliche und personelle Führung, Coaching und strukturierte Kompetenzentwicklung im 2-Schichtbetrieb." },
-      { label: "Prozessoptimierung", text: "Stabilisierung kritischer Fertigungsprozesse mittels Lean-Methoden (8D, 5-Why, Ishikawa)." },
-      { label: "Zukunftstechnologie", text: "Eigenständige Entwicklung eines Konzeptbeweises für eine interne Shopfloor-KI (RAG, MCP) zur Sicherung von Produktionswissen gegen den Fachkräftemangel." }
+      { label: "Prozessoptimierung", text: "Nachhaltige Stabilisierung kritischer Fertigungsprozesse durch den gezielten Einsatz bewährter Lean-Methoden." },
+      { label: "Zukunftsorientierung", text: "Entwicklung eines KI-Konzeptbeweises zur Sicherung von Produktionswissen gegen den akuten Fachkräftemangel." }
     ]
   },
   {
     id: "alge-chef",
-    period: "2018 – 2025",
-    role: "Geschäftsführer / Leiter QM",
+    period: "2009 – heute",
+    role: "Geschäftsführer / Leiter QM / Verwaltungsrat",
     company: "Alge H. AG (Familienunternehmen)",
     category: "Unternehmertum & KMU",
     shortText: "Operative Gesamtverantwortung, Qualitätssicherung und strategische Steuerung des CNC-Fertigungsbetriebs.",
     highlights: [
-      { label: "Unternehmertum", text: "Volle betriebswirtschaftliche Steuerung, Budgetplanung, Investitionsplanung und direktes Reklamationsmanagement." },
-      { label: "Ausbildungsverantwortung", text: "Einführung moderner, zukunftsweisender Ausbildungsmethoden (Workplace Learning) im Betrieb." },
-      { label: "Transformation", text: "Seit 2018 als Verwaltungsrat aktive Begleitung der strategischen Neuausrichtung des Familienunternehmens." }
+      { label: "Strategische Transformation", text: "Aktive Mitgestaltung und Begleitung der Neuausrichtung des Familienunternehmens zu einer immobilienverwaltenden AG." },
+      { label: "Unternehmerische Steuerung", text: "Volle betriebswirtschaftliche Verantwortung inklusive Budgetplanung, Investitionen und direktem Reklamationsmanagement." },
+      { label: "Zukunftsorientierte Ausbildung", text: "Nachhaltige Fachkräftesicherung durch die Implementierung moderner Workplace-Learning-Strukturen." }
     ]
   },
   {
@@ -35,22 +35,22 @@ const experiences = [
     category: "Gemeinwohl & Finanzen",
     shortText: "Finanzpolitische Aufsicht und strategische Prüfung im Dienste der Allgemeinheit.",
     highlights: [
-      { label: "Finanzkontrolle", text: "Prüfung von Jahresrechnungen und Krediten, Sicherstellung eines haushälterischen Umgangs mit Steuergeldern." },
-      { label: "Milizsystem", text: "Gelebte zivilgesellschaftliche Verantwortung als GPK-Mitglied, Stimmenzähler und Delegierter der Mitte Au-Heerbrugg." },
-      { label: "Pragmatismus", text: "Erarbeitung sachbezogener Lösungen über Parteigrenzen hinweg für die Gemeinde." }
+      { label: "Verantwortung", text: "Vorzeitige Mandatsabgabe wegen neuer Führungsaufgabe und Studium – für mich gilt: Ein Amt fordert vollen Einsatz und Zeit." },
+      { label: "Finanzkontrolle", text: "Konsequente Prüfung von Jahresrechnungen und Krediten für einen haushälterischen Umgang mit Ihren Steuergeldern." },
+      { label: "Milizsystem", text: "Gelebte zivilgesellschaftliche Verantwortung als GPK-Mitglied, Stimmenzähler und Delegierter der Mitte Au-Heerbrugg." }
     ]
   },
   {
     id: "fundament",
-    period: "2005 – 2018",
+    period: "2005 – 2009",
     role: "Präzisionsschleifer & Polymechaniker",
     company: "Alge H. AG / SFSintec, Heerbrugg",
     category: "Das Fundament",
-    shortText: "Fundierte Berufslehre (Niveau E) und langjährige Erfahrung direkt an der Werkbank.",
+    shortText: "Fundierte Berufslehre (Niveau E) erste Erfahrung direkt an der Werkbank.",
     highlights: [
-      { label: "Echte Basis", text: "Über ein Jahrzehnt operative Erfahrung im CNC-Rund-, Unrund- und Flachschleifen sowie Honen." },
-      { label: "Militärdienst", text: "Einsatz als Waffenmechaniker in der Schweizer Armee (Thun) zur Wartung von Infanteriewaffen." },
-      { label: "Berufsstolz", text: "Tiefes Verständnis für die Anliegen, den Zeitdruck und die Belastungen der arbeitenden Bevölkerung an der Front." }
+      { label: "Echte Basis", text: "Ausbildung im Rheintaler Grossbetrieb. Hier habe ich von Grund auf gelernt, was Präzision und Schweizer Qualität im Arbeitsalltag bedeuten." },
+      { label: "Militärdienst", text: "Praktischer Einsatz als Waffenmechaniker in der Schweizer Armee (Thun) zur Wartung von Infanteriewaffen." },
+      { label: "Berufsstolz", text: "Das Fundament für meinen täglichen Einsatz: Ich kenne den Zeitdruck und die echten Belastungen in der Produktion aus eigener Erfahrung." }
     ]
   }
 ];
