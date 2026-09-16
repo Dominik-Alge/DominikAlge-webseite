@@ -99,14 +99,17 @@ export default function AboutMe() {
                     </p>
                     <p>
                       Aktuell verantworte ich bei der{' '}
-                      <Link 
-                        href="/bruderer-ag" // Pfad zu deiner Unterseite
-                        className="font-bold text-orange-600 hover:text-orange-700 hover:underline transition-colors"
+                      <a 
+                        href="https://bruderer.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="font-bold text-orange-600 hover:text-orange-700 hover:underline transition-colors relative z-10 cursor-pointer"
                       >
                         BRUDERER AG
-                      </Link>{' '}
-                      ein hochpräzises Produktionsteam im Schichtbetrieb. Als eidg. diplomierter Ausbilder erlebe ich täglich die grossen Struggles...
+                      </a>{' '}
+                      ein hochpräzises Produktionsteam im Schichtbetrieb. Als eidg. diplomierter Ausbilder erlebe ich täglich die grossen Struggles bei der Facharbeitersuche und der Nachwuchsförderung. Ich weiss genau, unter welchem Druck unsere Betriebe stehen, und setze mich im Studium für praxisnahe digitale Lösungen (wie KI) ein, um unser Produktionswissen im Rheintal langfristig zu sichern.
                     </p>
+
                   </div>
                 ) : (
                   <div className="grid sm:grid-cols-2 gap-6 text-sm text-slate-600">
