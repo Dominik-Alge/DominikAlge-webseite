@@ -58,11 +58,18 @@ export default function Hero() {
             <div className="pt-4 flex flex-wrap gap-4">
               <a
                 href="#warum-ich"
-                onClick={(e) => scrollToSection(e, 'warum-ich')}
+                onClick={(e) => {
+                  e.preventDefault(); // Verhindert den harten Sprung
+                  const target = document.getElementById('warum-ich');
+                  if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
                 className="inline-block bg-orange-500 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg shadow-orange-500/20 hover:bg-orange-600 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 text-center"
               >
                 Warum ich kandidiere
               </a>
+
               
               <a
                 href="#ueber-mich"
