@@ -19,7 +19,6 @@ function App() {
       <Endorsements />
       <CoreValues />
       <Vision />
-      <Priorities />
       <Contact />
     </>
   );
