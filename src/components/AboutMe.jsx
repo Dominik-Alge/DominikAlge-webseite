@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Link from 'next/link';
 
 export default function AboutMe() {
   // State für die Tabs ("focus" oder "cv")
@@ -62,7 +61,7 @@ export default function AboutMe() {
                 <span className="text-slate-500 text-sm font-medium">BSc Wirtschaftsingenieurwesen i.A.</span>
               </p>
 
-              {/* Tab Navigation (Exakt wie in deiner Vorlage, farblich angepasst) */}
+              {/* Tab Navigation */}
               <div className="mt-8 flex border-b border-slate-200">
                 <button 
                   type="button"
@@ -110,7 +109,6 @@ export default function AboutMe() {
                       </a>{' '}
                       ein hochpräzises Produktionsteam im Schichtbetrieb. Als eidg. diplomierter Ausbilder erlebe ich täglich die grossen Struggles bei der Facharbeitersuche und der Nachwuchsförderung. Ich weiss genau, unter welchem Druck unsere Betriebe stehen, und setze mich im Studium für praxisnahe digitale Lösungen (wie KI) ein, um unser Produktionswissen im Rheintal langfristig zu sichern.
                     </p>
-
                   </div>
                 ) : (
                   <div className="grid sm:grid-cols-2 gap-6 text-sm text-slate-600">
@@ -150,20 +148,13 @@ export default function AboutMe() {
                 className="flex-1 px-6 py-3.5 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 transition-all duration-200 text-center text-sm shadow-md flex items-center justify-center gap-2"
               >
                 <span>Vernetzen auf LinkedIn</span>
-                <span className="text-xs text-slate-400">↗</span>
-              </a>
-              <a
-                href="#kontakt"
-                className="px-6 py-3.5 border-2 border-slate-800 text-slate-800 rounded-xl font-semibold hover:bg-slate-900 hover:text-white transition-all duration-200 text-center text-sm"
-              >
-                Kontakt aufnehmen
               </a>
             </div>
+
           </div>
-
         </div>
-
       </div>
     </section>
   );
 }
+
