@@ -13,14 +13,14 @@ function App() {
   return (
     <>
       <Hero />
+      <AboutMe />
       <WhyICandidate />
+      <MyExperience />
       <PoliticalTopics />
+      <Endorsements />
       <CoreValues />
       <Vision />
-      <MyExperience />
       <Priorities />
-      <AboutMe />
-      <Endorsements />
       <Contact />
     </>
   );
