@@ -1,25 +1,26 @@
 import Hero from "./components/Hero";
-import Problems from "./components/Problems";
-import Services from "./components/Services";
-import Approach from "./components/Approach";
-import WhyKinavita from "./components/WhyKinavita";
-import Team from "./components/Team";
-import References from "./components/References";
-import Process from "./components/Process";
+import WhyICandidate from "./components/WhyICandidate";
+import PoliticalTopics from "./components/PoliticalTopics";
+import CoreValues from "./components/CoreValues";
+import Vision from "./components/Vision";
+import MyExperience from "./components/MyExperience";
+import Priorities from "./components/Priorities";
+import AboutMe from "./components/AboutMe";
+import Endorsements from "./components/Endorsements";
 import Contact from "./components/contact";
-import WhoAreYou from "./components/WhoAreYou";
 
 function App() {
   return (
     <>
       <Hero />
-      <WhoAreYou />
-      <Problems />
-      <Team />
-      <WhyKinavita />
-      <Services />
-      <References />
-      <Process />
+      <WhyICandidate />
+      <PoliticalTopics />
+      <CoreValues />
+      <Vision />
+      <MyExperience />
+      <Priorities />
+      <AboutMe />
+      <Endorsements />
       <Contact />
     </>
   );
