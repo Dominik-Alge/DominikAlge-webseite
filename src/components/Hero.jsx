@@ -13,15 +13,6 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  // Funktion für das weiche Scrollen zu den Abschnitten
-  const scrollToSection = (e, id) => {
-    e.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="min-h-screen bg-gradient-to-br from-orange-50/50 via-white to-slate-100/50 flex items-center">
       <div className="max-w-7xl mx-auto px-6 py-20 w-full">
@@ -56,24 +47,17 @@ export default function Hero() {
             </p>
 
             <div className="pt-4 flex flex-wrap gap-4">
+              {/* SAUBERER HTML-LINK OHNE ONCLICK */}
               <a
                 href="#warum-ich"
-                onClick={(e) => {
-                  e.preventDefault(); // Verhindert den harten Sprung
-                  const target = document.getElementById('warum-ich');
-                  if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }}
                 className="inline-block bg-orange-500 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg shadow-orange-500/20 hover:bg-orange-600 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 text-center"
               >
                 Warum ich kandidiere
               </a>
 
-              
+              {/* SAUBERER HTML-LINK OHNE ONCLICK */}
               <a
                 href="#ueber-mich"
-                onClick={(e) => scrollToSection(e, 'ueber-mich')}
                 className="inline-block border-2 border-slate-800 text-slate-800 font-semibold px-8 py-4 rounded-2xl hover:bg-slate-900 hover:text-white hover:-translate-y-0.5 transition-all duration-200 text-center"
               >
                 Über mich
@@ -83,7 +67,6 @@ export default function Hero() {
 
           {/* Bild-Container mit "Die Mitte"-Klammer-Effekt */}
           <div className="relative justify-self-center lg:justify-self-end w-full max-w-[450px]">
-            {/* Dekoratives Element im Hintergrund (stilisiert die Logo-Klammer) */}
             <div className="absolute -inset-3 rounded-[48px] border-4 border-orange-500/20 pointer-events-none scale-105" />
             <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-4 border-l-4 border-orange-500 rounded-bl-[40px]" />
             <div className="absolute -top-4 -right-4 w-24 h-24 border-t-4 border-r-4 border-orange-500 rounded-tr-[40px]" />
@@ -103,4 +86,5 @@ export default function Hero() {
     </section>
   );
 }
+
 
