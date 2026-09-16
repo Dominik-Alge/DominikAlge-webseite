@@ -196,10 +196,9 @@ export default function AboutMe() {
                   LinkedIn
                 </a>
                 
-               {/* Kontakt Button (Scrollt sanft zur Kontakt-Sektion) */}
+               {/* SAUBERER HTML-LINK OHNE ONCLICK */}
                 <a 
                   href="#kontakt"
-                  onClick={(e) => scrollToSection(e, 'kontakt')}
                   className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all shadow-sm cursor-pointer"
                 >
                   <span>✉</span>
