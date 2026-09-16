@@ -35,8 +35,8 @@ export default function Contact() {
           <div style={styles.infoBlock}>
             <p><strong>Name:</strong> [Dominik & Alge]</p>
             <p><strong>Adresse:</strong> [Hauptstrasse 71, 9434 Au]</p>
-            <p><strong>E-Mail:</strong> <a href="mailto:dominik.alge@bluewin.ch" style={styles.link}>kontakt@ihre-webseite.ch</a></p>
-            <p><strong>Telefon:</strong> <a href="tel:+41 78 689 45 45" style={styles.link}>+41 (0)00 000 00 00</a></p>
+            <p><strong>E-Mail:</strong> <a href="mailto:dominik.alge@bluewin.ch" style={styles.link}>dominik.alge@bluewin.ch</a></p>
+            <p><strong>Telefon:</strong> <a href="tel:+41 78 689 45 45" style={styles.link}>+41 (0)78 689 45 45</a></p>
           </div>
         </section>
 
