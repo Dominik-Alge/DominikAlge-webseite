@@ -33,10 +33,10 @@ export default function Contact() {
           <h2 style={styles.cardTitle}>📌 Kontakt aufnehmen</h2>
           <p style={styles.text}>Ich freue mich auf den Austausch mit Ihnen.</p>
           <div style={styles.infoBlock}>
-            <p><strong>Name:</strong> [Ihr Vorname & Nachname]</p>
-            <p><strong>Adresse:</strong> [Strasse, PLZ Ort]</p>
-            <p><strong>E-Mail:</strong> <a href="mailto:kontakt@ihre-webseite.ch" style={styles.link}>kontakt@ihre-webseite.ch</a></p>
-            <p><strong>Telefon:</strong> <a href="tel:+41000000000" style={styles.link}>+41 (0)00 000 00 00</a></p>
+            <p><strong>Name:</strong> [Dominik & Alge]</p>
+            <p><strong>Adresse:</strong> [Hauptstrasse 71, 9434 Au]</p>
+            <p><strong>E-Mail:</strong> <a href="mailto:dominik.alge@bluewin.ch" style={styles.link}>kontakt@ihre-webseite.ch</a></p>
+            <p><strong>Telefon:</strong> <a href="tel:+41 78 689 45 45" style={styles.link}>+41 (0)00 000 00 00</a></p>
           </div>
         </section>
 
@@ -58,9 +58,9 @@ export default function Contact() {
           <div style={styles.donationBox}>
             <h3 style={styles.smallTitle}>🏦 Bankverbindung (IBAN)</h3>
             <div style={styles.bankDetails}>
-              <p><strong>Bank:</strong> [Name der Kantonalbank / PostFinance]</p>
-              <p><strong>Konto auf den Namen:</strong> [Ihr Name / Komitee Name]</p>
-              <p><strong>IBAN:</strong> CH00 0000 0000 0000 0000 0</p>
+              <p><strong>Bank:</strong> [Raiffeisenbank Diepoldsau-Schmitter]</p>
+              <p><strong>Konto auf den Namen:</strong> [Dominik Alge]</p>
+              <p><strong>IBAN:</strong> CH34 8080 8005 1035 1199 9</p>
             </div>
           </div>
         </section>
