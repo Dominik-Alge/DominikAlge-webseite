@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function AboutMe() {
-  // State für die Tabs ("focus" oder "cv")
+  // State für die 3 Tabs ("focus", "cv" oder "education")
   const [activeTab, setActiveTab] = useState('focus');
 
   return (
@@ -51,133 +51,122 @@ export default function AboutMe() {
             </div>
           </div>
 
-          {/* Tab Navigation mit 3 Reitern */}
-              <div className="mt-8 flex flex-wrap border-b border-slate-200">
-                <button 
-                  type="button"
-                  onClick={() => setActiveTab('focus')}
-                  className={`pb-3 px-4 font-bold text-sm transition-all relative ${
-                    activeTab === 'focus' 
-                      ? 'text-orange-500 border-b-2 border-orange-500 font-black' 
-                      : 'text-slate-500 hover:text-slate-800'
-                  }`}
-                >
-                  Story &amp; Kernfokus
-                </button>
-                <button 
-                  type="button"
-                  onClick={() => setActiveTab('cv')}
-                  className={`pb-3 px-4 font-bold text-sm transition-all relative ${
-                    activeTab === 'cv' 
-                      ? 'text-orange-500 border-b-2 border-orange-500 font-black' 
-                      : 'text-slate-500 hover:text-slate-800'
-                  }`}
-                >
-                  Schwerpunkte &amp; Kompetenzen
-                </button>
-                <button 
-                  type="button"
-                  onClick={() => setActiveTab('education')}
-                  className={`pb-3 px-4 font-bold text-sm transition-all relative ${
-                    activeTab === 'education' 
-                      ? 'text-orange-500 border-b-2 border-orange-500 font-black' 
-                      : 'text-slate-500 hover:text-slate-800'
-                  }`}
-                >
-                  Bildung &amp; Meilensteine
-                </button>
-              </div>
-
-              {/* Tab Content */}
-              <div className="mt-6 min-h-[260px]">
-                {activeTab === 'focus' && (
-                  <div className="space-y-4 text-slate-700 leading-relaxed text-base">
-                    <p className="italic font-semibold text-slate-900 bg-orange-50/40 p-4 rounded-2xl border-l-4 border-orange-500">
-                      „Erfolgreiche Wirtschaft und ein starker Kanton entstehen nicht am grünen Tisch, sondern durch echtes Handwerk, starke Bildung und verlässliche KMU.“
-                    </p>
-                    <p>
-                      Mein Weg führt von der Pike auf durch die Rheintaler Industrie: Gestartet an der Werkbank, durfte ich unser Familienunternehmen fast 17 Jahre lang operativ führen. Heute begleite ich die Firma als Verwaltungsrat bei der Neuausrichtung als immobilienverwaltende AG. Als aktiver KMU-Unternehmer und Vermieter kenne ich die Realität des Immobilienmarktes sowie die Anliegen von Eigentümern und Mietern aus erster Hand.
-                    </p>
-                    <p>
-                      Aktuell verantworte ich bei der <strong>BRUDERER AG</strong> ein hochpräzises Produktionsteam im Schichtbetrieb. Als eidg. diplomierter Ausbilder erlebe ich täglich die grossen Struggles bei der Facharbeitersuche und der Nachwuchsförderung. Ich weiss genau, unter welchem Druck unsere Betriebe stehen, und setze mich im Studium für praxisnahe digitale Lösungen (wie KI) ein, um unser Produktionswissen im Rheintal langfristig zu sichern.
-                    </p>
-                  </div>
-                )}
-
-                {activeTab === 'cv' && (
-                  <div className="grid sm:grid-cols-2 gap-6 text-sm text-slate-600">
-                    <div>
-                      <h4 className="font-black text-slate-900 uppercase tracking-wider text-xs mb-3 text-orange-600">
-                        Industrie &amp; KMU
-                      </h4>
-                      <ul className="space-y-2 font-medium">
-                        <li>• Effiziente Produktion (Lean Management)</li>
-                        <li>• Digitale Innovation &amp; Wissenssicherung</li>
-                        <li>• Krisenfeste Lieferketten &amp; Logistik</li>
-                        <li>• Standortsicherung im Rheintal</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-black text-slate-900 uppercase tracking-wider text-xs mb-3 text-orange-600">
-                        Führung &amp; Eigentum
-                      </h4>
-                      <ul className="space-y-2 font-medium">
-                        <li>• Teamleitung im Schichtbetrieb (10+ MA)</li>
-                        <li>• Immobilien- &amp; Mietwesen in der Praxis</li>
-                        <li>• Strategische &amp; finanzielle Führung (VR)</li>
-                        <li>• Nachhaltige Qualitäts- &amp; Prozesssicherung</li>
-                      </ul>
-                    </div>
-                  </div>
-                )}
-
-                {activeTab === 'education' && (
-                  <div className="space-y-4 text-sm text-slate-600">
-                    <p className="text-slate-900 font-medium">
-                      Alle höheren Abschlüsse wurden zu <strong>100% nebenberuflich</strong> und parallel zur vollen Erwerbstätigkeit an der Front erarbeitet:
-                    </p>
-                    <div className="grid sm:grid-cols-2 gap-4 mt-2">
-                      <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                        <h5 className="font-bold text-slate-900 text-xs uppercase tracking-wider text-orange-600 mb-1">
-                          Berufliche Meilensteine
-                        </h5>
-                        <ul className="space-y-1 font-medium">
-                          <li>• <strong>Professional Bachelor</strong> HF Maschinenbau</li>
-                          <li>• <strong>Professional Bachelor</strong> Ausbilder (eidg. FA)</li>
-                          <li>• Polymechaniker EFZ (Niveau E)</li>
-                        </ul>
-                      </div>
-                      <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                        <h5 className="font-bold text-slate-900 text-xs uppercase tracking-wider text-orange-600 mb-1">
-                          Aktuelles Studium
-                        </h5>
-                        <ul className="space-y-1 font-medium">
-                          <li>• <strong>BSc Wirtschaftsingenieurwesen</strong></li>
-                          <li>• Vertiefung: Digital Production Management</li>
-                          <li>• Fokus: KI &amp; Wissensmanagement</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Profil-Aktionstasten am unteren Ende */}
-            <div className="mt-8 flex flex-wrap gap-4 pt-6 border-t border-slate-100">
-              <a
-                href="https://www.linkedin.com/in/dominik-alge/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 px-6 py-3.5 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 transition-all duration-200 text-center text-sm shadow-md flex items-center justify-center gap-2"
+          {/* Rechte Spalte: Navigation & Content (7 von 12 Spalten) - HIER WAR DER FEHLER */}
+          <div className="lg:col-span-7 w-full">
+            
+            {/* Tab Navigation mit 3 Reitern */}
+            <div className="flex flex-wrap border-b border-slate-200">
+              <button 
+                type="button"
+                onClick={() => setActiveTab('focus')}
+                className={`pb-3 px-4 font-bold text-sm transition-all relative ${
+                  activeTab === 'focus' 
+                    ? 'text-orange-500 border-b-2 border-orange-500 font-black' 
+                    : 'text-slate-500 hover:text-slate-800'
+                }`}
               >
-                <span>Vernetzen auf LinkedIn</span>
-              </a>
+                Story &amp; Kernfokus
+              </button>
+              <button 
+                type="button"
+                onClick={() => setActiveTab('cv')}
+                className={`pb-3 px-4 font-bold text-sm transition-all relative ${
+                  activeTab === 'cv' 
+                    ? 'text-orange-500 border-b-2 border-orange-500 font-black' 
+                    : 'text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                Schwerpunkte &amp; Kompetenzen
+              </button>
+              <button 
+                type="button"
+                onClick={() => setActiveTab('education')}
+                className={`pb-3 px-4 font-bold text-sm transition-all relative ${
+                  activeTab === 'education' 
+                    ? 'text-orange-500 border-b-2 border-orange-500 font-black' 
+                    : 'text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                Bildung &amp; Meilensteine
+              </button>
             </div>
 
-          </div>
-        </div>
-      </div>
+            {/* Tab Content */}
+            <div className="mt-6 min-h-[260px]">
+              {activeTab === 'focus' && (
+                <div className="space-y-4 text-slate-700 leading-relaxed text-base">
+                  <p className="italic font-semibold text-slate-900 bg-orange-50/40 p-4 rounded-2xl border-l-4 border-orange-500">
+                    „Erfolgreiche Wirtschaft und ein starker Kanton entstehen nicht am grünen Tisch, sondern durch echtes Handwerk, starke Bildung und verlässliche KMU.“
+                  </p>
+                  <p>
+                    Mein Weg führt von der Pike auf durch die Rheintaler Industrie: Gestartet an der Werkbank, durfte ich unser Familienunternehmen fast 17 Jahre lang operativ führen. Heute begleite ich die Firma als Verwaltungsrat bei der Neuausrichtung als immobilienverwaltende AG. Als aktiver KMU-Unternehmer und Vermieter kenne ich die Realität des Immobilienmarktes sowie die Anliegen von Eigentümern und Mietern aus erster Hand.
+                  </p>
+                  <p>
+                    Aktuell verantworte ich bei der <strong>BRUDERER AG</strong> ein hochpräzises Produktionsteam im Schichtbetrieb. Als eidg. diplomierter Ausbilder erlebe ich täglich die grossen Struggles bei der Facharbeitersuche und der Nachwuchsförderung. Ich weiss genau, unter welchem Druck unsere Betriebe stehen, und setze mich im Studium für praxisnahe digitale Lösungen (wie KI) ein, um unser Produktionswissen im Rheintal langfristig zu sichern.
+                  </p>
+                </div>
+              )}
+
+              {activeTab === 'cv' && (
+                <div className="grid sm:grid-cols-2 gap-6 text-sm text-slate-600">
+                  <div>
+                    <h4 className="font-black text-slate-900 uppercase tracking-wider text-xs mb-3 text-orange-600">
+                      Industrie &amp; KMU
+                    </h4>
+                    <ul className="space-y-2 font-medium">
+                      <li>• Effiziente Produktion (Lean Management)</li>
+                      <li>• Digitale Innovation &amp; Wissenssicherung</li>
+                      <li>• Krisenfeste Lieferketten &amp; Logistik</li>
+                      <li>• Standortsicherung im Rheintal</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-black text-slate-900 uppercase tracking-wider text-xs mb-3 text-orange-600">
+                      Führung &amp; Eigentum
+                    </h4>
+                    <ul className="space-y-2 font-medium">
+                      <li>• Teamleitung im Schichtbetrieb (10+ MA)</li>
+                      <li>• Immobilien- &amp; Mietwesen in der Praxis</li>
+                      <li>• Strategische &amp; finanzielle Führung (VR)</li>
+                      <li>• Nachhaltige Qualitäts- &amp; Prozesssicherung</li>
+                    </ul>
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'education' && (
+                <div className="space-y-4 text-sm text-slate-600">
+                  <p className="text-slate-900 font-medium">
+                    Alle höheren Abschlüsse wurden zu <strong>100% nebenberuflich</strong> und parallel zur vollen Erwerbstätigkeit an der Front erarbeitet:
+                  </p>
+                  <div className="grid sm:grid-cols-2 gap-4 mt-2">
+                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                      <h5 className="font-bold text-slate-900 text-xs uppercase tracking-wider text-orange-600 mb-1">
+                        Berufliche Meilensteine
+                      </h5>
+                      <ul className="space-y-1 font-medium">
+                        <li>• <strong>Professional Bachelor</strong> HF Maschinenbau</li>
+                        <li>• <strong>Professional Bachelor</strong> Ausbilder (eidg. FA)</li>
+                        <li>• Polymechaniker EFZ (Niveau E)</li>
+                      </ul>
+                    </div>
+                    {/* HIER war dein Code abgeschnitten - zweite Box für Ausbildungen ergänzt */}
+                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                      <h5 className="font-bold text-slate-900 text-xs uppercase tracking-wider text-orange-600 mb-1">
+                        Aktueller Fokus
+                      </h5>
+                      <p className="font-medium text-xs leading-relaxed">
+                        Laufendes Studium / Weiterbildung im Bereich digitaler Innovationen und KI-gestütztem Wissensmanagement zur Zukunftssicherung der Industrie.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+          </div> {/* Ende Spalte 7 */}
+        </div> {/* Ende Grid */}
+      </div> {/* Ende Max-w-7xl */}
     </section>
   );
 }
