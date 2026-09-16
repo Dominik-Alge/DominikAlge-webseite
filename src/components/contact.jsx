@@ -1,145 +1,140 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    requestType: "",
-    message: "",
-  });
+  // Zustand für den geschützten PDF-Download
+  const [password, setPassword] = useState('');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  // Das Passwort für den Login (Ersetzen Sie 'Wahlkampf2026' mit Ihrem Wunschpasswort)
+  const CORRECT_PASSWORD = 'Wahlkampf2026'; 
+
+  const handleLogin = (e) => {
     e.preventDefault();
-    // Hier folgt deine Logik für den Mail-Versand oder API-Call
-    console.log("Formular abgeschickt:", formData);
+    if (password === CORRECT_PASSWORD) {
+      setIsAuthenticated(true);
+      setError('');
+    } else {
+      setError('Falsches Passwort. Bitte versuchen Sie es erneut.');
+    }
   };
 
   return (
-    <section id="kontakt" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <div style={styles.container}>
+      <h1 style={styles.title}>Kontakt & Unterstützung</h1>
+      <p style={styles.subtitle}>
+        Gemeinsam für unseren Kanton. Hier finden Sie alle Möglichkeiten, mich zu kontaktieren oder meine Kampagne finanziell zu unterstützen.
+      </p>
+
+      <div style={styles.grid}>
         
-        <div className="text-center">
-          <span className="text-sm font-semibold tracking-wider text-orange-600 uppercase">
-            Direkter Draht
-          </span>
-          <h2 className="mt-2 text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-            Lassen Sie uns ins Gespräch kommen
-          </h2>
-          <p className="mt-6 text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Haben Sie ein konkretes Anliegen zum Werkplatz St. Gallen, Fragen zu meiner Person 
-            oder möchten Sie mich im Wahlkampf unterstützen? Ich freue mich auf Ihre Nachricht.
-          </p>
-        </div>
+        {/* SPALTE 1: DIREKTKONTAKT */}
+        <section style={styles.card}>
+          <h2 style={styles.cardTitle}>📌 Kontakt aufnehmen</h2>
+          <p style={styles.text}>Ich freue mich auf den Austausch mit Ihnen.</p>
+          <div style={styles.infoBlock}>
+            <p><strong>Name:</strong> [Ihr Vorname & Nachname]</p>
+            <p><strong>Adresse:</strong> [Strasse, PLZ Ort]</p>
+            <p><strong>E-Mail:</strong> <a href="mailto:kontakt@ihre-webseite.ch" style={styles.link}>kontakt@ihre-webseite.ch</a></p>
+            <p><strong>Telefon:</strong> <a href="tel:+41000000000" style={styles.link}>+41 (0)00 000 00 00</a></p>
+          </div>
+        </section>
 
-        {/* Grid-Layout: Links Kontaktdaten, rechts das Formular */}
-        <div className="mt-16 grid lg:grid-cols-5 gap-12 items-start">
+        {/* SPALTE 2: SPENDEN & UNTERSTÜTZUNG */}
+        <section style={styles.card}>
+          <h2 style={styles.cardTitle}>📊 Kampagne unterstützen</h2>
+          <p style={styles.text}>Jeder Beitrag fliesst direkt in die politische Arbeit für den Kanton.</p>
           
-          {/* Linke Spalte: Visitenkarte (Vollständig angepasst) */}
-          <div className="lg:col-span-2 bg-slate-50 border border-slate-100 p-8 rounded-3xl shadow-lg lg:sticky lg:top-8">
-            <h3 className="text-2xl font-black text-slate-900 tracking-tight">Dominik Alge</h3>
-            <p className="text-orange-600 font-semibold mt-1">Kandidat für den Kantonsrat</p>
-            
-            <div className="mt-8 space-y-4 text-slate-700 font-medium">
-              <div className="flex items-center gap-3">
-                <span className="text-xl">📧</span>
-                <a href="mailto:dominik.alge@bluewin.ch" className="hover:text-orange-600 transition">
-                  dominik.alge@bluewin.ch
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-xl">📱</span>
-                <a href="tel:+41786894545" className="hover:text-orange-600 transition">
-                  078 689 45 45
-                </a>
-              </div>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-slate-200 text-xs text-slate-500 leading-relaxed">
-              <p><strong>Die Mitte Au-Heerbrugg</strong></p>
-              <p className="mt-1">Gemeinsam für einen starken, zukunftsorientierten und pragmatischen Kanton St. Gallen.</p>
-            </div>
+          <div style={styles.donationBox}>
+            <h3 style={styles.smallTitle}>✨ Schnell & einfach via TWINT</h3>
+            <p style={styles.textSmall}>Scannen Sie den QR-Code in Ihrer Twint-App oder nutzen Sie den Link:</p>
+            {/* Platzhalter für Twint QR-Code Bild */}
+            <div style={styles.qrPlaceholder}>[ Hier Twint-QR-Code Bild einfügen ]</div>
+            <a href="https://twint.ch" target="_blank" rel="noreferrer" style={styles.twintButton}>
+              Via TWINT spenden
+            </a>
           </div>
 
-          {/* Rechte Spalte: Politisches Formular */}
-          <form onSubmit={handleSubmit} className="lg:col-span-3 bg-white border border-slate-100 p-8 md:p-10 rounded-3xl shadow-xl space-y-6">
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-2">Name *</label>
-                <input
-                  type="text"
-                  required
-                  placeholder="Ihr Vor- und Nachname"
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-orange-500 focus:bg-white transition text-slate-900 font-medium"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-2">Telefonnummer</label>
-                <input
-                  type="tel"
-                  placeholder="Für den direkten Austausch"
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-orange-500 focus:bg-white transition text-slate-900 font-medium"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                />
-              </div>
+          <div style={styles.donationBox}>
+            <h3 style={styles.smallTitle}>🏦 Bankverbindung (IBAN)</h3>
+            <div style={styles.bankDetails}>
+              <p><strong>Bank:</strong> [Name der Kantonalbank / PostFinance]</p>
+              <p><strong>Konto auf den Namen:</strong> [Ihr Name / Komitee Name]</p>
+              <p><strong>IBAN:</strong> CH00 0000 0000 0000 0000 0</p>
             </div>
+          </div>
+        </section>
 
-            <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-2">E-Mail-Adresse *</label>
-              <input
-                type="email"
-                required
-                placeholder="ihre.adresse@beispiel.ch"
-                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-orange-500 focus:bg-white transition text-slate-900 font-medium"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+        {/* SPALTE 3: INTERNER DOWNLOAD BEREICH */}
+        <section style={styles.card}>
+          <h2 style={styles.cardTitle}>🔐 Interner Download</h2>
+          <p style={styles.text}>Exklusive Materialien (z.B. Argumentarien, Spender-Infos, Kampagnen-Leitfaden).</p>
+          
+          {!isAuthenticated ? (
+            <form onSubmit={handleLogin} style={styles.form}>
+              <p style={styles.textSmall}>Bitte geben Sie das Passwort ein, um die PDF-Dateien freizuschalten:</p>
+              <input 
+                type="password" 
+                placeholder="Passwort eingeben" 
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                style={styles.input}
               />
+              {error && <p style={styles.error}>{error}</p>}
+              <button type="submit" style={styles.button}>Login</button>
+            </form>
+          ) : (
+            <div style={styles.successBox}>
+              <p style={styles.successText}>✅ Erfolgreich eingeloggt!</p>
+              <ul style={styles.downloadList}>
+                <li>
+                  {/* Pfad zu Ihrem PDF im 'public'-Ordner Ihres React-Projekts */}
+                  <a href="/downloads/wahlkampf_dossier_2026.pdf" download style={styles.downloadLink}>
+                    📄 Wahlkampf-Dossier 2026 (PDF)
+                  </a>
+                </li>
+                <li>
+                  <a href="/downloads/argumentarium.pdf" download style={styles.downloadLink}>
+                    📄 Argumentarium & Positionen (PDF)
+                  </a>
+                </li>
+              </ul>
+              <button onClick={() => setIsAuthenticated(false)} style={styles.logoutButton}>
+                Ausloggen
+              </button>
             </div>
+          )}
+        </section>
 
-            {/* Wahlkampf-spezifische Segmentierung */}
-            <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-2">Mein Anliegen... *</label>
-              <select
-                required
-                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-orange-500 focus:bg-white transition text-slate-700 font-medium cursor-pointer"
-                value={formData.requestType}
-                onChange={(e) => setFormData({ ...formData, requestType: e.target.value })}
-              >
-                <option value="" disabled>Bitte auswählen</option>
-                <option value="komitee">Ich möchte Dominik Alge im Komitee unterstützen</option>
-                <option value="frage">Ich habe eine politische Frage / ein Anliegen</option>
-                <option value="medien">Medien- oder Verbandsanfrage</option>
-                <option value="sonstiges">Sonstiges</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-2">Ihre Nachricht / Ihr Anliegen *</label>
-              <textarea
-                required
-                rows="4"
-                placeholder="Beschreiben Sie kurz, worum es geht..."
-                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-orange-500 focus:bg-white transition resize-none text-slate-900 font-medium"
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition duration-200 text-center cursor-pointer uppercase tracking-wider text-xs"
-            >
-              Nachricht senden
-            </button>
-          </form>
-
-        </div>
       </div>
-    </section>
+    </div>
   );
 }
+
+// Einfaches, sauberes Styling direkt in der Datei (CSS-in-JS)
+const styles = {
+  container: { maxWidth: '1200px', margin: '0 auto', padding: '40px 20px', fontFamily: 'Arial, sans-serif' },
+  title: { fontSize: '2.5rem', color: '#1a365d', marginBottom: '10px', textAlign: 'center' },
+  subtitle: { fontSize: '1.1rem', color: '#4a5568', marginBottom: '40px', textAlign: 'center', maxWidth: '800px', margin: '0 auto 40px auto' },
+  grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' },
+  card: { background: '#f7fafc', padding: '30px', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', border: '1px solid #e2e8f0', display: 'flex', flexDirection: 'column' },
+  cardTitle: { fontSize: '1.5rem', color: '#2d3748', marginBottom: '15px', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px' },
+  text: { color: '#4a5568', lineHeight: '1.6', marginBottom: '20px' },
+  textSmall: { color: '#718096', fontSize: '0.9rem', marginBottom: '10px' },
+  infoBlock: { lineHeight: '2' },
+  link: { color: '#3182ce', textDecoration: 'none' },
+  donationBox: { background: '#fff', padding: '15px', borderRadius: '8px', marginBottom: '15px', border: '1px solid #edf2f7' },
+  smallTitle: { fontSize: '1.1rem', margin: '0 0 10px 0', color: '#2d3748' },
+  qrPlaceholder: { background: '#edf2f7', height: '140px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#a0aec0', fontSize: '0.9rem', borderRadius: '6px', marginBottom: '10px', border: '2px dashed #cbd5e0' },
+  twintButton: { display: 'block', textAlign: 'center', background: '#00a3e0', color: '#fff', padding: '10px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold' },
+  bankDetails: { fontSize: '0.95rem', lineHeight: '1.8' },
+  form: { display: 'flex', flexDirection: 'column', gap: '10px' },
+  input: { padding: '12px', borderRadius: '6px', border: '1px solid #cbd5e0', fontSize: '1rem' },
+  button: { background: '#1a365d', color: '#fff', padding: '12px', borderRadius: '6px', border: 'none', fontSize: '1rem', cursor: 'pointer', fontWeight: 'bold' },
+  error: { color: '#e53e3e', fontSize: '0.9rem', margin: '0' },
+  successBox: { background: '#f0fff4', padding: '15px', borderRadius: '8px', border: '1px solid #c6f6d5' },
+  successText: { color: '#38a169', fontWeight: 'bold', margin: '0 0 15px 0' },
+  downloadList: { listStyleType: 'none', padding: 0, margin: '0 0 20px 0' },
+  downloadLink: { color: '#2b6cb0', textDecoration: 'none', fontWeight: 'bold', display: 'block', padding: '5px 0' },
+  logoutButton: { background: 'none', border: 'none', color: '#718096', textDecoration: 'underline', cursor: 'pointer', padding: 0 }
+};
