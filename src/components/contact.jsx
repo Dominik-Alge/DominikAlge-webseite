@@ -20,7 +20,7 @@ export default function Contact() {
   };
 
   return (
-    <div style={styles.container}>
+    <div id="kontakt" style={styles.container}>
       <h1 style={styles.title}>Kontakt & Unterstützung</h1>
       <p style={styles.subtitle}>
         Gemeinsam für unseren Kanton. Hier finden Sie alle Möglichkeiten, mich zu kontaktieren oder meine Kampagne finanziell zu unterstützen.
