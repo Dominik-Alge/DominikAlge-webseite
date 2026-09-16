@@ -113,10 +113,10 @@ export default function CoreValues() {
               </div>
               <div className="flex-shrink-0">
                 <a
-                  href="#themen"
+                  href="#warum-ich"
                   className="inline-block bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-md transition duration-200 text-center"
                 >
-                  Zu meinen Themen
+                  Die Entscheidung
                 </a>
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function CoreValues() {
               </div>
               <div className="flex-shrink-0">
                 <a
-                  href="#themen"
+                  href="#warum-ich"
                   className="inline-block bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-md transition duration-200 text-center"
                 >
                   Faktenbasiert handeln
