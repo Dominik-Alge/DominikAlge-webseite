@@ -1,71 +1,118 @@
-const steps = [
+import { useState } from "react";
+
+const priorityList = [
   {
-    number: "01",
-    title: "Kennenlernen",
-    text: "Im kostenlosen Erstgespräch lernen wir Ihre Situation, Herausforderungen und Ziele kennen.",
+    num: "01",
+    icon: "🔌",
+    title: "KMU & Werkplatz von Fesseln befreien",
+    subtitle: "Bürokratie-Stopp für das Gewerbe",
+    description: "Unsere Unternehmen dürfen ihre Energie nicht im administrativen Leerlauf verlieren. Ich fordere einen konsequenten Bürokratieabbau bei kantonalen Bewilligungsverfahren und die steuerliche Entlastung von KMU, die in den Standort St. Gallen investieren.",
+    actionText: "Für einen starken Werkplatz"
   },
   {
-    number: "02",
-    title: "Analyse",
-    text: "Gemeinsam betrachten wir bestehende Abläufe, Belastungen und vorhandene Ressourcen.",
+    num: "02",
+    icon: "📈",
+    title: "Berufslehre & HF-Abschlüsse stärken",
+    subtitle: "Gleichwertigkeit im Bildungssystem",
+    description: "Der Fachkräftemangel wird an der Werkbank gelöst, nicht im Hörsaal. Ich setze mich für die massive Aufwertung des dualen Bildungssystems ein. Höhere Fachschulen (HF) müssen finanziell und gesellschaftlich den Universitäten komplett gleichgestellt werden.",
+    actionText: "Für echte Chancengleichheit"
   },
   {
-    number: "03",
-    title: "Umsetzung",
-    text: "Praxisnahe Schulungen, Begleitungen und Lernangebote werden direkt im Alltag integriert.",
-  },
-  {
-    number: "04",
-    title: "Nachhaltigkeit",
-    text: "Neue Erkenntnisse werden langfristig verankert und im Arbeitsalltag weiterentwickelt.",
-  },
+    num: "03",
+    icon: "🤖",
+    title: "Technologieoffenheit statt Verbote",
+    subtitle: "Fortschritt durch Praxis-Innovation",
+    description: "Die Digitalisierung und der demografische Wandel erfordern intelligente Systeme, keine neuen Regulierungswellen. Ob KI-gestütztes Wissensmanagement auf dem Shopfloor oder moderne Energietechnologien: St. Gallen muss zum Vorreiter für angewandte Innovation werden.",
+    actionText: "Für digitale Zukunft"
+  }
 ];
 
-export default function Process() {
+export default function Priorities() {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   return (
-    <section className="py-24 bg-pink-100">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="prioritaeten" className="py-24 bg-slate-900 text-white relative overflow-hidden">
+      {/* Subtile technologische Hintergrund-Dekoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-800/50 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="text-center">
-
-          <span className="text-emerald-700 font-semibold">
-            Ablauf
-          </span>
-
-          <h2 className="mt-4 text-5xl font-bold text-slate-900">
-            So läuft die Zusammenarbeit ab
-          </h2>
-
-          <p className="mt-6 text-lg text-slate-600 max-w-3xl mx-auto">
-            Von der ersten Kontaktaufnahme bis zur nachhaltigen
-            Verankerung begleiten wir Sie Schritt für Schritt.
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        
+        {/* Sektions-Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-800 pb-12">
+          <div className="max-w-2xl">
+            <span className="text-orange-500 font-semibold tracking-wide uppercase text-sm block">
+              Fokus & Agenda
+            </span>
+            <h2 className="mt-4 text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+              Meine drei Prioritäten <br />für den Kantonsrat
+            </h2>
+          </div>
+          <p className="mt-6 md:mt-0 text-slate-400 max-w-sm text-base leading-relaxed">
+            Kein politisches Wunschkonzert, sondern messbare Kernbereiche, die ich mit oberster Priorität anpacken werde.
           </p>
-
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        {/* Die Kacheln-Matrix */}
+        <div className="mt-16 grid gap-8 lg:grid-cols-3">
+          {priorityList.map((item, index) => {
+            const isHovered = hoveredIndex === index;
 
-          {steps.map((step) => (
-            <div
-              key={step.number}
-              className="rounded-3xl bg-slate-50 p-8 shadow-lg hover:-translate-y-2 transition"
-            >
+            return (
+              <div
+                key={item.num}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                className={`relative rounded-3xl p-8 lg:p-10 border transition-all duration-300 flex flex-col justify-between group min-h-[420px] ${
+                  isHovered
+                    ? "bg-slate-800/80 border-orange-500 shadow-2xl shadow-orange-500/5 -translate-y-2"
+                    : "bg-slate-800/40 border-slate-800"
+                }`}
+              >
+                {/* Obere Sektion: Nummerierung & Icon */}
+                <div>
+                  <div className="flex items-center justify-between">
+                    <span className={`text-5xl font-black transition-colors duration-300 ${
+                      isHovered ? "text-orange-500" : "text-slate-700"
+                    }`}>
+                      {item.num}
+                    </span>
+                    <div className="text-4xl bg-slate-800 p-3 rounded-2xl group-hover:bg-orange-500/10 transition-colors duration-300">
+                      {item.icon}
+                    </div>
+                  </div>
 
-              <div className="text-5xl font-black text-emerald-600">
-                {step.number}
+                  {/* Titel & Subtitel */}
+                  <div className="mt-8">
+                    <span className="text-xs font-bold text-orange-500 uppercase tracking-widest block mb-2">
+                      {item.subtitle}
+                    </span>
+                    <h3 className="text-2xl font-black tracking-tight leading-snug">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  {/* Beschreibung */}
+                  <p className="mt-4 text-slate-400 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+
+                {/* Untere Sektion: Action-Indikator */}
+                <div className="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between text-xs font-bold tracking-wider uppercase">
+                  <span className={isHovered ? "text-white" : "text-slate-500"}>
+                    {item.actionText}
+                  </span>
+                  <span className={`text-base transition-transform duration-300 ${
+                    isHovered ? "text-orange-500 translate-x-1" : "text-slate-600"
+                  }`}>
+                    →
+                  </span>
+                </div>
+
               </div>
-
-              <h3 className="mt-4 text-2xl font-bold text-slate-900">
-                {step.title}
-              </h3>
-
-              <p className="mt-4 text-slate-600">
-                {step.text}
-              </p>
-
-            </div>
-          ))}
-
+            );
+          })}
         </div>
 
       </div>
