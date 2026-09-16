@@ -124,10 +124,10 @@ export default function AboutMe() {
                         Wirtschaft &amp; Industrie
                       </h4>
                       <ul className="space-y-2 font-medium">
-                        <li>• **Standortsicherung im Rheintal:** Rahmenbedingungen für sichere Arbeitsplätze schaffen.</li>
-                        <li>• **Effiziente Produktion:** Lean Management für wettbewerbsfähige KMU einsetzen.</li>
-                        <li>• **Praxisnahe Innovation:** Digitale Tools und KI zur Wissenssicherung nutzen.</li>
-                        <li>• **Robuste Lieferketten:** Regionale Logistikstrukturen strategisch stärken.</li>
+                        <li>• <strong className="text-slate-900">Standortsicherung im Rheintal:</strong> Rahmenbedingungen für sichere Arbeitsplätze schaffen.</li>
+                        <li>• <strong className="text-slate-900">Effiziente Produktion:</strong> Lean Management für wettbewerbsfähige KMU einsetzen.</li>
+                        <li>• <strong className="text-slate-900">Praxisnahe Innovation:</strong> Digitale Tools und KI zur Wissenssicherung nutzen.</li>
+                        <li>• <strong className="text-slate-900">Robuste Lieferketten:</strong> Regionale Logistikstrukturen strategisch stärken.</li>
                       </ul>
                     </div>
                     <div>
@@ -135,10 +135,10 @@ export default function AboutMe() {
                         Führung &amp; Realpolitik
                       </h4>
                       <ul className="space-y-2 font-medium">
-                        <li>• **Führung mit Bodenhaftung:** Schichtbetrieb-Erfahrung für ehrliche Politik.</li>
-                        <li>• **Immobilien- &amp; Mietwesen:** Pragmatische Lösungen ohne ideologische Verbote.</li>
-                        <li>• **Finanzielle Verantwortung:** Strategische Weitsicht aus der VR-Praxis einbringen.</li>
-                        <li>• **Nachhaltige Qualität:** Prozesse auf Kantons-Ebene optimieren statt Bürokratie aufbauen.</li>
+                        <li>• <strong className="text-slate-900">Führung mit Bodenhaftung:</strong> Schichtbetrieb-Erfahrung für ehrliche Politik.</li>
+                        <li>• <strong className="text-slate-900">Immobilien- &amp; Mietwesen:</strong> Pragmatische Lösungen ohne ideologische Verbote.</li>
+                        <li>• <strong className="text-slate-900">Finanzielle Verantwortung:</strong> Strategische Weitsicht aus der VR-Praxis einbringen.</li>
+                        <li>• <strong className="text-slate-900">Nachhaltige Qualität:</strong> Prozesse auf Kantons-Ebene optimieren statt Bürokratie aufbauen.</li>
                       </ul>
                     </div>
                   </div>
