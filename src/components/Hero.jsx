@@ -57,11 +57,11 @@ export default function Hero() {
 
             <div className="pt-4 flex flex-wrap gap-4">
               <a
-                href="#themen"
+                href="#warum-ich"
                 onClick={(e) => scrollToSection(e, 'themen')}
                 className="inline-block bg-orange-500 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg shadow-orange-500/20 hover:bg-orange-600 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 text-center"
               >
-                Meine Themen
+                Warum ich kandidiere
               </a>
               
               <a
