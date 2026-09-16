@@ -104,7 +104,7 @@ export default function AboutMe() {
                         href="https://bruderer.com" 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="font-bold text-orange-600 hover:text-orange-700 hover:underline transition-colors relative z-10 cursor-pointer"
+                        className="font-bold text-orange-600 hover:text-orange-700 hover:underline cursor-pointer"
                       >
                         BRUDERER AG
                       </a>{' '}
