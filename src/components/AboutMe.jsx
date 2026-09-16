@@ -14,7 +14,7 @@ export default function AboutMe() {
             Der Kandidat persönlich
           </span>
           <h2 className="mt-4 text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">
-            Praxisdenken für den Kantonsrat
+            Praxis für den Kantonsrat
           </h2>
           <p className="mt-6 text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Erfahren Sie mehr über meinen Hintergrund als Führungskraft in der Industrie, 
@@ -158,7 +158,7 @@ export default function AboutMe() {
                           <li>• <strong>BSc Wirtschaftsingenieur i. A.</strong> (Bachelor of Science)</li>
                           <li>• <strong>Dipl. Techniker HF Maschinenbau</strong> (Professional Bachelor)</li>
                           <li>• <strong>eidg. Fachausweis Ausbilder</strong> (Professional Bachelor)</li>
-                          <li>• Polymechaniker EFZ (Niveau E)</li>
+                          <li>• <strong>Polymechaniker EFZ</strong> (Niveau E, Spezialisierung Schleifen)</li>
                         </ul>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
@@ -166,7 +166,7 @@ export default function AboutMe() {
                           Aktueller Fokus
                         </h5>
                         <p className="font-medium text-xs leading-relaxed">
-                          Laufendes Studium / Weiterbildung im Bereich digitaler Innovationen und KI-gestütztem Wissensmanagement zur Zukunftssicherung der Industrie.
+                          Laufendes Studium und angewandte Entwicklung im Bereich digitaler Innovationen (KI-gestütztes Wissensmanagement), um die Zukunft unserer Industrie aktiv mitzugestalten.
                         </p>
                       </div>
                     </div>
