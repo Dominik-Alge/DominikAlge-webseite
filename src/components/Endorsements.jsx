@@ -43,37 +43,53 @@ export default function Endorsements() {
         </div>
 
         {/* Das interaktive Zitat-Karussell */}
-        <div className="relative bg-white rounded-[40px] shadow-xl p-8 md:p-14 border border-slate-100">
+        <div className="relative bg-white rounded-[40px] shadow-xl p-8 md:p-14 border border-slate-100 overflow-hidden">
           
           {/* Riesiges dekoratives Anführungszeichen im Hintergrund */}
-          <span className="absolute -top-6 left-10 text-[12rem] font-serif text-orange-500/10 pointer-events-none select-none">
+          <span className="absolute -top-6 left-10 text-[12rem] font-serif text-orange-500/10 pointer-events-none select-none z-0">
             “
           </span>
 
-          <div className="relative z-10 min-h-[180px] flex flex-col justify-between">
-            {/* Das Zitat */}
-            <p className="text-xl md:text-2xl font-medium text-slate-800 italic leading-relaxed">
-              „{testimonials[activeIndex].quote}“
-            </p>
+          {/* Maskierungs-Container für die Seitwärtsbewegung */}
+          <div className="relative z-10 w-full overflow-hidden">
+            
+            {/* Dieser Container reiht alle Testimonials nebeneinander und verschiebt sie flüssig */}
+            <div 
+              className="flex transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+            >
+              {testimonials.map((item, idx) => (
+                <div 
+                  key={idx} 
+                  className="w-full shrink-0 flex flex-col justify-between min-h-[220px] md:min-h-[180px] pr-2"
+                >
+                  {/* Das Zitat */}
+                  <p className="text-xl md:text-2xl font-medium text-slate-800 italic leading-relaxed">
+                    „{item.quote}“
+                  </p>
 
-            {/* Die Person hinter dem Zitat */}
-            <div className="mt-8 flex items-center gap-4">
-              <div className="w-14 h-14 bg-orange-50 text-2xl flex items-center justify-center rounded-2xl border border-orange-100 shadow-inner">
-                {testimonials[activeIndex].avatar}
-              </div>
-              <div>
-                <h4 className="text-lg font-black text-slate-900 tracking-tight">
-                  {testimonials[activeIndex].name}
-                </h4>
-                <p className="text-sm text-orange-600 font-medium">
-                  {testimonials[activeIndex].role}
-                </p>
-              </div>
+                  {/* Die Person hinter dem Zitat */}
+                  <div className="mt-8 flex items-center gap-4">
+                    <div className="w-14 h-14 bg-orange-50 text-2xl flex items-center justify-center rounded-2xl border border-orange-100 shadow-inner shrink-0">
+                      {item.avatar}
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-black text-slate-900 tracking-tight">
+                        {item.name}
+                      </h4>
+                      <p className="text-sm text-orange-600 font-medium">
+                        {item.role}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
+
           </div>
 
           {/* Navigations-Punkte (Dots) unten rechts */}
-          <div className="absolute bottom-8 right-8 md:bottom-14 md:right-14 flex gap-2">
+          <div className="absolute bottom-6 right-8 md:bottom-10 md:right-14 flex gap-2 z-20">
             {testimonials.map((_, idx) => (
               <button
                 key={idx}
@@ -99,3 +115,4 @@ export default function Endorsements() {
     </section>
   );
 }
+
