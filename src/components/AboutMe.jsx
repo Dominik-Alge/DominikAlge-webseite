@@ -185,7 +185,7 @@ export default function AboutMe() {
               <div className="flex items-center gap-3">
                 {/* LinkedIn Button */}
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://www.linkedin.com/in/dominik-alge/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#0a66c2] hover:bg-[#004182] text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all shadow-sm"
