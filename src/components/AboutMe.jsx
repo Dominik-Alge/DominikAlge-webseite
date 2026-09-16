@@ -29,7 +29,7 @@ export default function AboutMe() {
           <div className="lg:col-span-5 bg-slate-50 rounded-3xl shadow-xl border border-slate-100 overflow-hidden flex flex-col">
             <div className="w-full h-[380px] bg-slate-200 overflow-hidden relative">
               <img 
-                src="/Dominik.jpg" 
+                src="/Dominik2.jpg" 
                 alt="Dominik Alge" 
                 className="w-full h-full object-cover object-center" 
               />
@@ -133,7 +133,7 @@ export default function AboutMe() {
             {/* Profil-Aktionstasten am unteren Ende */}
             <div className="mt-8 flex flex-wrap gap-4 pt-6 border-t border-slate-100">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/dominik-alge/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 px-6 py-3.5 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 transition-all duration-200 text-center text-sm shadow-md flex items-center justify-center gap-2"
