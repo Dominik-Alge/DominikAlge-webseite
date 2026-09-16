@@ -103,7 +103,16 @@ export default function AboutMe() {
                       Mein Weg führt von der Pike auf durch die Rheintaler Industrie: Gestartet an der Werkbank, durfte ich unser Familienunternehmen fast 17 Jahre lang operativ führen. Heute begleite ich die firma als Verwaltungsrat bei der Neuausrichtung als immobilienverwaltende AG. Als aktiver KMU-Unternehmer und Vermieter kenne ich die Realität des Immobilienmarktes sowie die Anliegen von Eigentümern und Mietern aus erster Hand.
                     </p>
                     <p>
-                      Aktuell verantworte ich bei der <strong>BRUDERER AG</strong> ein hochpräzises Produktionsteam im Schichtbetrieb. Als eidg. diplomierter Ausbilder erlebe ich täglich die grossen Herausforderungen bei der Facharbeitersuche und der Nachwuchsförderung. Ich weiss genau, unter welchem Druck unsere Betriebe stehen, und setze mich im Studium für praxisnahe digitale Lösungen (wie KI) ein, um unser Produktionswissen im Rheintal langfristig zu sichern.
+                      Aktuell verantworte ich bei der{' '}
+                      <a 
+                        href="https://bruderer.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="font-bold text-slate-950 underline decoration-orange-500 decoration-2 hover:text-orange-600 transition-colors"
+                      >
+                        BRUDERER AG
+                      </a>{' '}
+                      ein hochpräzises Produktionsteam im Schichtbetrieb. Als eidg. diplomierter Ausbilder erlebe ich täglich die grossen Herausforderungen bei der Facharbeitersuche und der Nachwuchsförderung. Ich weiss genau, unter welchem Druck unsere Betriebe stehen, und setze mich im Studium für praxisnahe digitale Lösungen (wie KI) ein, um unser Produktionswissen im Rheintal langfristig zu sichern.
                     </p>
                   </div>
                 )}
