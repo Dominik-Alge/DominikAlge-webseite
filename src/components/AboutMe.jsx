@@ -99,17 +99,14 @@ export default function AboutMe() {
                     </p>
                     <p>
                       Aktuell verantworte ich bei der{' '}
-                      <a 
-                        href="https://bruderer.com" // Hier die echte URL einfügen
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                      <Link 
+                        href="/bruderer-ag" // Pfad zu deiner Unterseite
                         className="font-bold text-orange-600 hover:text-orange-700 hover:underline transition-colors"
                       >
                         BRUDERER AG
-                      </a>{' '}
+                      </Link>{' '}
                       ein hochpräzises Produktionsteam im Schichtbetrieb. Als eidg. diplomierter Ausbilder erlebe ich täglich die grossen Struggles...
                     </p>
-
                   </div>
                 ) : (
                   <div className="grid sm:grid-cols-2 gap-6 text-sm text-slate-600">
