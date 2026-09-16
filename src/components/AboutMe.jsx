@@ -196,14 +196,14 @@ export default function AboutMe() {
                   LinkedIn
                 </a>
                 
-                {/* Kontakt Button (Sanfter Scroll nach unten) */}
-                <a 
-                  href="#contact" 
-                  className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all shadow-sm"
+               {/* Kontakt Button (Wechselt den Reiter) */}
+                <button 
+                  onClick={() => setActiveTab('contact')}
+                  className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all shadow-sm cursor-pointer"
                 >
                   <span>✉</span>
                   Kontakt
-                </a>
+                </button>            
               </div>
             </div>
           </div> {/* Ende Spalte 7 */}
