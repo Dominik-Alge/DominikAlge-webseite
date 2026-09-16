@@ -169,10 +169,10 @@ export default function CoreValues() {
               </div>
               <div className="flex-shrink-0">
                 <a
-                  href="#ueber-mich"
+                  href="#warum-ich"
                   className="inline-block bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-md transition duration-200 text-center"
                 >
-                  Mehr über meine Haltung
+                  Klartext wählen
                 </a>
               </div>
             </div>
