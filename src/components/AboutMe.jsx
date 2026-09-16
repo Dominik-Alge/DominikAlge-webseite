@@ -146,8 +146,9 @@ export default function AboutMe() {
                           Berufliche Meilensteine
                         </h5>
                         <ul className="space-y-1 font-medium">
-                          <li>• <strong>Professional Bachelor</strong> HF Maschinenbau</li>
-                          <li>• <strong>Professional Bachelor</strong> Ausbilder (eidg. FA)</li>
+                          <li>• <strong>BSc Wirtschaftsingenieur i. A.</strong> (Bachelor of Science)</li>
+                          <li>• <strong>Dipl. Techniker HF Maschinenbau</strong> (Professional Bachelor)</li>
+                          <li>• <strong>eidg. Fachausweis Ausbilder</strong> (Professional Bachelor)</li>
                           <li>• Polymechaniker EFZ (Niveau E)</li>
                         </ul>
                       </div>
