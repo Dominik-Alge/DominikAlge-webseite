@@ -111,27 +111,38 @@ export default function AboutMe() {
                     </p>
                   </div>
                 ) : (
-                  <div className="grid sm:grid-cols-2 gap-6 text-sm text-slate-600">
+                  <div className="grid sm:grid-cols-3 gap-6 text-sm text-slate-600">
                     <div>
                       <h4 className="font-black text-slate-900 uppercase tracking-wider text-xs mb-3 text-orange-600">
-                        Spezialgebiete
+                        Industrie &amp; KMU
                       </h4>
                       <ul className="space-y-2 font-medium">
-                        <li>• Operational Excellence & Lean</li>
-                        <li>• Wissensmanagement & Digitalisierung</li>
-                        <li>• Supply Chain & Lieferketten</li>
-                        <li>• Prozessstabilisierung (8D/Ishikawa)</li>
+                        <li>• Praxisnahe Digitalisierung &amp; KI</li>
+                        <li>• Krisenfeste Lieferketten &amp; Logistik</li>
+                        <li>• Effizienz &amp; Prozessoptimierung</li>
+                        <li>• Standortsicherung im Rheintal</li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="font-black text-slate-900 uppercase tracking-wider text-xs mb-3 text-orange-600">
-                        Führung & Entwicklung
+                        Berufsbegleitende Bildung
                       </h4>
                       <ul className="space-y-2 font-medium">
-                        <li>• Shopfloor Management (10+ MA)</li>
-                        <li>• Mitarbeiterentwicklung & Ausbildung</li>
-                        <li>• Ausbilder mit eidg. Fachausweis</li>
-                        <li>• Strategische Unternehmensführung</li>
+                        <li className="text-slate-900 font-bold">• 2x Professional Bachelor (HF &amp; FA)</li>
+                        <li>• 100% Erwerbsarbeit &amp; Studium parallel</li>
+                        <li>• Fundiertes Wissen aus dem 2. Bildungsweg</li>
+                        <li>• Praxisorientierte Weiterbildung an der Front</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-black text-slate-900 uppercase tracking-wider text-xs mb-3 text-orange-600">
+                        Führung &amp; Eigentum
+                      </h4>
+                      <ul className="space-y-2 font-medium">
+                        <li>• Teamleitung im Schichtbetrieb (10+ MA)</li>
+                        <li>• Immobilien- &amp; Mietwesen in der Praxis</li>
+                        <li>• Strategische &amp; finanzielle Führung</li>
+                        <li>• Nachwuchsförderung gegen Fachkräftemangel</li>
                       </ul>
                     </div>
                   </div>
