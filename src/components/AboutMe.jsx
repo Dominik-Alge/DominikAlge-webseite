@@ -195,10 +195,6 @@ export default function AboutMe() {
                 </a>
               </div>
             </div>
-
-          </div> {/* Ende Spalte 7 */}
-
-
           </div> {/* Ende Spalte 7 */}
         </div> {/* Ende Grid */}
       </div> {/* Ende Max-w-7xl */}
