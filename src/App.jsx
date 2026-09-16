@@ -16,7 +16,6 @@ function App() {
       <AboutMe />
       <WhyICandidate />
       <MyExperience />
-      <PoliticalTopics />
       <Endorsements />
       <CoreValues />
       <Vision />
