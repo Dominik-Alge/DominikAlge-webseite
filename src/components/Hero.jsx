@@ -82,11 +82,9 @@ export default function Hero() {
             <div className="absolute -top-4 -right-4 w-24 h-24 border-t-4 border-r-4 border-orange-500 rounded-tr-[40px]" />
             
             <div className="h-[550px] w-full rounded-[40px] shadow-2xl overflow-hidden relative bg-slate-100 z-10 transform hover:scale-[1.01] transition-transform duration-300">
-              <Image 
+              <img 
                 src="/Dominik.jpg" 
-                alt="Dominik Alge" 
-                width={450}
-                height={550}
+                alt="Dominik Alge – Kandidat Kantonsrat St. Gallen" 
                 className="w-full h-full object-cover object-center"
               />
             </div>
