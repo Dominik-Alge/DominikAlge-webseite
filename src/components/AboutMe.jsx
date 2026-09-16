@@ -18,7 +18,7 @@ export default function AboutMe() {
           </h2>
           <p className="mt-6 text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Erfahren Sie mehr über meinen Hintergrund als Führungskraft in der Industrie, 
-            ehemaliger KMU-Unternehmer und Gestalter digitaler Wissensarchitekturen.
+            aktiver KMU-Unternehmer im Immobilienbereich und Gestalter praxisnaher digitaler Innovationen.
           </p>
         </div>
 
@@ -95,10 +95,10 @@ export default function AboutMe() {
                       „Erfolgreiche Produktion und gesellschaftlicher Wohlstand entstehen dort, wo Menschen, Prozesse, Technologie und Wirtschaftlichkeit zusammenspielen.“
                     </p>
                     <p>
-                      In meiner Laufbahn durfte ich sowohl operative Produktionsbereiche an der Werkbank steuern als auch ein eigenes Familienunternehmen als Geschäftsführer führen. Diese Erfahrungen haben meinen Blick auf die industrielle Wertschöpfung tief geprägt. 
+                      Mein Weg führt von der Pike auf durch die Rheintaler Industrie: Gestartet an der Werkbank, durfte ich unser Familienunternehmen fast 17 Jahre lang operativ führen. Heute begleite ich die Firma als Verwaltungsrat bei der Neuausrichtung als immobilienverwaltende AG. Als aktiver KMU-Unternehmer und Vermieter kenne ich die Realität des Immobilienmarktes sowie die Anliegen von Eigentümern und Mietern aus erster Hand. 
                     </p>
                     <p>
-                      Heute verantworte ich bei der **BRUDERER AG** einen hochspezialisierten Fertigungsbereich im Mehrschichtbetrieb. Ich weiss aus erster Hand, wie wichtig funktionierende Lieferketten und leistungsfähige Teams für unseren Kanton sind.
+                      Aktuell verantworte ich bei der <strong>BRUDERER AG</strong> ein hochpräzises Produktionsteam im Schichtbetrieb. Als eidg. diplomierter Ausbilder erlebe ich täglich die grossen Struggles bei der Facharbeitersuche und der Nachwuchsförderung. Ich weiss genau, unter welchem Druck unsere Betriebe stehen, und setze mich im Studium für praxisnahe digitale Lösungen (wie KI) ein, um unser Produktionswissen im Rheintal langfristig zu sichern.
                     </p>
                   </div>
                 ) : (
