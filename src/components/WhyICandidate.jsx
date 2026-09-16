@@ -24,6 +24,20 @@ const approachItems = [
     title: "Echtes Sparen statt Kostenabwälzung",
     text: "Ein Sparprogramm ist wertlos, wenn der Kanton die Lasten einfach auf die Gemeinden abschiebt.",
     details: "Durch meine Arbeit in der GPK sehe ich genau, wo die Hebel angesetzt werden müssen. Es ist keine echte Budgetdisziplin, wenn kantonale Ausgaben durch Gesetzesänderungen zu kommunalen Lasten werden. Wir müssen Dritteffekte konsequent mitdenken: Ein starker Kanton St. Gallen braucht finanziell gesunde, handlungsfähige Gemeinden – ohne administrative Tricksereien.",
+  },
+  {
+    icon: "🏭",
+    title: "Werkplatz & Innovation",
+    text: "Unser Wohlstand im Rheintal basiert auf einem starken, wettbewerbsfähigen Industrie- und KMU-Standort.",
+    bullets: ["Starker Industrie- & KMU-Standort", "Technologieoffene Zukunft", "Bürokratieabbau für Betriebe", "Sicherung von Lieferketten"],
+    details: "Als Gruppenleiter in der Präzisionsfertigung kenne ich die Realität des St. Galler Rheintals. Unser Wohlstand basiert auf einem starken Werkplatz. Ich setze mich dafür ein, dass KMU und Industrie von administrativer Last befreit werden und wir durch Technologieoffenheit – von moderner CNC-Fertigung bis zu praxisnahen KI-Wissenssystemen – international wettbewerbsfähig bleiben.",
+  },
+  {
+    icon: "🎓",
+    title: "Bildung & Ausbildung",
+    text: "Lebenslanges Lernen fördern und das duale Bildungssystem gezielt für die Praxis stärken.",
+    bullets: ["Duales Bildungssystem stärken", "Moderne Erwachsenenbildung", "Workplace Learning fördern", "Praxisnaher Wissenstransfer"],
+    details: "Als Ausbilder mit eidg. Fachausweis und Student des Wirtschaftsingenieurwesens weiss ich: Lebenslanges Lernen darf kein leeres Schlagwort sein. Ich will die Berufsbildung und das duale System stärken. Wir müssen Ausbildungsmethoden modernisieren, um den demografischen Wandel abzufedern und Fachkräfte genau dort zu entwickeln, wo die Praxis sie braucht.",
   }
 ];
 
