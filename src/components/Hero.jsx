@@ -23,26 +23,16 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-orange-50/40 via-white to-slate-100/60 flex items-center overflow-hidden">
+    <section className="min-h-screen bg-gradient-to-br from-orange-50/50 via-white to-slate-100/50 flex items-center">
       <div className="max-w-7xl mx-auto px-6 py-20 w-full">
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* Text-Inhalt */}
           <div className="space-y-6">
-            
-            {/* Badge mit integriertem "Die Mitte"-Symbol */}
-            <div className="inline-flex items-center gap-3 rounded-full bg-white px-4 py-2 shadow-sm border border-orange-100">
-              <span className="text-sm font-bold text-slate-900 tracking-tight flex items-center gap-1.5">
-                Die Mitte
-                {/* Das ikonische Bogen-Symbol der Partei als CSS-Shape */}
-                <span className="inline-block w-2.5 h-5 border-r-[3.5px] border-t-[3.5px] border-orange-500 rounded-tr-full transform rotate-[15deg] translate-y-[-1px]" />
-              </span>
-              <span className="w-1 h-1 rounded-full bg-slate-300" />
-              <span className="text-sm font-semibold text-orange-600">
-                Kantonsrat St. Gallen
-              </span>
-            </div>
+            <span className="inline-block rounded-full bg-white px-4 py-2 shadow-sm text-sm font-semibold text-orange-600 border border-orange-100">
+              Kandidat für den Kantonsrat St. Gallen
+            </span>
 
             <h1 className="text-5xl lg:text-7xl font-black text-slate-900 tracking-tight leading-tight">
               Praxis stärken.
@@ -69,7 +59,7 @@ export default function Hero() {
               <a
                 href="#themen"
                 onClick={(e) => scrollToSection(e, 'themen')}
-                className="inline-block bg-orange-500 text-white font-bold px-8 py-4 rounded-2xl shadow-lg shadow-orange-500/20 hover:bg-orange-600 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 text-center"
+                className="inline-block bg-orange-500 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg shadow-orange-500/20 hover:bg-orange-600 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 text-center"
               >
                 Meine Themen
               </a>
@@ -77,30 +67,25 @@ export default function Hero() {
               <a
                 href="#ueber-mich"
                 onClick={(e) => scrollToSection(e, 'ueber-mich')}
-                className="inline-block border-2 border-slate-800 text-slate-800 font-bold px-8 py-4 rounded-2xl hover:bg-slate-900 hover:text-white hover:-translate-y-0.5 transition-all duration-200 text-center"
+                className="inline-block border-2 border-slate-800 text-slate-800 font-semibold px-8 py-4 rounded-2xl hover:bg-slate-900 hover:text-white hover:-translate-y-0.5 transition-all duration-200 text-center"
               >
                 Über mich
               </a>
             </div>
           </div>
 
-          {/* Bild-Container mit "Die Mitte"-Klammer-Rahmen */}
-          <div className="relative justify-self-center lg:justify-self-end w-full max-w-[440px] mt-8 lg:mt-0">
-            {/* Orange Design-Klammern im Hintergrund */}
-            <div className="absolute -inset-3 rounded-[48px] border-4 border-orange-500/10 pointer-events-none scale-105" />
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-[5px] border-l-[5px] border-orange-500 rounded-bl-[40px]" />
-            <div className="absolute -top-4 -right-4 w-24 h-24 border-t-[5px] border-r-[5px] border-orange-500 rounded-tr-[40px]" />
+          {/* Bild-Container mit "Die Mitte"-Klammer-Effekt */}
+          <div className="relative justify-self-center lg:justify-self-end w-full max-w-[450px]">
+            {/* Dekoratives Element im Hintergrund (stilisiert die Logo-Klammer) */}
+            <div className="absolute -inset-3 rounded-[48px] border-4 border-orange-500/20 pointer-events-none scale-105" />
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-4 border-l-4 border-orange-500 rounded-bl-[40px]" />
+            <div className="absolute -top-4 -right-4 w-24 h-24 border-t-4 border-r-4 border-orange-500 rounded-tr-[40px]" />
             
-            {/* Bild-Rahmen */}
-            <div className="h-[560px] w-full rounded-[40px] shadow-2xl overflow-hidden relative bg-slate-200 z-10 transform hover:scale-[1.01] transition-transform duration-300 group">
-              {/* Shimmer-Effekt während das Foto lädt */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite] pointer-events-none z-0" />
-              
+            <div className="h-[550px] w-full rounded-[40px] shadow-2xl overflow-hidden relative bg-slate-100 z-10 transform hover:scale-[1.01] transition-transform duration-300">
               <img 
                 src="Dominik.jpg" 
-                alt="Dominik Alge - Kandidat Die Mitte St. Gallen" 
-                className="w-full h-full object-cover object-center relative z-10"
-                loading="eager"
+                alt="Dominik Alge" 
+                className="w-full h-full object-cover object-center"
               />
             </div>
           </div>
@@ -111,4 +96,3 @@ export default function Hero() {
     </section>
   );
 }
-
