@@ -10,15 +10,21 @@ const approachItems = [
   {
     icon: "🔍",
     title: "Technische Perspektive & Logik",
-    text: "Herausforderungen löst man nicht mit Ideologie, sondern mit strukturierter Ursachenanalyse.",
+    text: "Herausforderungen löst man nicht mit Polit-Phrasen, sondern mit strukturierter Ursachenanalyse.",
     details: "In der Industrie nutzen wir klare Analysetools (wie 8D oder Ishikawa), um Probleme an der Wurzel zu packen. Genau diesen Ansatz bringe ich in die Politik ein: Sachzwänge und technologische Notwendigkeiten anerkennen, logische Strukturen schaffen und messbare Lösungen erarbeiten, statt Scheindebatten zu führen.",
   },
   {
     icon: "🛠️",
     title: "Pragmatismus statt Bürokratie",
-    text: "Regulierungen müssen praxistauglich sein. Was den Werkplatz lähmt, gehört optimiert.",
+    text: "Regulierungen müssen praxistauglich sein. Was unsere KMU lähmt, gehört wegreduziert.",
     details: "Innovation braucht Freiraum, keine administrativen Hürden. Mein Ziel ist ein starker, technologieoffener Kanton St. Gallen. Das bedeutet: Bürokratie abbauen, KMU entlasten und Rahmenbedingungen schaffen, die es Unternehmen erlauben, sich auf ihre Kernkompetenzen zu konzentrieren – pragmatisch, direkt und lösungsorientiert.",
   },
+  {
+    icon: "⚖️",
+    title: "Echtes Sparen statt Kostenabwälzung",
+    text: "Ein Sparprogramm ist wertlos, wenn der Kanton die Lasten einfach auf die Gemeinden abschiebt.",
+    details: "Durch meine Arbeit in der GPK sehe ich genau, wo die Hebel angesetzt werden müssen. Es ist keine echte Budgetdisziplin, wenn kantonale Ausgaben durch Gesetzesänderungen zu kommunalen Lasten werden. Wir müssen Dritteffekte konsequent mitdenken: Ein starker Kanton St. Gallen braucht finanziell gesunde, handlungsfähige Gemeinden – ohne administrative Tricksereien.",
+  }
 ];
 
 export default function WhyICandidate() {
