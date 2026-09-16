@@ -121,28 +121,29 @@ export default function AboutMe() {
                   <div className="grid sm:grid-cols-2 gap-6 text-sm text-slate-600">
                     <div>
                       <h4 className="font-black text-slate-900 uppercase tracking-wider text-xs mb-3 text-orange-600">
-                        Industrie &amp; KMU
+                        Wirtschaft &amp; Industrie
                       </h4>
                       <ul className="space-y-2 font-medium">
-                        <li>• Effiziente Produktion (Lean Management)</li>
-                        <li>• Digitale Innovation &amp; Wissenssicherung</li>
-                        <li>• Krisenfeste Lieferketten &amp; Logistik</li>
-                        <li>• Standortsicherung im Rheintal</li>
+                        <li>• **Standortsicherung im Rheintal:** Rahmenbedingungen für sichere Arbeitsplätze schaffen.</li>
+                        <li>• **Effiziente Produktion:** Lean Management für wettbewerbsfähige KMU einsetzen.</li>
+                        <li>• **Praxisnahe Innovation:** Digitale Tools und KI zur Wissenssicherung nutzen.</li>
+                        <li>• **Robuste Lieferketten:** Regionale Logistikstrukturen strategisch stärken.</li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="font-black text-slate-900 uppercase tracking-wider text-xs mb-3 text-orange-600">
-                        Führung &amp; Eigentum
+                        Führung &amp; Realpolitik
                       </h4>
                       <ul className="space-y-2 font-medium">
-                        <li>• Teamleitung im Schichtbetrieb (10+ MA)</li>
-                        <li>• Immobilien- &amp; Mietwesen in der Praxis</li>
-                        <li>• Strategische &amp; finanzielle Führung (VR)</li>
-                        <li>• Nachhaltige Qualitäts- &amp; Prozesssicherung</li>
+                        <li>• **Führung mit Bodenhaftung:** Schichtbetrieb-Erfahrung für ehrliche Politik.</li>
+                        <li>• **Immobilien- &amp; Mietwesen:** Pragmatische Lösungen ohne ideologische Verbote.</li>
+                        <li>• **Finanzielle Verantwortung:** Strategische Weitsicht aus der VR-Praxis einbringen.</li>
+                        <li>• **Nachhaltige Qualität:** Prozesse auf Kantons-Ebene optimieren statt Bürokratie aufbauen.</li>
                       </ul>
                     </div>
                   </div>
                 )}
+
 
                 {activeTab === 'education' && (
                   <div className="space-y-4 text-sm text-slate-600">
