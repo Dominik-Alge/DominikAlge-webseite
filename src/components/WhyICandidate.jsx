@@ -4,7 +4,7 @@ const approachItems = [
   {
     icon: "⚙️",
     title: "Der Blick aus der Praxis",
-    text: "Politik braucht weniger Theorie und mehr Verständnis für den realen Arbeitsalltag.",
+    text: "Werkbank statt Elfenbeinturm: Ich kenne den echten Arbeitsalltag.",
     details: "Als Gruppenleiter in der Präzisionsfertigung stehe ich täglich an der Schnittstelle von Mensch, Technik und Wirtschaft. Ich kenne den Druck im Mehrschichtbetrieb und die Bedürfnisse von Arbeitnehmenden und Familien aus eigener Erfahrung. Diese ungefilterte Praxisperspektive fehlt im Kantonsrat viel zu oft.",
   },
   {
@@ -22,8 +22,8 @@ const approachItems = [
   {
     icon: "⚖️",
     title: "Echtes Sparen statt Kostenabwälzung",
-    text: "Ein Sparprogramm ist wertlos, wenn der Kanton die Lasten einfach auf die Gemeinden abschiebt.",
-    details: "Durch meine Arbeit in der GPK sehe ich genau, wo die Hebel angesetzt werden müssen. Es ist keine echte Budgetdisziplin, wenn kantonale Ausgaben durch Gesetzesänderungen zu kommunalen Lasten werden. Wir müssen Dritteffekte konsequent mitdenken: Ein starker Kanton St. Gallen braucht finanziell gesunde, handlungsfähige Gemeinden – ohne administrative Tricksereien.",
+    text: "Ehrliche Finanzen: Keine kantonalen Tricks auf Kosten unserer Gemeinden.",
+    details: "Durch meine langjährige Arbeit in der GPK sehe ich genau, wo die Hebel angesetzt werden müssen. Es ist keine echte Budgetdisziplin, wenn kantonale Ausgaben durch Gesetzesänderungen zu kommunalen Lasten werden. Wir müssen Dritteffekte konsequent mitdenken: Ein starker Kanton St. Gallen braucht finanziell gesunde, handlungsfähige Gemeinden – ohne administrative Tricksereien.",
   },
   {
     icon: "🏭",
