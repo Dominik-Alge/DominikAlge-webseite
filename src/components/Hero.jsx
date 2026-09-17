@@ -14,7 +14,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentValueIndex((prevIndex) => (prevIndex + 1) % values.length);
-    }, 3000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -24,7 +24,7 @@ export default function Hero() {
       const timeout = setTimeout(() => {
         setDisplayedText((prev) => prev + welcomeText.charAt(charIndex));
         setCharIndex((prev) => prev + 1);
-      }, 400); // 40ms pro Buchstabe – fühlt sich natürlich und flüssig an
+      }, 15); // 40ms pro Buchstabe – fühlt sich natürlich und flüssig an
       return () => clearTimeout(timeout);
     }
   }, [charIndex]);
