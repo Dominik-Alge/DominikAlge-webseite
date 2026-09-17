@@ -58,8 +58,8 @@ export default function Contact() {
           <div style={styles.donationBox}>
             <h3 style={styles.smallTitle}>🏦 Bankverbindung (IBAN)</h3>
             <div style={styles.bankDetails}>
-              <p><strong>Bank:</strong> [Raiffeisenbank Diepoldsau-Schmitter]</p>
-              <p><strong>Konto auf den Namen:</strong> [Dominik Alge]</p>
+              <p><strong>Bank:</strong> Raiffeisenbank Diepoldsau-Schmitter</p>
+              <p><strong>Konto auf den Namen:</strong> Dominik Alge</p>
               <p><strong>IBAN:</strong> CH34 8080 8005 1035 1199 9</p>
             </div>
             {/* GARANTIERT EIN ECHTER BUTTON (OHNE JAVASCRIPT / OHNE HOVER-FEHLER) */}
