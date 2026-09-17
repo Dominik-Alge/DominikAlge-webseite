@@ -136,9 +136,9 @@ export default function AboutMe() {
                       </h4>
                       <ul className="space-y-2 font-medium">
                         <li>• <strong className="text-slate-900">Führung mit Bodenhaftung:</strong> Vom Schichtbetrieb bis in den Verwaltungsrat.</li>
-                        <li>• <strong className="text-slate-900">Immobilien- &amp; Mietwesen:</strong> Faire Mieten und sichere Investitionen durch lösungsorientierten Dialog.</li>
-                        <li>• <strong className="text-slate-900">Finanzielle Verantwortung:</strong> Zwei Jahrzehnte Budgetverantwortung für gesunde Kantonsfinanzen nutzen.</li>
-                        <li>• <strong className="text-slate-900">Nachhaltige Qualität:</strong> Bürokratie abbauen, damit mehr Zeit fürs Wesentliche bleibt.</li>
+                        <li>• <strong className="text-slate-900">Wohn- &amp; Lebensraum:</strong> Faire Mieten und sichere Investitionen durch lösungsorientierten Dialog.</li>
+                        <li>• <strong className="text-slate-900">Finanzpolitik mit Weitsicht:</strong> Zwei Jahrzehnte Budgetverantwortung für gesunde Kantonsfinanzen nutzen.</li>
+                        <li>• <strong className="text-slate-900">Effizienter Kanton:</strong> Bürokratie abbauen, damit mehr Zeit fürs Wesentliche bleibt.</li>
                       </ul>
                     </div>
                   </div>
