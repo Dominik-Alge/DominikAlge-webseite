@@ -8,6 +8,7 @@ import Priorities from "./components/Priorities";
 import AboutMe from "./components/AboutMe";
 import Endorsements from "./components/Endorsements";
 import Contact from "./components/contact";
+import Datenschutz from "./components/Datenschutz";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Endorsements />
       <CoreValues />
       <Contact />
+      <Datenschutz />
     </>
   );
 }
