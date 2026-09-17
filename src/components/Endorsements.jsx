@@ -2,22 +2,22 @@ import { useState } from "react";
 
 const testimonials = [
   {
-    quote: "Dominik Alge bringt genau das mit, was der Politik heute oft fehlt: Ein tiefes Verständnis für die Industrie und den Mut, Probleme mit technischer Logik statt mit Ideologie anzupacken.",
-    name: "Hans-Peter M.",
-    role: "Inhaber eines KMU-Betriebs im Rheintal",
-    avatar: "🛠️"
+    quote: "Es ist vollkommen legitim, wenn jemand nicht krampfhaft versucht, Vereinsmensch zu sein. Aber Dominik ist einfach da, wenn wir handwerkliche Hilfe beim Suuserfest brauchen – und als Ein-Mann-Fanklub an der Seitenlinie, wenn seine Frau spielt. Das ist echte Bodenhaftung.",
+    name: "Stimme aus dem Rheintaler Vereinsleben",
+    role: "STV Au -Mitglied",
+    avatar: "⚽"
   },
   {
-    quote: "Aus unserer gemeinsamen Zeit in der Geschäftsprüfungskommission (GPK) weiss ich, wie präzise und verantwortungsvoll Dominik mit Finanzen umgeht. Er schaut hin, analysiert die Fakten und entscheidet im Sinne des Allgemeinwohls.",
-    name: "Sarah J.",
-    role: "Ehemaliges GPK-Mitglied / Lokalpolitikerin",
-    avatar: "📊"
+    quote: "Wenn bei uns am Wochenende wirklich Not am Mann war, hat Dominik nicht gezögert und angepackt. In der heutigen Arbeitswelt ist so eine Einstellung unbezahlbar. Wer über den Tellerrand und über '9 to 5' hinausdenkt, bringt genau die richtige Mentalität für die Politik mit.",
+    name: "Beat K.",
+    role: "Inhaber eines Gewerbebetriebs & langjähriger Partner",
+    avatar: "🏢"
   },
   {
-    quote: "Als Ausbilder und Gruppenleiter versteht Dominik es hervorragend, Menschen zu fordern und gleichzeitig zu fördern. Er übernimmt soziale Verantwortung nicht nur als Schlagwort, sondern lebt sie täglich im Betrieb.",
-    name: "Thomas W.",
-    role: "Fachkraft CNC-Fertigung / Arbeitskollege",
-    avatar: "⚙️"
+    quote: "Als Vermieter war die Zusammenarbeit mit Dominik immer extrem unkompliziert. Wenn es ein Problem gab, wurde es gelöst – ohne administrativen Leerlauf. Er hat seine Aufgabe einfach erfüllt. Genau so stelle ich mir einen pragmatischen Politiker vor.",
+    name: "Marc L.",
+    role: "Ehemaliger Mieter",
+    avatar: "🔑"
   }
 ];
 
