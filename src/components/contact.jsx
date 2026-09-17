@@ -62,6 +62,12 @@ export default function Contact() {
               <p><strong>Konto auf den Namen:</strong> [Dominik Alge]</p>
               <p><strong>IBAN:</strong> CH34 8080 8005 1035 1199 9</p>
             </div>
+            {/* NEU: Download-Link für den QR-Code / Einzahlungsschein */}
+            <div style={styles.downloadQrContainer}>
+              <a href="/Rechnung.pdf" download="QR_Code_Einzahlungsschein.pdf" style={styles.downloadQrLink}>
+                📄 QR-Code / Einzahlungsschein herunterladen (PDF)
+              </a>
+            </div>
           </div>
         </section>
 
