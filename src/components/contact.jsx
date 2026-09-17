@@ -62,13 +62,26 @@ export default function Contact() {
               <p><strong>Konto auf den Namen:</strong> [Dominik Alge]</p>
               <p><strong>IBAN:</strong> CH34 8080 8005 1035 1199 9</p>
             </div>
-            {/* BUTTON OHNE JAVASCRIPT: Nutzt die CSS-Klasse für den Hover */}
-            <div style={styles.downloadQrContainer}>
+            {/* GARANTIERT EIN ECHTER BUTTON (OHNE JAVASCRIPT / OHNE HOVER-FEHLER) */}
+            <div style={{ marginTop: '15px', textAlign: 'center' }}>
               <a 
                 href="/Rechnung.pdf" 
                 download="QR_Code_Einzahlungsschein.pdf" 
-                className="pure-css-download-button"
-                style={styles.downloadQrButton}
+                style={{
+                  display: 'block',
+                  textAlign: 'center',
+                  backgroundColor: '#3182ce', /* Das gleiche Blau wie deine Links */
+                  color: '#ffffff',
+                  padding: '12px 20px',
+                  fontSize: '0.95rem',
+                  fontWeight: 'bold',
+                  textDecoration: 'none',
+                  borderRadius: '6px',
+                  border: '1px solid #2b6cb0',
+                  boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                  boxSizing: 'border-box',
+                  width: '100%'
+                }}
               >
                 📄 QR-Code / Einzahlungsschein (PDF)
               </a>
