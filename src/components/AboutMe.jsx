@@ -34,7 +34,7 @@ export default function AboutMe() {
                 className="w-full h-full object-cover object-center" 
               />
               <div className="absolute top-4 left-4 bg-orange-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-md">
-                Über 20 Jahre Industrieerfahrung
+                Über 2 Jahrzehnte Erfahrung in der Industrie
               </div>
             </div>
             
