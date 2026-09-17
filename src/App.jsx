@@ -17,8 +17,8 @@ function App() {
       <WhyICandidate />
       <MyExperience />
       <Vision />
-      <CoreValues />
       <Endorsements />
+      <CoreValues />
       <Contact />
     </>
   );
