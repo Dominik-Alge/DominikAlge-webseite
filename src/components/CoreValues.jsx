@@ -106,7 +106,7 @@ export default function CoreValues() {
                   Diesen unkomplizierten Spirit will ich nach St. Gallen bringen:
                 </p>
                 <ul className="mt-6 space-y-3 text-slate-700 font-medium">
-                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Sachzwänge vor Parteiideologie stellen</li>
+                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Messbare Ergebnisse über parteipolitisches Taktieren stellen</li>
                   <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Fokus auf machbare, wirtschaftliche Kompromisse</li>
                   <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Effizienzsteigerung in administrativen Prozessen</li>
                 </ul>
