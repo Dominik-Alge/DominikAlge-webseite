@@ -16,9 +16,9 @@ function App() {
       <AboutMe />
       <WhyICandidate />
       <MyExperience />
-      <Endorsements />
-      <CoreValues />
       <Vision />
+      <CoreValues />
+      <Endorsements />
       <Contact />
     </>
   );
