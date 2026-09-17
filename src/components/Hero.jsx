@@ -22,7 +22,7 @@ export default function Hero() {
           {/* Text-Inhalt */}
           <div className="space-y-6">
             <span className="inline-block rounded-full bg-white px-4 py-2 shadow-sm text-sm font-semibold text-orange-600 border border-orange-100">
-              Kandidat für den Kantonsrat St. Gallen
+              Dominik Alge – Kandidat Kantonsrat St. Gallen - Wahlkreis Rheintal / Au
             </span>
 
             <h1 className="text-5xl lg:text-7xl font-black text-slate-900 tracking-tight leading-tight">
