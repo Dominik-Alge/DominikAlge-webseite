@@ -3,6 +3,30 @@ import { useState } from 'react';
 export default function AboutMe() {
   // State für die 3 Tabs ("focus", "cv" oder "education")
   const [activeTab, setActiveTab] = useState('story');
+
+  // Schreibmaschinen-Effekt für die Sektions-Einleitung
+  const introText = "Erfahren Sie mehr über meinen Hintergrund als Führungskraft in der Industrie, aktiver KMU-Unternehmer im Immobilienbereich und Gestalter praxisnaher digitaler Innovationen.";
+  const [displayedText, setDisplayedText] = useState("");
+  const [charIndex, setCharIndex] = useState(0);
+
+  // Setzt die Animation zurück und startet sie neu, wenn der Reiter "Bildung" angewählt wird
+  useEffect(() => {
+    if (activeTab === 'bildung') {
+      setDisplayedText("");
+      setCharIndex(0);
+    }
+  }, [activeTab]);
+
+  // Der rasant-flüssige Tipp-Effekt
+  useEffect(() => {
+    if (activeTab === 'bildung' && charIndex < highlightText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + highlightText.charAt(charIndex));
+        setCharIndex((prev) => prev + 1);
+      }, 12); // 12ms für einen dynamischen Aufbau
+      return () => clearTimeout(timeout);
+    }
+  }, [charIndex, activeTab]);
   
   return (
     <section id="ueber-mich" className="py-24 bg-white">
@@ -147,9 +171,20 @@ export default function AboutMe() {
 
                 {activeTab === 'education' && (
                   <div className="space-y-4 text-sm text-slate-600">
-                    <p className="text-slate-900 font-medium">
-                      Alle höheren Abschlüsse wurden zu <strong>100% nebenberuflich</strong> und parallel zur vollen Erwerbstätigkeit an der Front erarbeitet:
-                    </p>
+                    {/* BRANDING-KONSISTENZ: Das animierte Widget exklusiv für Ihre größte Stärke */}
+                  <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-50 to-orange-100/50 border border-orange-200/60 px-5 py-3 rounded-2xl shadow-sm w-full min-h-[54px]">
+                   <span className="relative flex h-2 w-2 flex-shrink-0">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                   </span>
+                
+                   <p className="text-sm md:text-base text-slate-800 font-semibold tracking-wide leading-relaxed">
+                   {displayedText}
+                    {charIndex < highlightText.length && (
+                     <span className="inline-block w-[2px] h-[1em] bg-orange-500 ml-1 animate-pulse vertical-middle" />
+                   )}
+                  </p>
+                 </div>
                     <div className="grid sm:grid-cols-2 gap-4 mt-2">
                       <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
                         <h5 className="font-bold text-slate-900 text-xs uppercase tracking-wider text-orange-600 mb-1">
