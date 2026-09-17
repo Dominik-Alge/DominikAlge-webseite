@@ -6,7 +6,7 @@ export default function Hero() {
   const [currentValueIndex, setCurrentValueIndex] = useState(0);
 
   // 2. Schreibmaschinen-Effekt für die Begrüssung
-  const welcomeText = "Herzlich willkommen und vielen Dank für Ihr Interesse. 👋";
+  const welcomeText = "Hoi, schüa das du do beasch und di für mini Kandidatur interessierst 👋";
   const [displayedText, setDisplayedText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
 
@@ -14,7 +14,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentValueIndex((prevIndex) => (prevIndex + 1) % values.length);
-    }, 2000);
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
 
