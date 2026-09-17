@@ -41,9 +41,8 @@ export default function Hero() {
             </p>
             
             <p className="text-lg text-slate-700 max-w-xl leading-relaxed">
-              Diese Erfahrungen möchte ich in den Kantonsrat St. Gallen einbringen
-              und mich für einen starken Werkplatz, moderne Bildung und eine
-              technologieoffene Zukunft einsetzen.
+              Ich komme aus der Praxis. Ich habe gelernt, Verantwortung zu übernehmen. 
+              Und ich möchte diese Erfahrung dort einbringen, wo politische Rahmenbedingungen geschaffen werden.
             </p>
 
             <div className="pt-4 flex flex-wrap gap-4">
