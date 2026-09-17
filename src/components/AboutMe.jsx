@@ -179,10 +179,10 @@ export default function AboutMe() {
                      </span>
                 
                      <p className="text-sm md:text-base text-slate-800 font-semibold tracking-wide leading-relaxed">
-                      {displayedText}
-                      {charIndex < highlightText.length && (
-                       <span className="inline-block w-[2px] h-[1em] bg-orange-500 ml-1 animate-pulse vertical-middle" />
-                      )}
+                       {displayedText}
+                       {charIndex < highlightText.length && (
+                         <span className="inline-block w-[2px] h-[1em] bg-orange-500 ml-1 animate-pulse vertical-middle" />
+                       )}
                      </p>
                     </div>
                     <div className="grid sm:grid-cols-2 gap-4 mt-2">
