@@ -135,10 +135,10 @@ export default function AboutMe() {
                         Führung &amp; Realpolitik
                       </h4>
                       <ul className="space-y-2 font-medium">
-                        <li>• <strong className="text-slate-900">Führung mit Bodenhaftung:</strong> Schichtbetrieb-Erfahrung für ehrliche Politik.</li>
-                        <li>• <strong className="text-slate-900">Immobilien- &amp; Mietwesen:</strong> Pragmatische Lösungen ohne ideologische Verbote.</li>
-                        <li>• <strong className="text-slate-900">Finanzielle Verantwortung:</strong> Strategische Weitsicht aus der VR-Praxis einbringen.</li>
-                        <li>• <strong className="text-slate-900">Nachhaltige Qualität:</strong> Prozesse auf Kantons-Ebene optimieren statt Bürokratie aufbauen.</li>
+                        <li>• <strong className="text-slate-900">Führung mit Bodenhaftung:</strong> Vom Schichtbetrieb bis in den Verwaltungsrat.</li>
+                        <li>• <strong className="text-slate-900">Immobilien- &amp; Mietwesen:</strong> Faire Mieten und sichere Investitionen durch lösungsorientierten Dialog.</li>
+                        <li>• <strong className="text-slate-900">Finanzielle Verantwortung:</strong> Zwei Jahrzehnte Budgetverantwortung für gesunde Kantonsfinanzen nutzen.</li>
+                        <li>• <strong className="text-slate-900">Nachhaltige Qualität:</strong> Bürokratie abbauen, damit mehr Zeit fürs Wesentliche bleibt.</li>
                       </ul>
                     </div>
                   </div>
