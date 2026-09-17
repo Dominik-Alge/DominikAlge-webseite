@@ -131,12 +131,12 @@ export default function CoreValues() {
                 </h3>
                 <p className="mt-4 text-slate-700 leading-relaxed">
                   Als Techniker weiss ich, dass Berechnungen stimmen müssen, damit die Praxis funktioniert. 
-                  Politische Vorlagen müssen denselben Belastungsproben standhalten:
+                  Politische Vorlagen dürfen keine Luftschlösser sein, sondern müssen der Realität standhalten:
                 </p>
                 <ul className="mt-6 space-y-3 text-slate-700 font-medium">
-                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Technologieoffene Ansätze (z.B. bei Energie- und Digitalfragen)</li>
-                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Gesetzgebung basierend auf harten Daten und Studien</li>
-                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Förderung von angewandter Forschung und Entwicklung im Kanton</li>
+                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Ideologiefreie Lösungen, die physikalisch und ökonomisch aufgehen</li>
+                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Gesetzgebung basierend auf harten Daten, Fakten und Praxisprüfungen</li>
+                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Förderung von konkreter Innovation und angewandter Forschung im Kanton</li>
                 </ul>
               </div>
               <div className="flex-shrink-0">
