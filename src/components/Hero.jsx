@@ -51,7 +51,7 @@ export default function Hero() {
                 href="#warum-ich"
                 className="inline-block bg-orange-500 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg shadow-orange-500/20 hover:bg-orange-600 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 text-center"
               >
-                Warum ich kandidiere
+                Meine Kernanliegen
               </a>
 
               {/* SAUBERER HTML-LINK OHNE ONCLICK */}
