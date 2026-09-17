@@ -70,7 +70,7 @@ export default function Contact() {
                 style={{
                   display: 'block',
                   textAlign: 'center',
-                  backgroundColor: '#3182ce', /* Das gleiche Blau wie deine Links */
+                  backgroundColor: '#00a3e0', /* Das gleiche Blau wie deine Links */
                   color: '#ffffff',
                   padding: '12px 20px',
                   fontSize: '0.95rem',
