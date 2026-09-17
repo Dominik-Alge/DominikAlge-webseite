@@ -14,7 +14,7 @@ export default function AboutMe() {
             Der Kandidat persönlich
           </span>
           <h2 className="mt-4 text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">
-            Praxis für den Kantonsrat
+            Ein Praktiker, der die Realität unserer Industrie und KMU kennt.
           </h2>
           <p className="mt-6 text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Erfahren Sie mehr über meinen Hintergrund als Führungskraft in der Industrie, 
