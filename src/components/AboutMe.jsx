@@ -75,7 +75,7 @@ export default function AboutMe() {
             </div>
           </div>
 
-                    {/* Rechte Spalte: Navigation, Content & Connect (7 von 12 Spalten) */}
+          {/* Rechte Spalte: Navigation, Content & Connect (7 von 12 Spalten) */}
           <div className="lg:col-span-7 w-full flex flex-col justify-between min-h-[460px]">
             
             <div>
@@ -148,26 +148,11 @@ export default function AboutMe() {
                         Wirtschaft &amp; Industrie
                       </h4>
                       <ul className="space-y-2 font-medium">
-                        <li>• <strong className="text-slate-900">Standortsicherung im Rheintal:</strong> Rahmenbedingungen für sichere Arbeitsplätze schaffen.</li>
-                        <li>• <strong className="text-slate-900">Effiziente Produktion:</strong> Lean Management für wettbewerbsfähige KMU einsetzen.</li>
-                        <li>• <strong className="text-slate-900">Praxisnahe Innovation:</strong> Digitale Tools und KI zur Wissenssicherung nutzen.</li>
-                        <li>• <strong className="text-slate-900">Robuste Lieferketten:</strong> Regionale Logistikstrukturen strategisch stärken.</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-black text-slate-900 uppercase tracking-wider text-xs mb-3 text-orange-600">
-                        Führung &amp; Realpolitik
-                      </h4>
-                      <ul className="space-y-2 font-medium">
-                        <li>• <strong className="text-slate-900">Führung mit Bodenhaftung:</strong> Vom Schichtbetrieb bis in den Verwaltungsrat.</li>
-                        <li>• <strong className="text-slate-900">Wohn- &amp; Lebensraum:</strong> Faire Mieten und sichere Investitionen durch lösungsorientierten Dialog.</li>
-                        <li>• <strong className="text-slate-900">Finanzpolitik mit Weitsicht:</strong> Zwei Jahrzehnte Budgetverantwortung für gesunde Kantonsfinanzen nutzen.</li>
-                        <li>• <strong className="text-slate-900">Effizienter Kanton:</strong> Bürokratie abbauen, damit mehr Zeit fürs Wesentliche bleibt.</li>
+                        <li>• <strong className="text-slate-900">Standortsicherung im Rheintal:</strong> Rahmenbedingungen für sichere Arbeitsplätze schaffen</li>
                       </ul>
                     </div>
                   </div>
                 )}
-
 
                 {activeTab === 'education' && (
                   <div className="space-y-4 text-sm text-slate-600">
@@ -180,7 +165,6 @@ export default function AboutMe() {
                 
                       <p className="text-sm md:text-base text-slate-800 font-semibold tracking-wide leading-relaxed">
                         {displayedText}
-                        {/* FIX: 'highlightText' zu 'introText' geändert, damit die App nicht abstürzt */}
                         {charIndex < introText.length && (
                           <span className="inline-block w-[2px] h-[1em] bg-orange-500 ml-1 animate-pulse align-middle" />
                         )}
@@ -211,6 +195,16 @@ export default function AboutMe() {
                     </div>
                   </div>
                 )}
+              </div> {/* Ende Tab Content */}
+            </div> {/* Ende oberer Nav/Content-Block */}
+            
+          </div> {/* Ende Rechte Spalte (lg:col-span-7) */}
+        </div> {/* Ende Profil-Container Grid */}
+        
+      </div> {/* Ende max-w-7xl */}
+    </section>
+  );
+}
 
 
             {/* Vernetzen & Kontakt Sektion */}
