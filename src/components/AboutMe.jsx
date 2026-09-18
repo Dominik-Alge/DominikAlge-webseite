@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react'; // FIX: useEffect hier hinzugefügt!
 
 export default function AboutMe() {
   // State für die Tabs ("story", "competences" oder "education")
