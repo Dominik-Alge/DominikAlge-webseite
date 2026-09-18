@@ -151,50 +151,67 @@ export default function AboutMe() {
                       <h4 className="font-black text-slate-900 uppercase tracking-wider text-xs mb-3 text-orange-600">
                         Wirtschaft &amp; Industrie
                       </h4>
-                      <ul className="space-y-2 font-medium">
-                        <li>• <strong className="text-slate-900">Standortsicherung im Rheintal:</strong> Rahmenbedingungen für sichere Arbeitsplätze schaffen</li>
+                      <ul className="space-y-3 font-medium">
+                        <li>• <strong className="text-slate-900">Standortsicherung im Rheintal:</strong> Rahmenbedingungen für sichere Arbeitsplätze schaffen.</li>
+                        <li>• <strong className="text-slate-900">Effiziente Produktion:</strong> Lean Management für wettbewerbsfähige KMU einsetzen.</li>
+                        <li>• <strong className="text-slate-900">Praxisnahe Innovation:</strong> Digitale Tools und KI zur Wissenssicherung nutzen.</li>
+                        <li>• <strong className="text-slate-900">Robuste Lieferketten:</strong> Regionale Logistikstrukturen strategisch stärken.</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-black text-slate-900 uppercase tracking-wider text-xs mb-4 text-orange-600">
+                        Führung &amp; Realpolitik
+                      </h4>
+                      <ul className="space-y-3 font-medium">
+                        <li>• <strong className="text-slate-900">Führung mit Bodenhaftung:</strong> Vom Schichtbetrieb bis in den Verwaltungsrat.</li>
+                        <li>• <strong className="text-slate-900">Wohn- &amp; Lebensraum:</strong> Faire Mieten und sichere Investitionen durch lösungsorientierten Dialog.</li>
+                        <li>• <strong className="text-slate-900">Finanzpolitik mit Weitsicht:</strong> Zwei Jahrzehnte Budgetverantwortung für gesunde Kantonsfinanzen nutzen.</li>
+                        <li>• <strong className="text-slate-900">Effizienter Kanton:</strong> Bürokratie abbauen, damit mehr Zeit fürs Wesentliche bleibt.</li>
                       </ul>
                     </div>
                   </div>
                 )}
 
-                                {activeTab === 'education' && (
+                  {activeTab === 'education' && (
                   <div className="space-y-4 text-sm text-slate-600">
                     {/* BRANDING-KONSISTENZ: Das animierte Widget exklusiv für Ihre größte Stärke */}
-                    <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-50 to-orange-100/50 border border-orange-200/60 px-5 py-3 rounded-2xl shadow-sm w-full min-h-[54px]">
-                      <span className="relative flex h-2 w-2 flex-shrink-0">
+                     {/* DAS ANIMIERTE ERFOLGS-BANNER IM HERO-STIL */}
+                    <div className="bg-slate-900 text-white px-6 py-4 rounded-2xl shadow-lg border border-slate-800 flex items-center gap-4 min-h-[70px]">
+                      <span className="relative flex h-3 w-3 flex-shrink-0">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
                       </span>
-                
-                      <p className="text-sm md:text-base text-slate-800 font-semibold tracking-wide leading-relaxed">
+                      <p className="text-sm sm:text-base font-bold tracking-wide leading-relaxed text-slate-100">
                         {displayedText}
                         {charIndex < introText.length && (
                           <span className="inline-block w-[2px] h-[1em] bg-orange-500 ml-1 animate-pulse align-middle" />
                         )}
                       </p>
                     </div>
-                    
-                    <div className="grid sm:grid-cols-2 gap-4 mt-2">
-                      <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                        <h5 className="font-bold text-slate-900 text-xs uppercase tracking-wider text-orange-600 mb-1">
+                
+                      {/* Die zwei Spalten für Meilensteine und Fokus */}
+                    <div className="grid sm:grid-cols-2 gap-6 mt-4">
+                      <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 shadow-sm">
+                        <h5 className="font-black text-slate-900 text-xs uppercase tracking-wider text-orange-600 mb-3">
                           Berufliche Meilensteine
                         </h5>
-                        <ul className="space-y-1 font-medium">
-                          <li>• <strong>BSc Wirtschaftsingenieur i. A.</strong> (Bachelor of Science)</li>
-                          <li>• <strong>Dipl. Techniker HF Maschinenbau</strong> (Professional Bachelor)</li>
-                          <li>• <strong>eidg. Fachausweis Ausbilder</strong> (Professional Bachelor)</li>
-                          <li>• <strong>Polymechaniker EFZ</strong> (Niveau E, Spezialisierung Schleifen)</li>
+                        <ul className="space-y-2 font-medium text-slate-700">
+                          <li>• <strong className="text-slate-900">BSc Wirtschaftsingenieur i. A.</strong> (Bachelor of Science)</li>
+                          <li>• <strong className="text-slate-900">Dipl. Techniker HF Maschinenbau</strong> (Professional Bachelor)</li>
+                          <li>• <strong className="text-slate-900">eidg. Fachausweis Ausbilder</strong> (Professional Bachelor)</li>
+                          <li>• <strong className="text-slate-900">Polymechaniker EFZ</strong> (Niveau E, Spezialisierung Schleifen)</li>
                         </ul>
                       </div>
                       
-                      <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                        <h5 className="font-bold text-slate-900 text-xs uppercase tracking-wider text-orange-600 mb-1">
-                          Aktueller Fokus
-                        </h5>
-                        <p className="font-medium text-xs leading-relaxed">
-                          Laufendes Studium und angewandte Entwicklung im Bereich digitaler Innovationen (KI-gestütztes Wissensmanagement), um die Zukunft unserer Industrie aktiv mitzugestalten.
-                        </p>
+                      <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                        <div>
+                          <h5 className="font-black text-slate-900 text-xs uppercase tracking-wider text-orange-600 mb-3">
+                            Aktueller Fokus
+                          </h5>
+                          <p className="font-medium text-slate-700 text-sm leading-relaxed">
+                            Laufendes Studium und angewandte Entwicklung im Bereich digitaler Innovationen (KI-gestütztes Wissensmanagement), um die Zukunft unserer Industrie aktiv mitzugestalten.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
