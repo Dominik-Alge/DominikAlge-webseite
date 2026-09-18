@@ -1,18 +1,17 @@
 import { useState } from 'react';
 
 export default function AboutMe() {
-  // State für die 3 Tabs ("focus", "cv" oder "education")
+  // State für die Tabs ("story", "competences" oder "education")
   const [activeTab, setActiveTab] = useState('story');
 
   // Schreibmaschinen-Effekt für die Sektions-Einleitung
   const introText = "Erfahren Sie mehr über meinen Hintergrund als Führungskraft in der Industrie, aktiver KMU-Unternehmer im Immobilienbereich und Gestalter praxisnaher digitaler Innovationen.";
+  
+  // FIX: Jedes useState existiert hier jetzt exakt nur noch einmal!
   const [displayedText, setDisplayedText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
 
-    const [displayedText, setDisplayedText] = useState("");
-  const [charIndex, setCharIndex] = useState(0);
-
-  // DIE RETTUNG: Ein einziger, stabiler Haken für die gesamte Animation
+  // Der stabile, kombinierte Haken für die gesamte Schreibmaschinen-Animation
   useEffect(() => {
     // Wenn wir NICHT im Bildungs-Tab sind, setzen wir alles zurück und tun nichts
     if (activeTab !== 'education') {
@@ -30,9 +29,10 @@ export default function AboutMe() {
       
       return () => clearTimeout(timeout);
     }
-  }, [activeTab, charIndex]); // Hört sauber auf Tab-Wechsel und den Zeichen-Fortschritt
+  }, [activeTab, charIndex]); // Hört sauber auf den Tab-Wechsel und den Zeichen-Fortschritt
   
   return (
+
     <section id="ueber-mich" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
