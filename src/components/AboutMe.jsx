@@ -173,18 +173,20 @@ export default function AboutMe() {
                   <div className="space-y-4 text-sm text-slate-600">
                     {/* BRANDING-KONSISTENZ: Das animierte Widget exklusiv für Ihre größte Stärke */}
                     <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-50 to-orange-100/50 border border-orange-200/60 px-5 py-3 rounded-2xl shadow-sm w-full min-h-[54px]">
-                     <span className="relative flex h-2 w-2 flex-shrink-0">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-                     </span>
+                      <span className="relative flex h-2 w-2 flex-shrink-0">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                      </span>
                 
-                     <p className="text-sm md:text-base text-slate-800 font-semibold tracking-wide leading-relaxed">
-                       {displayedText}
-                       {charIndex < highlightText.length && (
-                         <span className="inline-block w-[2px] h-[1em] bg-orange-500 ml-1 animate-pulse vertical-middle" />
-                       )}
-                     </p>
+                      <p className="text-sm md:text-base text-slate-800 font-semibold tracking-wide leading-relaxed">
+                        {displayedText}
+                        {/* FIX: 'highlightText' zu 'introText' geändert, damit die App nicht abstürzt */}
+                        {charIndex < introText.length && (
+                          <span className="inline-block w-[2px] h-[1em] bg-orange-500 ml-1 animate-pulse align-middle" />
+                        )}
+                      </p>
                     </div>
+                    
                     <div className="grid sm:grid-cols-2 gap-4 mt-2">
                       <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
                         <h5 className="font-bold text-slate-900 text-xs uppercase tracking-wider text-orange-600 mb-1">
@@ -197,6 +199,7 @@ export default function AboutMe() {
                           <li>• <strong>Polymechaniker EFZ</strong> (Niveau E, Spezialisierung Schleifen)</li>
                         </ul>
                       </div>
+                      
                       <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
                         <h5 className="font-bold text-slate-900 text-xs uppercase tracking-wider text-orange-600 mb-1">
                           Aktueller Fokus
@@ -208,8 +211,7 @@ export default function AboutMe() {
                     </div>
                   </div>
                 )}
-              </div>
-            </div>
+
 
             {/* Vernetzen & Kontakt Sektion */}
             <div className="mt-12 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
