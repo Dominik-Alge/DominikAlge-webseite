@@ -173,20 +173,21 @@ export default function AboutMe() {
 
                   {activeTab === 'education' && (
                   <div className="space-y-4 text-sm text-slate-600">
-                    {/* BRANDING-KONSISTENZ: Das animierte Widget exklusiv für Ihre größte Stärke */}
-                     {/* DAS ANIMIERTE ERFOLGS-BANNER IM HERO-STIL */}
-                    <div className="bg-slate-900 text-white px-6 py-4 rounded-2xl shadow-lg border border-slate-800 flex items-center gap-4 min-h-[70px]">
-                      <span className="relative flex h-3 w-3 flex-shrink-0">
+                  {/* HIER IST DAS ANPASSBARE TEXTFELD IM DESIGN DES HERO-BANNERS */}
+                    <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-50 to-orange-100/50 border border-orange-200/60 px-5 py-3 rounded-2xl shadow-sm w-full min-h-[54px]">
+                      <span className="relative flex h-2 w-2 flex-shrink-0">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
                       </span>
-                      <p className="text-sm sm:text-base font-bold tracking-wide leading-relaxed text-slate-100">
+                
+                      <p className="text-sm md:text-base text-slate-800 font-semibold tracking-wide leading-relaxed">
                         {displayedText}
                         {charIndex < introText.length && (
                           <span className="inline-block w-[2px] h-[1em] bg-orange-500 ml-1 animate-pulse align-middle" />
                         )}
                       </p>
                     </div>
+
                 
                       {/* Die zwei Spalten für Meilensteine und Fokus */}
                     <div className="grid sm:grid-cols-2 gap-6 mt-4">
