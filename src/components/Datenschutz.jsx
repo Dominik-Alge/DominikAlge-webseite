@@ -1,7 +1,6 @@
-import React, { useState } from 'react'; // FIX: useState hier importiert
+import React, { useState } from 'react';
 
 export default function Datenschutz() {
-  // Lokaler State in dieser Komponente: Steuert das Overlay
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -12,7 +11,7 @@ export default function Datenschutz() {
           
           {/* Das angeforderte Foto/Logo */}
           <img 
-            src="/DieMitte.jpg" 
+            src="/DieMitte.png" 
             alt="Die Mitte Logo" 
             className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
           />
@@ -29,20 +28,26 @@ export default function Datenschutz() {
         </div>
       </section>
 
-      {/* 2. DAS POPUP (Wird nur gerendert, wenn isOpen true ist) */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-          <div className="relative w-full max-w-3xl bg-white rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
+          <div className="relative w-full max-w-3xl bg-white rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
 
-            {/* Header */}
-            <div className="bg-orange-500 text-white px-8 py-6 sticky top-0 z-10">
+            {/* Header mit integriertem, sichtbarem Schliessen-Button */}
+            <div className="bg-orange-500 text-white px-8 py-6 flex justify-between items-center sticky top-0 z-10">
               <h2 className="text-2xl sm:text-3xl font-black">
                 Datenschutz & Easter Egg 🥚
               </h2>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-2xl transition flex items-center justify-center cursor-pointer focus:outline-none"
+                aria-label="Schliessen"
+              >
+                &times;
+              </button>
             </div>
 
-            {/* Inhalt */}
-            <div className="p-8 space-y-6 text-slate-700">
+            {/* Scrollbarer Inhalt */}
+            <div className="p-8 space-y-6 text-slate-700 overflow-y-auto flex-1">
               <div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Hallo 👋</h3>
                 <p className="leading-relaxed">Herzlichen Glückwunsch.</p>
@@ -81,14 +86,15 @@ export default function Datenschutz() {
               </div>
             </div>
 
-            {/* Schliessen Button */}
-            <button
-              onClick={() => setIsOpen(false)} // FIX: Schliesst das Popup lokal
-              className="absolute top-5 right-6 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 text-white font-bold text-2xl transition flex items-center justify-center z-20 cursor-pointer"
-              aria-label="Schliessen"
-            >
-              &times;
-            </button>
+            {/* Footer-Button für mobile User (zusätzliche Sicherheit beim Schliessen) */}
+            <div className="p-4 bg-slate-50 border-t border-slate-100 flex justify-end">
+              <button 
+                onClick={() => setIsOpen(false)}
+                className="px-6 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold rounded-xl transition text-sm cursor-pointer"
+              >
+                Alles klar, schliessen
+              </button>
+            </div>
 
           </div>
         </div>
@@ -96,4 +102,3 @@ export default function Datenschutz() {
     </>
   );
 }
-
