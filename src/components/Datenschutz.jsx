@@ -66,12 +66,12 @@ export default function Datenschutz() {
 
               <div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Sie planen etwas Ähnliches?</h3>
-                <p className="leading-relaxed">Falls Sie selbst eine Website, eine digitale Idee oder ein kleines Softwareprojekt umsetzen möchten, unterstütze ich Sie gerne.</p>
-                <p className="leading-relaxed mt-3">Bezahlung akzeptiere ich bevorzugt in:</p>
+                <p className="leading-relaxed">Falls Sie selbst eine Website, eine digitale Idee oder ein kleines Softwareprojekt umsetzen möchten, unterstütze ich Sie gerne mit meinen Erfahrungen.</p>
+                <p className="leading-relaxed mt-3">Der Treibstoff für solche Projekte besteht meistens aus:</p>
                 <ul className="space-y-2 mt-3">
                   <li>✅ Kaffee ☕</li>
-                  <li>✅ Wertschätzung 🤝</li>
-                  <li>✅ oder notfalls auch in Schweizer Franken 💵🤑</li>
+                  <li>✅ Neugier und Ausdauer 🔧</li>
+                  <li>✅ einer gesunden Portion "Das muss doch irgendwie funktionieren" 😄</li>
                 </ul>
               </div>
 
