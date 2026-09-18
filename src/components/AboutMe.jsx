@@ -45,8 +45,7 @@ export default function AboutMe() {
             Ein Praktiker, der die Realität unserer Industrie und KMU kennt.
           </h2>
           <p className="mt-6 text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Erfahren Sie mehr über meinen Hintergrund als Führungskraft in der Industrie, 
-            aktiver KMU-Unternehmer im Immobilienbereich und Gestalter praxisnaher digitaler Innovationen.
+            Alle höheren Abschlüsse wurden zu 100% nebenberuflich und parallel zur vollen Erwerbstätigkeit an der Front erworben: 
           </p>
         </div>
 
