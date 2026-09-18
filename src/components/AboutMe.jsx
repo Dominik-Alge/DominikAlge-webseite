@@ -200,12 +200,6 @@ export default function AboutMe() {
             
           </div> {/* Ende Rechte Spalte (lg:col-span-7) */}
         </div> {/* Ende Profil-Container Grid */}
-        
-      </div> {/* Ende max-w-7xl */}
-    </section>
-  );
-}
-
 
             {/* Vernetzen & Kontakt Sektion */}
             <div className="mt-12 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
