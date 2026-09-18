@@ -9,24 +9,28 @@ export default function AboutMe() {
   const [displayedText, setDisplayedText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
 
-  // Setzt die Animation zurück und startet sie neu, wenn der Reiter "Bildung" angewählt wird
+    const [displayedText, setDisplayedText] = useState("");
+  const [charIndex, setCharIndex] = useState(0);
+
+  // DIE RETTUNG: Ein einziger, stabiler Haken für die gesamte Animation
   useEffect(() => {
-    if (activeTab === 'bildung') {
+    // Wenn wir NICHT im Bildungs-Tab sind, setzen wir alles zurück und tun nichts
+    if (activeTab !== 'education') {
       setDisplayedText("");
       setCharIndex(0);
+      return;
     }
-  }, [activeTab]);
 
-  // Der rasant-flüssige Tipp-Effekt
-  useEffect(() => {
-    if (activeTab === 'bildung' && charIndex < highlightText.length) {
+    // Wenn wir im Bildungs-Tab sind und noch Buchstaben übrig sind
+    if (charIndex < introText.length) {
       const timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + highlightText.charAt(charIndex));
+        setDisplayedText((prev) => prev + introText.charAt(charIndex));
         setCharIndex((prev) => prev + 1);
-      }, 12); // 12ms für einen dynamischen Aufbau
+      }, 12);
+      
       return () => clearTimeout(timeout);
     }
-  }, [charIndex, activeTab]);
+  }, [activeTab, charIndex]); // Hört sauber auf Tab-Wechsel und den Zeichen-Fortschritt
   
   return (
     <section id="ueber-mich" className="py-24 bg-white">
