@@ -154,7 +154,7 @@ export default function AboutMe() {
                   </div>
                 )}
 
-                {activeTab === 'education' && (
+                                {activeTab === 'education' && (
                   <div className="space-y-4 text-sm text-slate-600">
                     {/* BRANDING-KONSISTENZ: Das animierte Widget exklusiv für Ihre größte Stärke */}
                     <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-50 to-orange-100/50 border border-orange-200/60 px-5 py-3 rounded-2xl shadow-sm w-full min-h-[54px]">
@@ -195,11 +195,8 @@ export default function AboutMe() {
                     </div>
                   </div>
                 )}
-              </div> {/* Ende Tab Content */}
-            </div> {/* Ende oberer Nav/Content-Block */}
-            
-          </div> {/* Ende Rechte Spalte (lg:col-span-7) */}
-        </div> {/* Ende Profil-Container Grid */}
+              </div> {/* HIER WAR DER FEHLER: Dieses schliessende div für "mt-6" hat gefehlt! */}
+            </div> {/* Ende des oberen Inhalt-Blocks */}
 
             {/* Vernetzen & Kontakt Sektion */}
             <div className="mt-12 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
@@ -221,7 +218,7 @@ export default function AboutMe() {
                   LinkedIn
                 </a>
                 
-               {/* SAUBERER HTML-LINK OHNE ONCLICK */}
+                {/* SAUBERER HTML-LINK OHNE ONCLICK */}
                 <a 
                   href="#kontakt"
                   className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all shadow-sm cursor-pointer"
@@ -231,9 +228,11 @@ export default function AboutMe() {
                 </a>            
               </div>
             </div>
-          </div> {/* Ende Spalte 7 */}
-        </div> {/* Ende Grid */}
-      </div> {/* Ende Max-w-7xl */}
+
+          </div> {/* Ende Rechte Spalte (lg:col-span-7) */}
+        </div> {/* Ende Profil-Container Grid */}
+      </div> {/* Ende max-w-7xl */}
     </section>
   );
 }
+
