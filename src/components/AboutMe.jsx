@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react'; // FIX: useEffect hier hinzugefügt!
+import { useState, useEffect } from 'react';
 
 export default function AboutMe() {
   // State für die Tabs ("story", "competences" oder "education")
   const [activeTab, setActiveTab] = useState('story');
 
   // Schreibmaschinen-Effekt für die Sektions-Einleitung
-  const introText = "Erfahren Sie mehr über meinen Hintergrund als Führungskraft in der Industrie, aktiver KMU-Unternehmer im Immobilienbereich und Gestalter praxisnaher digitaler Innovationen.";
+  const introText = "100% nebenberuflich. 100% an der Front. Alle höheren Abschlüsse entstanden parallel zur vollen Erwerbstätigkeit.";
   
   // FIX: Jedes useState existiert hier jetzt exakt nur noch einmal!
   const [displayedText, setDisplayedText] = useState("");
@@ -45,7 +45,7 @@ export default function AboutMe() {
             Ein Praktiker, der die Realität unserer Industrie und KMU kennt.
           </h2>
           <p className="mt-6 text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Alle höheren Abschlüsse wurden zu 100% nebenberuflich und parallel zur vollen Erwerbstätigkeit an der Front erworben: 
+            Erfahren Sie mehr über meinen Hintergrund als Führungskraft in der Industrie, aktiver KMU-Unternehmer im Immobilienbereich und Gestalter praxisnaher digitaler Innovationen. 
           </p>
         </div>
 
