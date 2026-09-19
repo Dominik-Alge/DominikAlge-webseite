@@ -43,7 +43,7 @@ export default function Contact() {
         {/* SPALTE 2: SPENDEN & UNTERSTÜTZUNG */}
         <section style={styles.card}>
           <h2 style={styles.cardTitle}>📊 Kampagne unterstützen</h2>
-          <p style={styles.text}>Jeder Beitrag fliesst direkt in die politische Arbeit für den Kanton.</p>
+          <p style={styles.text}>Jeder Beitrag unterstützt meine Kandidatur für den Kantonsrat St. Gallen und hilft, unsere Anliegen in die Bevölkerung zu tragen.</p>
           
           <div style={styles.donationBox}>
             <h3 style={styles.smallTitle}>✨ Schnell & einfach via TWINT</h3>
