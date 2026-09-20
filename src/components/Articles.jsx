@@ -41,7 +41,6 @@ export default function Articles() {
                 <div>
                   {/* KORREKTUR: Bild als echtes <img> Tag ausgeben */}
                   <div className="h-48 overflow-hidden">
-                    <div className="h-48 overflow-hidden">
                     <img 
                       src={article.image} 
                       alt={article.title} 
