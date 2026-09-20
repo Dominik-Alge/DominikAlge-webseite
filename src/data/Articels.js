@@ -13,14 +13,14 @@ export const articles = [
     image: "/images/fachkraefte.jpg",
     excerpt:
       "Was ich als Gruppenleiter täglich in der Industrie erlebe.",
-    url: "https://www.linkedin.com/posts/DEIN-ARTIKEL-2",
+    url: "https://www.linkedin.com/posts/dominik-alge_industrieforum-swissmanufacturing-industrie40-activity-7501549110190297090-0RdF",
   },
   {
     title: "Verantwortung übernehmen",
-    date: "08.07.2026",
+    date: "21.08.2026",
     image: "/images/verantwortung.jpg",
     excerpt:
       "Warum pragmatische Politik wichtiger ist denn je.",
-    url: "https://www.linkedin.com/posts/DEIN-ARTIKEL-3",
+    url: "https://www.linkedin.com/posts/dominik-alge_diefalschefrage-problemeloesen-zukunftgestalten-activity-7496783306148073472-EW9O",
   },
 ];
