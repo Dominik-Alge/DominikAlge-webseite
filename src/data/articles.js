@@ -10,7 +10,7 @@ export const articles = [
   {
     title: "Fachkräfte sichern",
     date: "15.08.2026",
-    image: "/fachkraefte.png", // KORREKTUR: '/images/' statt '/public/'
+    image: "/fachkräfte.png", // KORREKTUR: '/images/' statt '/public/'
     excerpt:
       "Was ich als Gruppenleiter täglich in der Industrie erlebe.",
     url: "https://www.linkedin.com/posts/dominik-alge_industrieforum-swissmanufacturing-industrie40-activity-7501549110190297090-0RdF",
