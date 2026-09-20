@@ -41,10 +41,11 @@ export default function Articles() {
                 <div>
                   {/* KORREKTUR: Bild als echtes <img> Tag ausgeben */}
                   <div className="h-48 overflow-hidden">
+                    <div className="h-48 overflow-hidden">
                     <img 
                       src={article.image} 
                       alt={article.title} 
-                      className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover object-top transform hover:scale-105 transition-transform duration-300"
                     />
                   </div>
 
