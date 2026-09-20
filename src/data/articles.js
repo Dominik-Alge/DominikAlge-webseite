@@ -4,7 +4,7 @@ export const articles = [
     date: "20.09.2026",
     image: "/Demokratie.png", // KORREKTUR: Großes 'D' beachten!
     excerpt:
-      "Konkurrenzdemokratie am Ende: Warum wir nach den jüngsten Wahlergebnissen mehr Konsens und neue Wege der Koalitionsbildung wagen müssen.",
+      "Konkurrenzdemokratie am Ende: Warum Deutschland nach den jüngsten Wahlergebnissen mehr Konsens und neue Wege der Koalitionsbildung wagen müssen.",
     url: "https://www.linkedin.com/posts/dominik-alge_landtagswahl2026-demokratiewagen-sachpolitik-activity-7507545525542535169-X4hT",
   },
   {
