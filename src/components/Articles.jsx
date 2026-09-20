@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { articles } from "../data/articles";
+import { articles } from "../data/articles.js";
 
 export default function Articles() {
   return (
