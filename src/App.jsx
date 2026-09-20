@@ -9,6 +9,8 @@ import AboutMe from "./components/AboutMe";
 import Endorsements from "./components/Endorsements";
 import Contact from "./components/contact"; // FIX: Komplett kleingeschrieben wie deine Datei!
 import Datenschutz from "./components/Datenschutz";
+import Articles from "./components/Articles";
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
       <AboutMe />
       <WhyICandidate />
       <MyExperience />
+      <Articles/>
       <Vision />
       <Endorsements />
       <CoreValues />
