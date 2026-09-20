@@ -2,7 +2,7 @@ export const articles = [
   {
     title: "Kein Vegan - Zwang",
     date: "16.09.2026",
-    image: "/public/vegan.jpg",
+    image: "/public/vegan.png",
     excerpt:
       "Warum wir die falsche Frage stellen.",
     url: "https://www.linkedin.com/posts/dominik-alge_ernaeuhrungsinitiative-ernaeuhrungssicherheit-activity-7505727937179054080-Co8B?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAACmMZdYBQTaVQYaHulMnOCnCJNWteeN-0U4&utm_campaign=copy_link",
