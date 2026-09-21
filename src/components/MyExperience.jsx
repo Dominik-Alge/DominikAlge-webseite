@@ -9,9 +9,9 @@ const experiences = [
     category: "Führung & Technologie",
     shortText: "Führung eines Produktionsteams (10 MA) und Einfahren stabiler Prozesse in der industriellen Kleinserienproduktion.",
     highlights: [
-      { label: "Soziale Verantwortung", text: "Fachliche und personelle Führung, Coaching und strukturierte Kompetenzentwicklung im 2-Schichtbetrieb." },
-      { label: "Prozessoptimierung", text: "Nachhaltige Stabilisierung kritischer Fertigungsprozesse durch den gezielten Einsatz bewährter Lean-Methoden." },
-      { label: "Zukunftsorientierung", text: "Entwicklung eines KI-Konzeptbeweises zur Sicherung von Produktionswissen gegen den akuten Fachkräftemangel." }
+      { label: "Mitarbeiterführung", text: "Fachliche und personelle Führung, Coaching und strukturierte Kompetenzentwicklung im 2-Schichtbetrieb." },
+      { label: "Prozessstabilität", text: "Nachhaltige Verbesserung von Qualität, Lieferfähigkeit und Prozesssicherheit durch strukturierte Problemlösung und Lean-Methoden." },
+      { label: "Innovation", text: "Entwicklung praxisnaher KI-Lösungen zur Sicherung von Erfahrungswissen und zur Unterstützung der Fachkräfte von morgen." }
     ]
   },
   {
@@ -36,8 +36,8 @@ const experiences = [
     shortText: "Finanzpolitische Aufsicht und strategische Prüfung im Dienste der Allgemeinheit.",
     highlights: [
       { label: "Verantwortung", text: "Vorzeitige Mandatsabgabe wegen neuer Führungsaufgabe und Studium – für mich gilt: Ein Amt fordert vollen Einsatz und Zeit." },
-      { label: "Finanzkontrolle", text: "Konsequente Prüfung von Jahresrechnungen und Krediten für einen haushälterischen Umgang mit Ihren Steuergeldern." },
-      { label: "Milizsystem", text: "Gelebte zivilgesellschaftliche Verantwortung als GPK-Mitglied, Stimmenzähler und Delegierter der Mitte Au-Heerbrugg." }
+      { label: "Finanzaufsicht", text: "Prüfung von Jahresrechnungen, Budgets und Krediten für einen sorgfältigen Umgang mit öffentlichen Mitteln." },
+      { label: "Milizgedanke", text: "Langjähriges Engagement als GPK-Mitglied, Stimmenzähler und Delegierter der Mitte Au-Heerbrugg im Sinne des Schweizer Milizsystems." }
     ]
   },
   {
@@ -48,9 +48,9 @@ const experiences = [
     category: "Das Fundament",
     shortText: "Fundierte Berufslehre (Niveau E) erste Erfahrung direkt an der Werkbank.",
     highlights: [
-      { label: "Echte Basis", text: "Ausbildung im Rheintaler Grossbetrieb. Hier habe ich von Grund auf gelernt, was Präzision und Schweizer Qualität im Arbeitsalltag bedeuten." },
-      { label: "Militärdienst", text: "Praktischer Einsatz als Waffenmechaniker in der Schweizer Armee (Thun) zur Wartung von Infanteriewaffen." },
-      { label: "Berufsstolz", text: "Das Fundament für meinen täglichen Einsatz: Ich kenne den Zeitdruck und die echten Belastungen in der Produktion aus eigener Erfahrung." }
+      { label: "Echte Basis", text: "Fundierte Ausbildung im Rheintaler Industriebetrieb SFSintec. Hier lernte ich Präzision, Qualität und die Anforderungen der produzierenden Industrie von Grund auf kennen." },
+      { label: "Militärdienst", text: "Vertiefung meiner technischen Kenntnisse als Waffenmechaniker der Schweizer Armee. Die Kombination aus Berufsausbildung und Militärdienst prägte mein Qualitäts- und Verantwortungsbewusstsein." },
+      { label: "Berufsstolz", text: "Mein berufliches Fundament entstand direkt an der Werkbank. Deshalb kenne ich die Herausforderungen, den Zeitdruck und die Verantwortung in der Produktion aus eigener Erfahrung." }
     ]
   }
 ];
