@@ -108,7 +108,7 @@ export default function Endorsements() {
 
         {/* Hinweis für den Wahlkampf */}
         <p className="text-center text-xs text-slate-400 mt-8 italic">
-          Möchten auch Sie Dominik Alge unterstützen? Schreiben Sie uns über das Kontaktformular.
+          Möchten auch Sie Dominik Alge unterstützen? Dann schreiben Sie mir über die Kontaktinformationen.
         </p>
 
       </div>
