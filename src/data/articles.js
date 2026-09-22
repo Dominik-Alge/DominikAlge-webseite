@@ -1,5 +1,13 @@
 export const articles = [
   {
+    title: "Wissen ist Produktionskapazität",
+    date: "22.09.2026",
+    image: "/Wissen.png", // KORREKTUR: Großes 'D' beachten!
+    excerpt:
+      "Wenn erfahrene Fachkräfte gehen, bricht unsere Wirtschaft weg – ich bringe die KI-Lösungen auf den Shopfloor, die unser wertvolles Industrie-Wissen sichern und die Zukunft unseres Kantons sichern.",
+    url: "https://lnkd.in/p/egEjpCaV",
+  },
+  {
     title: "Entscheidungsstunde für Deutschland",
     date: "20.09.2026",
     image: "/Demokratie.png", // KORREKTUR: Großes 'D' beachten!
