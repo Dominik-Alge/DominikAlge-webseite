@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Hero from "./components/Hero";
 import WhyICandidate from "./components/WhyICandidate";
 import PoliticalTopics from "./components/PoliticalTopics";
@@ -7,14 +8,14 @@ import MyExperience from "./components/MyExperience";
 import Priorities from "./components/Priorities";
 import AboutMe from "./components/AboutMe";
 import Endorsements from "./components/Endorsements";
-import Contact from "./components/contact"; // FIX: Komplett kleingeschrieben wie deine Datei!
+import Contact from "./components/contact"; 
 import Datenschutz from "./components/Datenschutz";
 import Articles from "./components/Articles";
 
-
 function App() {
-  // Mögliche States: "home", "politik", "beruf", "verbaende", "publikationen"
+  // Mögliche Zustände: "home", "politik", "beruf", "verbaende", "publikationen"
   const [activeArea, setActiveArea] = useState("home");
+
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col justify-between">
       <div>
@@ -23,7 +24,7 @@ function App() {
 
         {/* BEREICH 1: 🗳️ Politik */}
         {activeArea === "politik" && (
-          <div className="animate-fadeIn">
+          <div>
             <WhyICandidate />
             <PoliticalTopics />
             <Priorities />
@@ -34,26 +35,23 @@ function App() {
 
         {/* BEREICH 2: 🏭 Beruf & Fachthemen */}
         {activeArea === "beruf" && (
-          <div className="animate-fadeIn">
+          <div>
             <AboutMe />
             <MyExperience />
-            {/* Hier kannst du zukünftig spezifische Industrie/KI-Komponenten reinladen */}
           </div>
         )}
 
         {/* BEREICH 3: 🤝 Verbände & Engagement */}
         {activeArea === "verbaende" && (
-          <div className="animate-fadeIn">
+          <div>
             <CoreValues />
-            {/* Hier kommen deine Engagements wie Swissmem / SwissSkills hin */}
           </div>
         )}
 
         {/* BEREICH 4: 📚 Publikationen */}
         {activeArea === "publikationen" && (
-          <div className="animate-fadeIn">
+          <div>
             <Articles />
-            {/* Hier kommen White Paper, Vorträge und LinkedIn-Artikel hin */}
           </div>
         )}
       </div>
@@ -70,3 +68,4 @@ function App() {
 }
 
 export default App;
+
