@@ -33,8 +33,8 @@ function App() {
           </div>
         )}
 
-        {/* BEREICH 2: 🏭 Beruf & Fachthemen */}
-        {activeArea === "beruf" && (
+        {/* BEREICH 2: 🏭 Kompetenzen & Erfahrung */}
+        {activeArea === "kompetenzen" && (
           <div>
             <AboutMe />
             <MyExperience />
