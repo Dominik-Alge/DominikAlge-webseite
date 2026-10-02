@@ -24,31 +24,35 @@ export default function Hero({ activeArea, setActiveArea }) {
       }, 15);
       return () => clearTimeout(timeout);
     }
-  }, [charIndex]);
+  }, [charIndex, welcomeText, devoured = charIndex]); // Fix für Dependency Array
 
-  // Definition der 4 neuen Bereiche
+  // Definition der 4 Bereiche mit Kurznamen für die Menüleiste
   const categories = [
     {
       id: "politik",
       title: "🗳️ Politik",
+      shortTitle: "🗳️ Politik",
       subtitle: "Kandidat Kantonsrat St. Gallen – Wahlkreis Rheintal / Au",
       color: "hover:border-orange-500 hover:bg-orange-50/30"
     },
     {
       id: "beruf",
       title: "🏭 Beruf & Fachthemen",
+      shortTitle: "🏭 Beruf",
       subtitle: "Führung, Berufsbildung, Wissensmanagement, KI, Industrie 4.0",
       color: "hover:border-blue-600 hover:bg-blue-50/30"
     },
     {
       id: "verbaende",
       title: "🤝 Verbände & Engagement",
+      shortTitle: "🤝 Verbände",
       subtitle: "GPK, Swissmem, Swissmechanic, SwissSkills, Berufsbildung",
       color: "hover:border-emerald-600 hover:bg-emerald-50/30"
     },
     {
       id: "publikationen",
       title: "📚 Publikationen",
+      shortTitle: "📚 Publikationen",
       subtitle: "White Paper, Industrieforum-Vorträge, LinkedIn-Artikel, Fachbeiträge",
       color: "hover:border-amber-600 hover:bg-amber-50/30"
     }
@@ -57,18 +61,18 @@ export default function Hero({ activeArea, setActiveArea }) {
   // WENN EIN BEREICH AKTIV IST: Zeige die kompakte Navigations-Leiste oben an
   if (activeArea !== "home") {
     return (
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
+      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <div>
+          <div className="text-center sm:text-left">
             <span className="text-xl font-black text-slate-900 tracking-tight">Dominik Alge</span>
             <span className="hidden md:inline-block mx-3 text-slate-300">|</span>
-            <span className="text-sm font-medium text-slate-500">Industrie • Bildung • Innovation • Verantwortung</span>
+            <span className="hidden md:inline-block text-sm font-medium text-slate-500">Industrie • Bildung • Innovation • Verantwortung</span>
           </div>
           
-          <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto justify-center">
+          <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto justify-center py-1">
             <button 
               onClick={() => setActiveArea("home")}
-              className="px-4 py-2 text-sm font-semibold rounded-xl text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all"
+              className="px-4 py-2 text-sm font-semibold rounded-xl text-slate-600 bg-white hover:bg-slate-100 border border-slate-200 transition-all"
             >
               ← Übersicht
             </button>
@@ -82,7 +86,7 @@ export default function Hero({ activeArea, setActiveArea }) {
                     : "bg-white text-slate-700 border-slate-200 hover:bg-slate-50"
                 }`}
               >
-                {cat.title.split(" ")[0]} {cat.id === "politik" ? "Politik" : cat.id === "beruf" ? "Beruf" : cat.id === "verbaende" ? "Verbände" : "Publikationen"}
+                {cat.shortTitle}
               </button>
             ))}
           </div>
@@ -91,7 +95,7 @@ export default function Hero({ activeArea, setActiveArea }) {
     );
   }
 
-  // WENN DIE STARTSEITE AKTIV IST: Die vollwertige Weichensteller-Landingpage
+  // WENN DIE STARTSEITE AKTIV IST: Die vollhertige Weichensteller-Landingpage
   return (
     <section className="min-h-screen bg-gradient-to-br from-orange-50/40 via-white to-slate-100/40 flex items-center py-12">
       <div className="max-w-7xl mx-auto px-6 w-full">
@@ -152,7 +156,7 @@ export default function Hero({ activeArea, setActiveArea }) {
               <div className="absolute -bottom-3 -left-3 w-16 h-16 border-b-4 border-l-4 border-orange-500 rounded-bl-[30px]" />
               <div className="absolute -top-3 -right-3 w-16 h-16 border-t-4 border-r-4 border-orange-500 rounded-tr-[30px]" />
               
-              <div className="h-[48px]0 w-full aspect-[3/4] rounded-[32px] shadow-xl overflow-hidden relative bg-slate-100 z-10">
+              <div className="w-full aspect-[3/4] rounded-[32px] shadow-xl overflow-hidden relative bg-slate-100 z-10">
                 <img 
                   src="/Dominik.jpg" 
                   alt="Dominik Alge" 
@@ -167,4 +171,5 @@ export default function Hero({ activeArea, setActiveArea }) {
     </section>
   );
 }
+
 
