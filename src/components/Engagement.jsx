@@ -41,7 +41,6 @@ export default function Engagement() {
                 <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                   Effiziente Überwachung der Gemeindeverwaltung und Kontrolle öffentlicher Mittel. Rücktritt per Ende Februar 2026.
                 </p>
-                <a href="https://au.ch" target="_blank" rel="noreferrer" className="text-[11px] font-semibold text-slate-900 hover:text-orange-600 underline mt-1 inline-block">Behördenmitglied anzeigen →</a>
               </div>
 
               {/* GPK Eisbahn */}
@@ -95,6 +94,7 @@ export default function Engagement() {
                 <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                   Verantwortungsvolle Einleitung und Begleitung der strategischen Firmen-Umstrukturierung. Zielgerichtete Sanierung und Neuausrichtung des Betriebs, um einen geordneten Fortbestand zu sichern und Arbeitsplätze sowie Werte vor dem Ruin zu bewahren.
                 </p>
+                <a href="https://sg.chregister.ch/cr-portal/auszug/auszug.xhtml?uid=CHE-107.930.774" target="_blank" rel="noreferrer" className="text-[11px] font-semibold text-slate-900 hover:text-orange-600 underline mt-1 inline-block">Handelsregister anzeigen →</a>
               </div>
 
               {/* Eigene Immobilien */}
