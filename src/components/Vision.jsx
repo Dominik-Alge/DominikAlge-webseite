@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Vision() {
   const [selected, setSelected] = useState("bildung"); // "bildung" ist als Kern deiner Vision vorausgewählt
 
-  return (
+    return (
     <section id="vision" className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
 
@@ -111,6 +111,14 @@ export default function Vision() {
                   <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Förderung praxisnaher Weiterbildungsmodelle neben dem Beruf</li>
                 </ul>
               </div>
+              <div className="flex-shrink-0">
+                <button
+                  onClick={() => handleNavigation("kompetenzen", "erfahrung")}
+                  className="pointer-events-auto inline-block bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-md transition duration-200 text-center cursor-pointer"
+                >
+                  Zu meinen Kompetenzen →
+                </button>
+              </div>
             </div>
           )}
 
@@ -131,6 +139,14 @@ export default function Vision() {
                   <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Förderung moderner Arbeitszeitmodelle in der Industrie und KMU</li>
                 </ul>
               </div>
+              <div className="flex-shrink-0">
+                <button
+                  onClick={() => handleNavigation("politik", "prioritaeten")}
+                  className="pointer-events-auto inline-block bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-md transition duration-200 text-center cursor-pointer"
+                >
+                  Meine Prioritäten sehen →
+                </button>
+              </div>
             </div>
           )}
 
@@ -148,8 +164,16 @@ export default function Vision() {
                 <ul className="mt-6 space-y-3 text-slate-700 font-medium">
                   <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Abfedern des demografischen Wandels durch gezieltes Wissensmanagement</li>
                   <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Kürzere Wege beim Transfer von Forschung (z.B. KI/Technik) in die KMU-Praxis</li>
-                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Standortsicherung für hochpräzise Wertschöpfung im Rheintal</li>
+                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Standortsicherung for hochpräzise Wertschöpfung im Rheintal</li>
                 </ul>
+              </div>
+              <div className="flex-shrink-0">
+                <button
+                  onClick={() => handleNavigation("verbaende", "werte")}
+                  className="pointer-events-auto inline-block bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-md transition duration-200 text-center cursor-pointer"
+                >
+                  Mein Engagement in Verbänden →
+                </button>
               </div>
             </div>
           )}
@@ -160,4 +184,5 @@ export default function Vision() {
     </section>
   );
 }
+
 
