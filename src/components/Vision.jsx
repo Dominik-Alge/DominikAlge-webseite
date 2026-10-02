@@ -1,8 +1,30 @@
-import { useState } from "react";
+// WICHTIG: Die geschweiften Klammern { setActiveArea } nehmen die Funktion aus der App.jsx entgegen
+export default function Vision({ setActiveArea }) {
+  const [selected, setSelected] = useState("bildung"); // "bildung" ist vorausgewählt
 
-export default function Vision() {
-  const [selected, setSelected] = useState("bildung"); // "bildung" ist als Kern deiner Vision vorausgewählt
+  // Technisch optimierte Hilfsfunktion für bereichsübergreifende Sprünge
+  const handleNavigation = (areaId, elementId) => {
+    console.log("Vision-Button geklickt! Versuche zu wechseln nach:", areaId);
 
+    if (typeof setActiveArea === "function") {
+      // 1. In die gewünschte Welt umschalten
+      setActiveArea(areaId);
+      
+      // 2. Dem Browser Zeit zum Rendern geben, dann sanft scrollen
+      setTimeout(() => {
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          // Fallback, falls die ID (noch) nicht im DOM existiert
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }, 250);
+    } else {
+      console.warn("setActiveArea fehlt als Prop in Vision.jsx");
+    }
+  };
+  
     return (
     <section id="vision" className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
