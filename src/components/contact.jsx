@@ -1,3 +1,4 @@
+// components/contact.jsx
 import React, { useState } from 'react';
 
 export default function Contact() {
@@ -6,7 +7,7 @@ export default function Contact() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [error, setError] = useState('');
 
-  // Das Passwort für den Login (Ersetzen Sie 'Wahlkampf2026' mit Ihrem Wunschpasswort)
+  // Das Passwort für den Login
   const CORRECT_PASSWORD = 'Wahlkampf2026'; 
 
   const handleLogin = (e) => {
@@ -45,14 +46,13 @@ export default function Contact() {
           <h2 style={styles.cardTitle}>📊 Kampagne unterstützen</h2>
           <p style={styles.text}>Jeder Beitrag unterstützt meine Kandidatur für den Kantonsrat St. Gallen und hilft, unsere Anliegen in die Bevölkerung zu tragen.</p>
           
+          {/* TWINT ANPASSUNG: Pragmatischer Hinweistext statt leerem Bild-Platzhalter */}
           <div style={styles.donationBox}>
-            <h3 style={styles.smallTitle}>✨ Schnell & einfach via TWINT</h3>
-            <p style={styles.textSmall}>Scannen Sie den QR-Code in Ihrer Twint-App oder nutzen Sie den Link:</p>
-            {/* Platzhalter für Twint QR-Code Bild */}
-            <div style={styles.qrPlaceholder}>[ Hier Twint-QR-Code Bild einfügen ]</div>
-            <a href="https://twint.ch" target="_blank" rel="noreferrer" style={styles.twintButton}>
-              Via TWINT spenden
-            </a>
+            <h3 style={styles.smallTitle}>✨ Spenden via TWINT</h3>
+            <p style={styles.textSmall}>
+              Die direkte digitale Spendenoption per TWINT-Code befindet sich aktuell in der Freischaltung. 
+              Nutzen Sie in der Zwischenzeit gerne unsere reguläre Bankverbindung oder den Einzahlungsschein. Vielen Dank!
+            </p>
           </div>
 
           <div style={styles.donationBox}>
@@ -62,7 +62,6 @@ export default function Contact() {
               <p><strong>Konto auf den Namen:</strong> Dominik Alge</p>
               <p><strong>IBAN:</strong> CH34 8080 8005 1035 1199 9</p>
             </div>
-            {/* GARANTIERT EIN ECHTER BUTTON (OHNE JAVASCRIPT / OHNE HOVER-FEHLER) */}
             <div style={{ marginTop: '15px', textAlign: 'center' }}>
               <a 
                 href="/Rechnung.pdf" 
@@ -111,13 +110,12 @@ export default function Contact() {
             <div style={styles.successBox}>
               <p style={styles.successText}>✅ Erfolgreich eingeloggt!</p>
               <ul style={styles.downloadList}>
-                <li>
-                  {/* Pfad zu Ihrem PDF im 'public'-Ordner Ihres React-Projekts */}
+                <li style={{ marginBottom: '10px' }}>
                   <a href="/downloads/wahlkampf_dossier_2026.pdf" download style={styles.downloadLink}>
                     📄 Wahlkampf-Dossier 2026 (PDF)
                   </a>
                 </li>
-                <li>
+                <li style={{ marginBottom: '15px' }}>
                   <a href="/downloads/argumentarium.pdf" download style={styles.downloadLink}>
                     📄 Argumentarium & Positionen (PDF)
                   </a>
@@ -135,7 +133,7 @@ export default function Contact() {
   );
 }
 
-// Einfaches, sauberes Styling direkt in der Datei (CSS-in-JS)
+// Vollständiges, sauberes CSS-in-JS Styling
 const styles = {
   container: { maxWidth: '1200px', margin: '0 auto', padding: '40px 20px', fontFamily: 'Arial, sans-serif' },
   title: { fontSize: '2.5rem', color: '#1a365d', marginBottom: '10px', textAlign: 'center' },
@@ -144,13 +142,11 @@ const styles = {
   card: { background: '#f7fafc', padding: '30px', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', border: '1px solid #e2e8f0', display: 'flex', flexDirection: 'column' },
   cardTitle: { fontSize: '1.5rem', color: '#2d3748', marginBottom: '15px', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px' },
   text: { color: '#4a5568', lineHeight: '1.6', marginBottom: '20px' },
-  textSmall: { color: '#718096', fontSize: '0.9rem', marginBottom: '10px' },
+  textSmall: { color: '#718096', fontSize: '0.9rem', marginBottom: '10px', lineHeight: '1.5' },
   infoBlock: { lineHeight: '2' },
   link: { color: '#3182ce', textDecoration: 'none' },
   donationBox: { background: '#fff', padding: '15px', borderRadius: '8px', marginBottom: '15px', border: '1px solid #edf2f7' },
   smallTitle: { fontSize: '1.1rem', margin: '0 0 10px 0', color: '#2d3748' },
-  qrPlaceholder: { background: '#edf2f7', height: '140px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#a0aec0', fontSize: '0.9rem', borderRadius: '6px', marginBottom: '10px', border: '2px dashed #cbd5e0' },
-  twintButton: { display: 'block', textAlign: 'center', background: '#00a3e0', color: '#fff', padding: '10px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold' },
   bankDetails: { fontSize: '0.95rem', lineHeight: '1.8' },
   form: { display: 'flex', flexDirection: 'column', gap: '10px' },
   input: { padding: '12px', borderRadius: '6px', border: '1px solid #cbd5e0', fontSize: '1rem' },
@@ -158,7 +154,7 @@ const styles = {
   error: { color: '#e53e3e', fontSize: '0.9rem', margin: '0' },
   successBox: { background: '#f0fff4', padding: '15px', borderRadius: '8px', border: '1px solid #c6f6d5' },
   successText: { color: '#38a169', fontWeight: 'bold', margin: '0 0 15px 0' },
-  downloadList: { listStyleType: 'none', padding: 0, margin: '0 0 20px 0' },
-  downloadLink: { color: '#2b6cb0', textDecoration: 'none', fontWeight: 'bold', display: 'block', padding: '5px 0' },
-  logoutButton: { background: 'none', border: 'none', color: '#718096', textDecoration: 'underline', cursor: 'pointer', padding: 0 }
+  downloadList: { listStyleType: 'none', padding: 0, margin: 0 },
+  downloadLink: { color: '#2b6cb0', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.95rem' },
+  logoutButton: { background: '#e2e8f0', color: '#4a5568', padding: '8px 12px', borderRadius: '6px', border: 'none', fontSize: '0.85rem', cursor: 'pointer', transition: 'all 0.2s', width: '100%', fontWeight: 'semibold' }
 };
