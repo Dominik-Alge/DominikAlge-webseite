@@ -27,7 +27,7 @@ function App() {
           <div>
             <WhyICandidate />
             <PoliticalTopics />
-            <Priorities />
+            <Priorities setActiveArea={setActiveArea} />
             <Vision setActiveArea={setActiveArea} />
             <Endorsements />
           </div>
