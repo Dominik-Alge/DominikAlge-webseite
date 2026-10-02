@@ -8,7 +8,7 @@ import MyExperience from "./components/MyExperience";
 import Priorities from "./components/Priorities";
 import AboutMe from "./components/AboutMe";
 import Endorsements from "./components/Endorsements";
-import contact from "./components/contact"; 
+import Contact from "./components/contact"; 
 import Datenschutz from "./components/Datenschutz";
 import Articles from "./components/Articles";
 import WhitePaper from "./components/WhitePaper";
