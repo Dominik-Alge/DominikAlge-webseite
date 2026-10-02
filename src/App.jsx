@@ -13,19 +13,59 @@ import Articles from "./components/Articles";
 
 
 function App() {
+  // Mögliche States: "home", "politik", "beruf", "verbaende", "publikationen"
+  const [activeArea, setActiveArea] = useState("home");
   return (
-    <>
-      <Hero />
-      <AboutMe />
-      <WhyICandidate />
-      <MyExperience />
-      <Articles/>
-      <Vision />
-      <Endorsements />
-      <CoreValues />
-      <Contact />
-      <Datenschutz />
-    </>
+    <div className="min-h-screen bg-slate-50 flex flex-col justify-between">
+      <div>
+        {/* Das Hero erhält die Steuerungs-Funktion und den aktuellen Zustand */}
+        <Hero activeArea={activeArea} setActiveArea={setActiveArea} />
+
+        {/* BEREICH 1: 🗳️ Politik */}
+        {activeArea === "politik" && (
+          <div className="animate-fadeIn">
+            <WhyICandidate />
+            <PoliticalTopics />
+            <Priorities />
+            <Vision />
+            <Endorsements />
+          </div>
+        )}
+
+        {/* BEREICH 2: 🏭 Beruf & Fachthemen */}
+        {activeArea === "beruf" && (
+          <div className="animate-fadeIn">
+            <AboutMe />
+            <MyExperience />
+            {/* Hier kannst du zukünftig spezifische Industrie/KI-Komponenten reinladen */}
+          </div>
+        )}
+
+        {/* BEREICH 3: 🤝 Verbände & Engagement */}
+        {activeArea === "verbaende" && (
+          <div className="animate-fadeIn">
+            <CoreValues />
+            {/* Hier kommen deine Engagements wie Swissmem / SwissSkills hin */}
+          </div>
+        )}
+
+        {/* BEREICH 4: 📚 Publikationen */}
+        {activeArea === "publikationen" && (
+          <div className="animate-fadeIn">
+            <Articles />
+            {/* Hier kommen White Paper, Vorträge und LinkedIn-Artikel hin */}
+          </div>
+        )}
+      </div>
+
+      {/* Globale Sektionen, die immer ganz unten sichtbar sein sollen */}
+      {activeArea !== "home" && (
+        <>
+          <Contact />
+          <Datenschutz />
+        </>
+      )}
+    </div>
   );
 }
 
