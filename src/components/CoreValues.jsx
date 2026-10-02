@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // FIX: Hier wurden die geschweiften Klammern hinzugefügt, um die Funktion aus der App.jsx anzunehmen
 export default function CoreValues({ setActiveArea }) {
-  const [selected, setSelected] = useState("loesung"); 
+  const [selected, setSelected] = useState("resonanz"); 
 
 
      // Bombensichere Navigations-Funktion mit Fehlerdiagnose
@@ -48,9 +48,33 @@ export default function CoreValues({ setActiveArea }) {
           </p>
         </div>
 
-        {/* Interaktive Werte-Auswahl */}
+        {/* Interaktive Werte-Auswahl (Umsortiert: Resonanz als Nr. 1 ganz links) */}
         <div className="mt-16 grid gap-8 md:grid-cols-3">
 
+          {/* KACHEL 1: INDUSTRIEFORUM RESONANZ */}
+          <button
+            onClick={() => setSelected("resonanz")}
+            className={`rounded-3xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300 text-left cursor-pointer border-2 flex flex-col justify-between ${
+              selected === "resonanz"
+                ? "bg-orange-50/50 border-orange-500 shadow-lg"
+                : "bg-slate-50 border-transparent hover:bg-slate-100/70"
+            }`}
+          >
+            <div>
+              <div className="text-5xl mb-6">🤝</div>
+              <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
+                Industrieforum-Resonanz
+              </h3>
+              <p className="mt-4 text-slate-600 leading-relaxed">
+                Herausragendes Direkt-Feedback von Spitzenvertretern aus dem Schweizer Maschinenbau, der Forschung und Hochschulbildung.
+              </p>
+            </div>
+            <span className="mt-6 text-xs font-semibold text-orange-600 uppercase tracking-wider">
+              {selected === "resonanz" ? "Aktiviert • Details unten" : "Klicken für Details"}
+            </span>
+          </button>
+
+          {/* KACHEL 2: LÖSUNGSORIENTIERUNG */}
           <button
             onClick={() => setSelected("loesung")}
             className={`rounded-3xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300 text-left cursor-pointer border-2 flex flex-col justify-between ${
@@ -73,28 +97,7 @@ export default function CoreValues({ setActiveArea }) {
             </span>
           </button>
 
-          <button
-            onClick={() => setSelected("resonanz")}
-            className={`rounded-3xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300 text-left cursor-pointer border-2 flex flex-col justify-between ${
-              selected === "resonanz"
-                ? "bg-orange-50/50 border-orange-500 shadow-lg"
-                : "bg-slate-50 border-transparent hover:bg-slate-100/70"
-            }`}
-          >
-            <div>
-              <div className="text-5xl mb-6">🤝</div>
-              <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
-                Industrie- & Bildungs-Resonanz
-              </h3>
-              <p className="mt-4 text-slate-600 leading-relaxed">
-                Direktes Feedback von Spitzenvertretern aus dem Maschinenbau, der Forschung und der Hochschulbildung.
-              </p>
-            </div>
-            <span className="mt-6 text-xs font-semibold text-orange-600 uppercase tracking-wider">
-              {selected === "resonanz" ? "Aktiviert • Details unten" : "Klicken für Details"}
-            </span>
-          </button>
-
+          {/* KACHEL 3: RÜCKGRAT & KONSTANZ */}
           <button
             onClick={() => setSelected("rueckgrat")}
             className={`rounded-3xl p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300 text-left cursor-pointer border-2 flex flex-col justify-between ${
@@ -118,6 +121,7 @@ export default function CoreValues({ setActiveArea }) {
           </button>
 
         </div>
+
 
         {/* DETAIL-PANELS (DYNAMISCH) */}
         <div className="mt-12">
