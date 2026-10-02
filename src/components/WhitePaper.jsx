@@ -89,7 +89,7 @@ export default function WhitePaper() {
             <div className="pt-2">
               <a
                 href={pdfPath}
-                download="Whitepaper_Dominik_Alge.pdf"
+                download="Beyond_FactoryAI_White_Paper.pdf" // Schöner Dateiname beim User auf dem Gerät
                 className="pointer-events-auto inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-2xl shadow-lg shadow-orange-500/20 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 cursor-pointer text-center"
               >
                 <span>📥</span>
@@ -99,6 +99,7 @@ export default function WhitePaper() {
                 Kostenloser Download • Vollständiges Dokument
               </p>
             </div>
+
           </div>
 
         </div>
