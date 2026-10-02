@@ -133,7 +133,7 @@ export default function Engagement() {
                 <span className="text-xs font-bold text-orange-600 block">2018 – 2019</span>
                 <h4 className="text-base font-bold text-slate-900 mt-0.5">Abteilungsleiter CNC / Baulatten (interim)</h4>
                 <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                  Führung in einer Stiftung für Arbeitsintegration. Aktive Unterstützung und Befähigung von Menschen auf dem Weg zurück in den ersten Arbeitsmarkt sowie erfolgreiche Ausbildung eines Mechanikpraktikers EBA.
+                  Führung einer CNC-Abteilung in einer Stiftung für Arbeitsintegration. Aktive Unterstützung und Befähigung von Menschen auf dem Weg zurück in den ersten Arbeitsmarkt sowie erfolgreiche Ausbildung eines Mechanikpraktikers EBA.
                 </p>
               </div>
 
