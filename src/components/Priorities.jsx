@@ -1,3 +1,4 @@
+// components/Priorities.jsx
 import { useState } from "react";
 
 const priorityList = [
@@ -7,7 +8,9 @@ const priorityList = [
     title: "KMU & Werkplatz von Fesseln befreien",
     subtitle: "Bürokratie-Stopp für das Gewerbe",
     description: "Unsere Unternehmen dürfen ihre Energie nicht im administrativen Leerlauf verlieren. Ich fordere einen konsequenten Bürokratieabbau bei kantonalen Bewilligungsverfahren und die steuerliche Entlastung von KMU, die in den Standort St. Gallen investieren.",
-    actionText: "Für einen starken Werkplatz"
+    actionText: "Zu meinen Verbänden", // Text optimiert für Navigation
+    targetArea: "verbaende",
+    targetElement: "werte"
   },
   {
     num: "02",
@@ -15,7 +18,9 @@ const priorityList = [
     title: "Berufslehre & HF-Abschlüsse stärken",
     subtitle: "Gleichwertigkeit im Bildungssystem",
     description: "Der Fachkräftemangel wird an der Werkbank gelöst, nicht im Hörsaal. Ich setze mich für die massive Aufwertung des dualen Bildungssystems ein. Höhere Fachschulen (HF) müssen finanziell und gesellschaftlich den Universitäten komplett gleichgestellt werden.",
-    actionText: "Für echte Chancengleichheit"
+    actionText: "Zu meinen Kompetenzen", // Text optimiert für Navigation
+    targetArea: "kompetenzen",
+    targetElement: "erfahrung"
   },
   {
     num: "03",
@@ -23,12 +28,38 @@ const priorityList = [
     title: "Technologieoffenheit statt Verbote",
     subtitle: "Fortschritt durch Praxis-Innovation",
     description: "Die Digitalisierung und der demografische Wandel erfordern intelligente Systeme, keine neuen Regulierungswellen. Ob KI-gestütztes Wissensmanagement auf dem Shopfloor oder moderne Energietechnologien: St. Gallen muss zum Vorreiter für angewandte Innovation werden.",
-    actionText: "Für digitale Zukunft"
+    actionText: "Zu meinen Publikationen", // Text optimiert für Navigation
+    targetArea: "publikationen",
+    targetElement: "artikel" // Oder die entsprechende ID in Articles.jsx (z.B. "articles" oder leer lassen für Top-Scroll)
   }
 ];
 
-export default function Priorities() {
+// WICHTIG: Wir fangen { setActiveArea } hier sauber als Prop ab
+export default function Priorities({ setActiveArea }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  // Technisch optimierte Hilfsfunktion für bereichsübergreifende Sprünge
+  const handleNavigation = (areaId, elementId) => {
+    console.log("Prioritäten-Kachel geklickt! Wechsle nach:", areaId);
+
+    if (typeof setActiveArea === "function") {
+      // 1. In die gewünschte Welt umschalten
+      setActiveArea(areaId);
+      
+      // 2. Dem Browser Zeit zum Rendern geben, dann sanft scrollen
+      setTimeout(() => {
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          // Fallback, falls die ID auf der Zielseite (noch) nicht im DOM existiert
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }, 250);
+    } else {
+      console.warn("setActiveArea fehlt als Prop in Priorities.jsx");
+    }
+  };
 
   return (
     <section id="prioritaeten" className="py-24 bg-slate-900 text-white relative overflow-hidden">
@@ -59,18 +90,19 @@ export default function Priorities() {
             const isHovered = hoveredIndex === index;
 
             return (
-              <div
+              <button
                 key={item.num}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`relative rounded-3xl p-8 lg:p-10 border transition-all duration-300 flex flex-col justify-between group min-h-[420px] ${
+                onClick={() => handleNavigation(item.targetArea, item.targetElement)}
+                className={`w-full text-left relative rounded-3xl p-8 lg:p-10 border transition-all duration-300 flex flex-col justify-between group min-h-[420px] pointer-events-auto cursor-pointer ${
                   isHovered
                     ? "bg-slate-800/80 border-orange-500 shadow-2xl shadow-orange-500/5 -translate-y-2"
                     : "bg-slate-800/40 border-slate-800"
                 }`}
               >
                 {/* Obere Sektion: Nummerierung & Icon */}
-                <div>
+                <div className="w-full">
                   <div className="flex items-center justify-between">
                     <span className={`text-5xl font-black transition-colors duration-300 ${
                       isHovered ? "text-orange-500" : "text-slate-700"
@@ -99,7 +131,7 @@ export default function Priorities() {
                 </div>
 
                 {/* Untere Sektion: Action-Indikator */}
-                <div className="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between text-xs font-bold tracking-wider uppercase">
+                <div className="w-full mt-8 pt-6 border-t border-slate-800 flex items-center justify-between text-xs font-bold tracking-wider uppercase">
                   <span className={isHovered ? "text-white" : "text-slate-500"}>
                     {item.actionText}
                   </span>
@@ -110,7 +142,7 @@ export default function Priorities() {
                   </span>
                 </div>
 
-              </div>
+              </button>
             );
           })}
         </div>
