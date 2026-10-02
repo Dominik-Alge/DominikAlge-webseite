@@ -3,26 +3,29 @@ import { useState } from "react";
 export default function CoreValues() {
   const [selected, setSelected] = useState("loesung"); // "loesung" ist standardmässig vorausgewählt
 
-    // Technisch optimierte Hilfsfunktion für das React-Timing
+     // Bombensichere Navigations-Funktion mit Fehlerdiagnose
   const handleNavigation = (areaId, elementId) => {
-    // 1. Zuerst die Welt umschalten (z. B. auf 'politik')
+    console.log("Button geklickt! Versuche zu wechseln nach:", areaId);
+
     if (setActiveArea) {
+      // 1. Bereich umschalten
       setActiveArea(areaId);
+      
+      // 2. Warten und scrollen
+      setTimeout(() => {
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }, 250);
+    } else {
+      // FEHLERDIAGNOSE: Das hilft uns sofort zu sehen, was schiefschäuft
+      console.error("KRITISCH: 'setActiveArea' wurde nicht an CoreValues übergeben!");
+      alert("Technischer Fehler: Die Verbindung zur Hauptseite fehlt. Bitte prüfe die App.jsx.");
     }
-
-    // 2. Dem Browser 250ms Zeit geben, um die Komponenten stabil im DOM zu rendern
-    setTimeout(() => {
-      const element = document.getElementById(elementId);
-      if (element) {
-        // Wenn die ID existiert, perfekt hinscrollen
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        // Fallback: Wenn das Element noch lädt, smooth an den Anfang der neuen Welt springen
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    }, 250); // Erhöht auf 250ms – das löst das Timing-Problem bei Single-Page-Apps
   };
-
 
     return (
     <section id="werte" className="py-24 bg-white">
