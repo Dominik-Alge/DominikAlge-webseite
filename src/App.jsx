@@ -44,7 +44,7 @@ function App() {
         {/* BEREICH 3: 🤝 Verbände & Engagement */}
         {activeArea === "verbaende" && (
           <div>
-            <CoreValues />
+            <CoreValues setActiveArea={setActiveArea} />
           </div>
         )}
 
