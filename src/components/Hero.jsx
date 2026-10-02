@@ -35,9 +35,9 @@ export default function Hero({ activeArea, setActiveArea }) {
       color: "hover:border-orange-500 hover:bg-orange-50/30"
     },
     {
-      id: "beruf",
-      title: "🏭 Beruf & Fachthemen",
-      shortTitle: "🏭 Beruf",
+      id: "kompetenzen",
+      title: "🏭 Kompetenzen & Erfahrung",
+      shortTitle: "🏭 Kompetenzen",
       subtitle: "Führung, Berufsbildung, Wissensmanagement, KI, Industrie 4.0",
       color: "hover:border-blue-600 hover:bg-blue-50/30"
     },
