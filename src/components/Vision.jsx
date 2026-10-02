@@ -1,3 +1,4 @@
+import { useState } from "react";
 // WICHTIG: Die geschweiften Klammern { setActiveArea } nehmen die Funktion aus der App.jsx entgegen
 export default function Vision({ setActiveArea }) {
   const [selected, setSelected] = useState("bildung"); // "bildung" ist vorausgewählt
