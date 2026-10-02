@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function WhitePaper() {
   // Pfad zu deinem PDF im public-Ordner
-  const pdfPath = "/Whitepaper_Dominik_Alge.pdf"; 
+  const pdfPath = "/Beyond%20FactoryAI%20-%20White%20Paper.pdf"; 
 
   const coreTopics = [
     "Strategische Vision für den Werkplatz Rheintal",
