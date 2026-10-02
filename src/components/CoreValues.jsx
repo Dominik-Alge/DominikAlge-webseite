@@ -3,7 +3,20 @@ import { useState } from "react";
 export default function CoreValues() {
   const [selected, setSelected] = useState("loesung"); // "loesung" ist standardmässig vorausgewählt
 
-  return (
+  // Hilfsfunktion für den bereichsübergreifenden Sprung
+  const handleNavigation = (areaId, elementId) => {
+    if (setActiveArea) {
+      setActiveArea(areaId);
+    }
+    setTimeout(() => {
+      const element = document.getElementById(elementId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
+  };
+
+    return (
     <section id="werte" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
@@ -112,12 +125,12 @@ export default function CoreValues() {
                 </ul>
               </div>
               <div className="flex-shrink-0">
-                <a
-                  href="#warum-ich"
-                  className="inline-block bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-md transition duration-200 text-center"
+                <button
+                  onClick={() => handleNavigation("politik", "warum-ich")}
+                  className="inline-block bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-md transition duration-200 text-center cursor-pointer"
                 >
-                  Die Entscheidung
-                </a>
+                  Zur Politik-Ausrichtung
+                </button>
               </div>
             </div>
           )}
@@ -140,12 +153,12 @@ export default function CoreValues() {
                 </ul>
               </div>
               <div className="flex-shrink-0">
-                <a
-                  href="#warum-ich"
-                  className="inline-block bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-md transition duration-200 text-center"
+                <button
+                  onClick={() => handleNavigation("kompetenzen", "erfahrung")} 
+                  className="inline-block bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-md transition duration-200 text-center cursor-pointer"
                 >
-                  Faktenbasiert handeln
-                </a>
+                  Zu meinen Kompetenzen
+                </button>
               </div>
             </div>
           )}
@@ -155,30 +168,34 @@ export default function CoreValues() {
             <div className="rounded-3xl bg-slate-50 p-8 lg:p-10 shadow-inner border border-slate-100 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
               <div className="max-w-3xl">
                 <h3 className="text-3xl font-black text-slate-900 tracking-tight">
-                  Konstanz für das grössere Wohl
+                  Konstanz in stürmischen Zeiten
                 </h3>
                 <p className="mt-4 text-slate-700 leading-relaxed">
-                  Wer jede Woche seine Meinung ändert, um Umfragen zu gefallen, schafft kein Vertrauen. 
-                  Manchmal erfordern nachhaltige Erfolge mutige und unbequeme Schritte:
+                  Wer überall gefallen will, steht am Ende für gar nichts. Echte Führung bedeutet, auch bei 
+                  Gegenwind Kurs zu halten und fundierte Werte zu vertreten:
                 </p>
                 <ul className="mt-6 space-y-3 text-slate-700 font-medium">
-                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Berechenbare, langfristige Finanz- und Sachpolitik</li>
-                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Das langfristige Gemeinwohl über kurzfristige Schlagzeilen stellen</li>
-                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Wort halten – auch wenn der politische Gegenwind zunimmt</li>
+                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Transparente Kommunikation – auch bei unbequemen Themen</li>
+                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Langfristige Stabilität statt kurzfristigem Aktionismus</li>
+                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Verlässlicher Partner für Wirtschaft, Bildung und Gesellschaft</li>
                 </ul>
               </div>
               <div className="flex-shrink-0">
-                <a
-                  href="#warum-ich"
-                  className="inline-block bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-md transition duration-200 text-center"
+                <button
+                  onClick={() => handleNavigation("politik", "prioritaeten")}
+                  className="inline-block bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-md transition duration-200 text-center cursor-pointer"
                 >
-                  Klartext wählen
-                </a>
+                  Meine Prioritäten sehen
+                </button>
               </div>
             </div>
           )}
 
         </div>
+      </div>
+    </section>
+  );
+}
 
       </div>
     </section>
