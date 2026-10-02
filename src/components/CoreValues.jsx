@@ -1,7 +1,9 @@
 import { useState } from "react";
 
-export default function CoreValues() {
-  const [selected, setSelected] = useState("loesung"); // "loesung" ist standardmässig vorausgewählt
+// FIX: Hier wurden die geschweiften Klammern hinzugefügt, um die Funktion aus der App.jsx anzunehmen
+export default function CoreValues({ setActiveArea }) {
+  const [selected, setSelected] = useState("loesung"); 
+
 
      // Bombensichere Navigations-Funktion mit Fehlerdiagnose
   const handleNavigation = (areaId, elementId) => {
