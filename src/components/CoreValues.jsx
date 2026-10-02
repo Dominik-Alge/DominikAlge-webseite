@@ -3,18 +3,26 @@ import { useState } from "react";
 export default function CoreValues() {
   const [selected, setSelected] = useState("loesung"); // "loesung" ist standardmässig vorausgewählt
 
-  // Hilfsfunktion für den bereichsübergreifenden Sprung
+    // Technisch optimierte Hilfsfunktion für das React-Timing
   const handleNavigation = (areaId, elementId) => {
+    // 1. Zuerst die Welt umschalten (z. B. auf 'politik')
     if (setActiveArea) {
       setActiveArea(areaId);
     }
+
+    // 2. Dem Browser 250ms Zeit geben, um die Komponenten stabil im DOM zu rendern
     setTimeout(() => {
       const element = document.getElementById(elementId);
       if (element) {
+        // Wenn die ID existiert, perfekt hinscrollen
         element.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        // Fallback: Wenn das Element noch lädt, smooth an den Anfang der neuen Welt springen
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
-    }, 100);
+    }, 250); // Erhöht auf 250ms – das löst das Timing-Problem bei Single-Page-Apps
   };
+
 
     return (
     <section id="werte" className="py-24 bg-white">
