@@ -53,35 +53,46 @@ export default function WhitePaper() {
             </div>
           </div>
 
-          {/* Rechte Spalte: Text & Download-Inhalte */}
+                    {/* Rechte Spalte: Text & Download-Inhalte */}
           <div className="lg:col-span-7 space-y-8">
             <div>
               <span className="text-orange-600 font-semibold tracking-wide uppercase text-sm block">
-                Hintergrund & Tiefgang
+                Konzept & Praxis-Leitfaden
               </span>
               <h2 className="mt-2 text-4xl font-black text-slate-900 tracking-tight leading-tight">
-                Das White Paper zu meiner <br />politischen & fachlichen Vision
+                Beyond FactoryAI: Wissenssicherung <br />& KI-Integration für KMU-Betriebe
               </h2>
               <p className="mt-4 text-slate-600 leading-relaxed text-base">
-                Politik darf sich nicht in Slogans erschöpfen. In diesem White Paper habe ich meine 
-                Erfahrungen aus über 20 Jahren Industrie, Berufsbildung und GPK-Arbeit zu einem konkreten 
-                Fundament zusammengefasst. Es beleuchtet die Kernhebel, die wir ansetzen müssen, um St. Gallen 
-                zukunftssicher aufzustellen.
+                Der demografische Wandel trifft unsere Industrie hart: Wenn erfahrene Fachkräfte den Betrieb 
+                verlassen, geht oft wertvolles implizites Erfahrungswissen verloren. Dieses White Paper basiert auf 
+                meinem Vortrag am Industrieforum und beschreibt einen pragmatischen Ansatz für Fertigungsbetriebe. 
+                Es zeigt auf, wie KMU ihr wertvollstes Gut – das Praxiswissen ihrer Mitarbeitenden – systematisch 
+                sichern, durch KI-Assistenzsysteme im Alltag verfügbar machen und eine lernende Organisation bauen können.
               </p>
             </div>
 
             {/* Die Kernpunkte im Dokument */}
             <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
               <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4">
-                Was dich in diesem Dokument erwartet:
+                Die Kerninhalte des Leitfadens:
               </h4>
               <ul className="space-y-3">
-                {coreTopics.map((topic, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-slate-700 font-medium">
-                    <span className="text-orange-500 mt-0.5">✔</span>
-                    <span>{topic}</span>
-                  </li>
-                ))}
+                <li className="flex items-start gap-3 text-sm text-slate-700 font-medium">
+                  <span className="text-orange-500 mt-0.5">✔</span>
+                  <span><strong>Wissensrisiken erkennen:</strong> Wo droht durch Pensionierungen akuter Wissensverlust?</span>
+                </li>
+                <li className="flex items-start gap-3 text-sm text-slate-700 font-medium">
+                  <span className="text-orange-500 mt-0.5">✔</span>
+                  <span><strong>Digitale Experten aufbauen:</strong> Wie domänenspezifische KI-Agenten (z.B. für Schleif- oder Frästechnik) Teams im Schichtbetrieb unterstützen.</span>
+                </li>
+                <li className="flex items-start gap-3 text-sm text-slate-700 font-medium">
+                  <span className="text-orange-500 mt-0.5">✔</span>
+                  <span><strong>Shopfloor-Integration:</strong> Wie gesichertes Wissen direkt in operative Handlungen und messbare Verbesserungen einfliesst.</span>
+                </li>
+                <li className="flex items-start gap-3 text-sm text-slate-700 font-medium">
+                  <span className="text-orange-500 mt-0.5">✔</span>
+                  <span><strong>Das IKOS-Verfahren:</strong> Ein modularer Leitfaden für KMU zur schrittweisen Transformation vom Wissensverlust zur selbstlernenden Fabrik.</span>
+                </li>
               </ul>
             </div>
 
@@ -89,17 +100,16 @@ export default function WhitePaper() {
             <div className="pt-2">
               <a
                 href={pdfPath}
-                download="Beyond_FactoryAI_White_Paper.pdf" // Schöner Dateiname beim User auf dem Gerät
+                download="Beyond_FactoryAI_White_Paper.pdf"
                 className="pointer-events-auto inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-2xl shadow-lg shadow-orange-500/20 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 cursor-pointer text-center"
               >
                 <span>📥</span>
-                <span>White Paper herunterladen (PDF)</span>
+                <span>Konzept-Leitfaden herunterladen (PDF)</span>
               </a>
               <p className="text-xs text-slate-400 mt-2 ml-1">
-                Kostenloser Download • Vollständiges Dokument
+                Kostenloser Download • Vollständiges Dokument (12 Seiten)
               </p>
             </div>
-
           </div>
 
         </div>
