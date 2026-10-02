@@ -12,6 +12,7 @@ import Contact from "./components/contact";
 import Datenschutz from "./components/Datenschutz";
 import Articles from "./components/Articles";
 import WhitePaper from "./components/WhitePaper";
+import Engagement from "./components/Engagement";
 
 function App() {
   // Mögliche Zustände: "home", "politik", "beruf", "verbaende", "publikationen"
@@ -46,6 +47,7 @@ function App() {
         {activeArea === "verbaende" && (
           <div>
             {/* WICHTIG: setActiveArea MUSS exakt so als Prop übergeben werden! */}
+            <Engagement />
             <CoreValues setActiveArea={setActiveArea} />
           </div>
         )}
