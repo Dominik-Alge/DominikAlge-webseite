@@ -1,4 +1,3 @@
-// components/Hero.jsx
 import { useState, useEffect } from 'react';
 
 export default function Hero({ activeArea, setActiveArea }) {
@@ -14,7 +13,7 @@ export default function Hero({ activeArea, setActiveArea }) {
       setCurrentValueIndex((prevIndex) => (prevIndex + 1) % values.length);
     }, 2500);
     return () => clearInterval(interval);
-  }, []);
+  }, [values.length]);
 
   useEffect(() => {
     if (charIndex < welcomeText.length) {
@@ -24,7 +23,7 @@ export default function Hero({ activeArea, setActiveArea }) {
       }, 15);
       return () => clearTimeout(timeout);
     }
-  }, [charIndex, welcomeText, devoured = charIndex]); // Fix für Dependency Array
+  }, [charIndex, welcomeText]);
 
   // Definition der 4 Bereiche mit Kurznamen für die Menüleiste
   const categories = [
@@ -95,7 +94,7 @@ export default function Hero({ activeArea, setActiveArea }) {
     );
   }
 
-  // WENN DIE STARTSEITE AKTIV IST: Die vollhertige Weichensteller-Landingpage
+  // WENN DIE STARTSEITE AKTIV IST: Die vollwertige Weichensteller-Landingpage
   return (
     <section className="min-h-screen bg-gradient-to-br from-orange-50/40 via-white to-slate-100/40 flex items-center py-12">
       <div className="max-w-7xl mx-auto px-6 w-full">
@@ -171,5 +170,6 @@ export default function Hero({ activeArea, setActiveArea }) {
     </section>
   );
 }
+
 
 
