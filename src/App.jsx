@@ -13,6 +13,7 @@ import Datenschutz from "./components/Datenschutz";
 import Articles from "./components/Articles";
 import WhitePaper from "./components/WhitePaper";
 import Engagement from "./components/Engagement";
+import DominikAI from "./DominikAI/frontend/DominikAI";
 
 function App() {
   // Mögliche Zustände: "home", "politik", "beruf", "verbaende", "publikationen"
@@ -57,6 +58,41 @@ function App() {
           <div>
             <WhitePaper />
             <Articles />
+          </div>
+        )}
+      </div>
+
+      {/* BEREICH 5: 🤖 NEU: DominikAI mit "In Konstruktion" & PW-Schutz */}
+        {activeArea === "dominikAi" && (
+          <div className="max-w-4xl mx-auto my-12 p-6 bg-white rounded-xl shadow-md">
+            {!isAiAuthorized ? (
+              /* Passwort-Barriere / Under Construction View */
+              <div className="text-center py-12">
+                <span className="text-5xl">🚧</span>
+                <h2 className="text-2xl font-bold text-slate-800 mt-4 mb-2">DominikAI befindet sich im Aufbau</h2>
+                <p className="text-slate-600 mb-6">Dieser Bereich ist momentan nur für Entwickler und Tester zugänglich.</p>
+                
+                <form onSubmit={handlePasswordSubmit} className="max-w-sm mx-auto flex flex-col gap-3">
+                  <input 
+                    type="password" 
+                    placeholder="Entwickler-Passwort eingeben" 
+                    value={passwordInput}
+                    onChange={(e) => setPasswordInput(e.target.value)}
+                    className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-center"
+                  />
+                  <button 
+                    type="submit" 
+                    className="bg-slate-800 text-white py-2 rounded-lg font-semibold hover:bg-slate-700 transition"
+                  >
+                    Freischalten
+                  </button>
+                  {authError && <p className="text-red-500 text-sm mt-1">Falsches Passwort. Zugriff verweigert.</p>}
+                </form>
+              </div>
+            ) : (
+              /* Die eigentliche App, wenn das Passwort korrekt eingegeben wurde */
+              <DominikAI />
+            )}
           </div>
         )}
       </div>
