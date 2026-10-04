@@ -79,15 +79,14 @@ function App() {
         )}
       </div>
 
-      {/* BEREICH 5: 🤖 NEU: DominikAI mit "In Konstruktion" & PW-Schutz */}
+      {/* BEREICH 5: 🤖 DominikAI mit PW-Schutz */}
         {activeArea === "dominikAi" && (
           <div className="max-w-4xl mx-auto my-12 p-6 bg-white rounded-xl shadow-md">
             {!isAiAuthorized ? (
-              /* Passwort-Barriere / Under Construction View */
               <div className="text-center py-12">
                 <span className="text-5xl">🚧</span>
                 <h2 className="text-2xl font-bold text-slate-800 mt-4 mb-2">DominikAI befindet sich im Aufbau</h2>
-                <p className="text-slate-600 mb-6">Dieser Bereich ist momentan nur für Entwickler und Tester zugänglich.</p>
+                <p className="text-slate-600 mb-6">Dieser Bereich ist momentan nur für Entwickler zugänglich.</p>
                 
                 <form onSubmit={handlePasswordSubmit} className="max-w-sm mx-auto flex flex-col gap-3">
                   <input 
@@ -107,7 +106,6 @@ function App() {
                 </form>
               </div>
             ) : (
-              /* Die eigentliche App, wenn das Passwort korrekt eingegeben wurde */
               <DominikAI />
             )}
           </div>
@@ -126,4 +124,3 @@ function App() {
 }
 
 export default App;
-
