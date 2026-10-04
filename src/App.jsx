@@ -16,8 +16,25 @@ import Engagement from "./components/Engagement";
 import DominikAI from "./DominikAI/frontend/DominikAI";
 
 function App() {
-  // Mögliche Zustände: "home", "politik", "beruf", "verbaende", "publikationen"
+  // Mögliche Zustände erweitert um: "dominikAi"
   const [activeArea, setActiveArea] = useState("home");
+
+  // NEU: Zustand für den Passwort-Schutz / Baustellen-Modus im Frontend
+  const [isAiAuthorized, setIsAiAuthorized] = useState(false);
+  const [passwordInput, setPasswordInput] = useState("");
+  const [authError, setAuthError] = useState(false);
+
+  // Einfacher Passwort-Check fürs Frontend (Später über auth.py absichern!)
+  const handlePasswordSubmit = (e) => {
+    e.preventDefault();
+    // Ersetze 'geheim123' mit deinem temporären Passwort
+    if (passwordInput === "geheim123") { 
+      setIsAiAuthorized(true);
+      setAuthError(false);
+    } else {
+      setAuthError(true);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col justify-between">
