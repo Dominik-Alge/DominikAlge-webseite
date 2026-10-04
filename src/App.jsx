@@ -13,21 +13,22 @@ import Datenschutz from "./components/Datenschutz";
 import Articles from "./components/Articles";
 import WhitePaper from "./components/WhitePaper";
 import Engagement from "./components/Engagement";
-import DominikAI from "./DominikAI/frontend/DominikAI";
+
+// Importiere deine DominikAI-Hauptkomponente aus dem neuen Ordner
+import DominikAI from "./DominikAI/frontend/DominikAI"; 
 
 function App() {
-  // Mögliche Zustände erweitert um: "dominikAi"
+  // Mögliche Zustände: "home", "politik", "kompetenzen", "verbaende", "publikationen", "dominikAi"
   const [activeArea, setActiveArea] = useState("home");
 
-  // NEU: Zustand für den Passwort-Schutz / Baustellen-Modus im Frontend
+  // Zustand für den Passwort-Schutz / Baustellen-Modus im Frontend
   const [isAiAuthorized, setIsAiAuthorized] = useState(false);
   const [passwordInput, setPasswordInput] = useState("");
   const [authError, setAuthError] = useState(false);
 
-  // Einfacher Passwort-Check fürs Frontend (Später über auth.py absichern!)
+  // Einfacher Passwort-Check fürs Frontend
   const handlePasswordSubmit = (e) => {
     e.preventDefault();
-    // Ersetze 'geheim123' mit deinem temporären Passwort
     if (passwordInput === "geheim123") { 
       setIsAiAuthorized(true);
       setAuthError(false);
@@ -64,7 +65,6 @@ function App() {
         {/* BEREICH 3: 🤝 Verbände & Engagement */}
         {activeArea === "verbaende" && (
           <div>
-            {/* WICHTIG: setActiveArea MUSS exakt so als Prop übergeben werden! */}
             <Engagement />
             <CoreValues setActiveArea={setActiveArea} />
           </div>
@@ -77,9 +77,8 @@ function App() {
             <Articles />
           </div>
         )}
-      </div>
 
-      {/* BEREICH 5: 🤖 DominikAI mit PW-Schutz */}
+        {/* BEREICH 5: 🤖 DominikAI mit PW-Schutz */}
         {activeArea === "dominikAi" && (
           <div className="max-w-4xl mx-auto my-12 p-6 bg-white rounded-xl shadow-md">
             {!isAiAuthorized ? (
