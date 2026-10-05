@@ -6,38 +6,31 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
-from pypdf import PdfReader
 import openpyxl
 
 load_dotenv()
 
 app = FastAPI(title="DominikAI API")
 
+# CORS restlos freigeben, um jegliche Browser-Blockaden bei Fehlern zu verhindern
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://dominikalge.ch",
-        "https://dominikalge.ch",
-        "http://localhost:5173"
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
-# Hier wird das kompakte Excel-Wissen global im RAM gespeichert
 GLOBAL_KNOWLEDGE_BASE = ""
 
 def build_knowledge_index():
-    """Liest AUSSCHLIESSLICH die zentrale Index-Excel im metadata-Ordner ein"""
+    """Liest die zentrale Index-Excel im metadata-Ordner ein"""
     global GLOBAL_KNOWLEDGE_BASE
     print("🚀 Starte ultrakompakte Indizierung via knowledge_index.xlsx...")
     
     excel_content = ""
-    
-    # Mögliche Pfade zur Index-Datei (lokal & Render-Server)
     possible_paths = [
         "DominikAi/app/metadata/knowledge_index.xlsx",
         "app/metadata/knowledge_index.xlsx",
@@ -57,11 +50,10 @@ def build_knowledge_index():
     try:
         wb = openpyxl.load_workbook(target_file, data_only=True)
         for sheet in wb.sheetnames:
-            excel_content += f" Rubrik: {sheet}\n"
+            excel_content += f"\n[RUBRIK: {sheet}]\n"
             ws = wb[sheet]
             for row in ws.iter_rows(values_only=True):
-                # Zeilen kompakt mit | trennen, leere Zellen ignorieren
-                row_text = " | ".join([str(cell) for cell in row if cell is not None])
+                row_text = " | ".join([str(cell).strip() for cell in row if cell is not None])
                 if row_text.strip():
                     excel_content += row_text + "\n"
         
@@ -71,7 +63,6 @@ def build_knowledge_index():
     except Exception as e:
         print(f"Fehler beim Einlesen der Excel-Matrix: {e}")
 
-# Event-Trigger: Führt den Code beim Starten des Render-Servers aus
 @app.on_event("startup")
 async def startup_event():
     build_knowledge_index()
@@ -80,10 +71,8 @@ SYSTEM_PROMPT = """Du bist DominikAI, der persönliche, KI-gestützte Assistent 
 Deine Aufgabe ist es, Fragen zu Dominiks Person, seinem Lebenslauf, seinen politischen Positionen, seiner Arbeit in der Industrie und seinen Publikationen kompetent, freundlich und präzise zu beantworten. 
 Antworte immer in der Ich-Perspektive für Dominik oder als sein persönlicher Sprecher. Bleibe stets professionell und sachlich.
 
-WICHTIGE SICHERHEITSREGEL: Antworte AUSSCHLIESSLICH auf Basis der unten bereitgestellten Informationen aus Dominiks Dokumenten. Wenn eine Information nicht darin steht oder du die Antwort nicht weißt, erfinde auf keinen Fall etwas (keine Halluzinationen!). 
+WICHTIGE SICHERHEITSREGEL: Antworte AUSSCHLIESSLICH auf Basis der unten bereitgestellten Informationen aus Dominiks Inhaltsverzeichnis/Wissensmatrix. Wenn eine Information nicht darin steht oder du die Antwort nicht weißt, erfinde auf keinen Fall etwas (keine Halluzinationen!). 
 Antworte in diesem Fall stattdessen höflich auf Deutsch: „Dazu liegen mir aktuell leider keine genauen Informationen vor. Bitte wende dich bei spezifischen Fragen direkt an Dominik.“
-
-HIER IST DEIN VERFÜGBARES WISSEN AUS DEN DATEIEN:
 """
 
 class ChatRequest(BaseModel):
@@ -92,20 +81,27 @@ class ChatRequest(BaseModel):
 @app.post("/api/chat")
 async def chat_endpoint(request: ChatRequest):
     try:
-        # Kein Festplatten-Zugriff mehr! Holt die Daten direkt blitzschnell aus dem RAM
+        # Falls die Excel beim Starten nicht geladen werden konnte, fangen wir das ab
+        current_context = GLOBAL_KNOWLEDGE_BASE if GLOBAL_KNOWLEDGE_BASE else "Keine Daten geladen."
+        
+        # Wir fügen Prompt und Kontext sauber als lesbaren Text zusammen
+        full_instructions = f"{SYSTEM_PROMPT}\n\nHIER IST DEINE STRUKTURIERTE WISSENSMATRIX:\n{current_context}"
+        
+        # Aufruf nach den neuesten Google-Vorgaben für gemini-3-flash-preview
         response = client.models.generate_content(
             model='gemini-3-flash-preview',
             contents=request.message,
             config=types.GenerateContentConfig(
-                system_instruction=SYSTEM_PROMPT + GLOBAL_KNOWLEDGE_BASE,
+                system_instruction=full_instructions,
                 temperature=0.15
             )
         )
         return {"reply": response.text}
     except Exception as e:
-        print(f"Backend Fehler: {e}")
-        raise HTTPException(status_code=500, detail="KI-Verarbeitung fehlgeschlagen")
+        print(f"💥 Backend Absturz-Details: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("DominikAI:app", host="0.0.0.0", port=10000, reload=True)
+
