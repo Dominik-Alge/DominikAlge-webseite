@@ -13,11 +13,11 @@ load_dotenv()
 
 app = FastAPI(title="DominikAI API")
 
-# CORS erlauben, damit das React-Frontend zugreifen darf
+# CORS restlos freigeben, damit dein Frontend von jeder Domain aus anfragen darf
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,  # Muss bei allow_origins=["*"] auf False stehen
     allow_methods=["*"],
     allow_headers=["*"],
 )
