@@ -4,7 +4,8 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
-from openai import OpenAI
+from google import genai
+from google.genai import types
 from pypdf import PdfReader
 import openpyxl
 
@@ -12,6 +13,7 @@ load_dotenv()
 
 app = FastAPI(title="DominikAI API")
 
+# CORS erlauben, damit das React-Frontend zugreifen darf
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -20,12 +22,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# Initialisiert den kostenlosen Google Client mit der korrekten Variable
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 def load_knowledge():
     knowledge_text = ""
-    # Pfad-Erkennung flexibel halten (lokal vs Render)
-    possible_paths = ["DominikAi/app/knowledge/*", "app/knowledge/*", "knowledge/*"]
+    # Pfade flexibel durchsuchen (lokal und auf dem Render-Linux-Server)
+    possible_paths = ["DominikAi/knowledge/*", "knowledge/*", "app/knowledge/*", "../knowledge/*"]
     knowledge_files = []
     for path in possible_paths:
         knowledge_files.extend(glob.glob(path))
@@ -36,13 +39,13 @@ def load_knowledge():
     for file_path in knowledge_files:
         file_name = os.path.basename(file_path).lower()
         try:
-            # 1. MARKDOWN ODER TEXT DATEIEN LESEN
+            # 1. MARKDOWN / TEXT
             if file_name.endswith('.md') or file_name.endswith('.txt'):
                 with open(file_path, "r", encoding="utf-8") as f:
-                    knowledge_text += f"\n--- DOkUMENT: {os.path.basename(file_path)} ---\n"
+                    knowledge_text += f"\n--- DOKUMENT: {os.path.basename(file_path)} ---\n"
                     knowledge_text += f.read() + "\n"
             
-            # 2. PDF DATEIEN LESEN
+            # 2. PDFs AUSLESEN
             elif file_name.endswith('.pdf'):
                 reader = PdfReader(file_path)
                 pdf_content = ""
@@ -53,7 +56,7 @@ def load_knowledge():
                 knowledge_text += f"\n--- PDF-DOKUMENT: {os.path.basename(file_path)} ---\n"
                 knowledge_text += pdf_content + "\n"
             
-            # 3. EXCEL DATEIEN (.XLSX) LESEN
+            # 3. EXCEL-TABELLEN (.XLSX) AUSLESEN
             elif file_name.endswith('.xlsx'):
                 wb = openpyxl.load_workbook(file_path, data_only=True)
                 excel_content = ""
@@ -61,7 +64,6 @@ def load_knowledge():
                     excel_content += f" Tabellenblatt: {sheet}\n"
                     ws = wb[sheet]
                     for row in ws.iter_rows(values_only=True):
-                        # Leere Zeilen überspringen, Rest als Text zusammenfügen
                         row_text = " | ".join([str(cell) for cell in row if cell is not None])
                         if row_text.strip():
                             excel_content += row_text + "\n"
@@ -74,13 +76,13 @@ def load_knowledge():
     return knowledge_text
 
 SYSTEM_PROMPT = """Du bist DominikAI, der persönliche, KI-gestützte Assistent auf der offiziellen Website von Dominik Alge (dominikalge.ch). 
-Deine Aufgabe ist es, Fragen zu Dominiks Person, seinem Lebenslauf, seinen politischen Positionen (z.B. Kantonsrat / Nationalrat Antworten), seiner Arbeit in der Industrie und seinen Publikationen kompetent, freundlich und präzise zu beantworten. 
+Deine Aufgabe ist es, Fragen zu Dominiks Person, seinem Lebenslauf, seinen politischen Positionen, seiner Arbeit in der Industrie und seinen Publikationen kompetent, freundlich und präzise zu beantworten. 
 Antworte immer in der Ich-Perspektive für Dominik oder als sein persönlicher Sprecher. Bleibe stets professionell und sachlich.
 
 WICHTIGE SICHERHEITSREGEL: Antworte AUSSCHLIESSLICH auf Basis der unten bereitgestellten Informationen aus Dominiks Dokumenten. Wenn eine Information nicht darin steht oder du die Antwort nicht weißt, erfinde auf keinen Fall etwas (keine Halluzinationen!). 
 Antworte in diesem Fall stattdessen höflich auf Deutsch: „Dazu liegen mir aktuell leider keine genauen Informationen vor. Bitte wende dich bei spezifischen Fragen direkt an Dominik.“
 
-HIER IST DEIN VERFÜGBARES WISSEN AUS DEN DATEIEN (PDF, EXCEL, MARKDOWN):
+HIER IST DEIN VERFÜGBARES WISSEN AUS DEINEN DATEIEN (PDF, EXCEL, MARKDOWN):
 """
 
 class ChatRequest(BaseModel):
@@ -91,13 +93,13 @@ async def chat_endpoint(request: ChatRequest):
     try:
         context = load_knowledge()
         
-        # Aufruf des neuen Gemini 3 Flash Preview Modells
+        # Aufruf des Gemini 3 Flash Preview Modells aus deiner Google Studio Liste
         response = client.models.generate_content(
-            model='gemini-3-flash-preview', # Dein verfügbares Modell aus der Liste
+            model='gemini-3-flash-preview',
             contents=request.message,
             config=types.GenerateContentConfig(
                 system_instruction=SYSTEM_PROMPT + context,
-                temperature=0.15 # Niedrig gehalten gegen Halluzinationen
+                temperature=0.15
             )
         )
         
@@ -106,4 +108,7 @@ async def chat_endpoint(request: ChatRequest):
         print(f"Backend Fehler: {e}")
         raise HTTPException(status_code=500, detail="KI-Verarbeitung fehlgeschlagen")
 
-
+if __name__ == "__main__":
+    import uvicorn
+    # Port 10000 ist der Standardport für Web Services auf Render
+    uvicorn.run("DominikAI:app", host="0.0.0.0", port=10000, reload=True)
