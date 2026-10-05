@@ -91,23 +91,19 @@ async def chat_endpoint(request: ChatRequest):
     try:
         context = load_knowledge()
         
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT + context},
-                {"role": "user", "content": request.message}
-            ],
-            temperature=0.15 # Sehr niedrig für maximale Fakten-Treue
+        # Aufruf des neuen Gemini 3 Flash Preview Modells
+        response = client.models.generate_content(
+            model='gemini-3-flash-preview', # Dein verfügbares Modell aus der Liste
+            contents=request.message,
+            config=types.GenerateContentConfig(
+                system_instruction=SYSTEM_PROMPT + context,
+                temperature=0.15 # Niedrig gehalten gegen Halluzinationen
+            )
         )
         
-        return {"reply": response.choices.message.content}
+        return {"reply": response.text}
     except Exception as e:
         print(f"Backend Fehler: {e}")
         raise HTTPException(status_code=500, detail="KI-Verarbeitung fehlgeschlagen")
-
-if __name__ == "__main__":
-    import uvicorn
-    # Port 10000 ist der Standardport für Web Services auf Render
-    uvicorn.run("DominikAI:app", host="0.0.0.0", port=10000, reload=True)
 
 
