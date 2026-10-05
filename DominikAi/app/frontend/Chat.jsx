@@ -22,12 +22,13 @@ export default function Chat() {
     setIsLoading(true);
 
     try {
-      // Deine exakte Live-URL von Render mit dem richtigen API-Endpunkt
+      // Deine exakte, spezifische Backend-URL inklusive API-Endpunkt
       const response = await fetch("https://onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMessage }),
       });
+
 
       if (!response.ok) throw new Error("Netzwerkfehler");
 
