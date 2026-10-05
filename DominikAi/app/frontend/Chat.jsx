@@ -23,7 +23,7 @@ export default function Chat() {
 
     try {
       // Deine exakte, spezifische Backend-URL inklusive API-Endpunkt
-      const response = await fetch("https://onrender.com", {
+      const response = await fetch("https://dominikalge-backend.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMessage }),
