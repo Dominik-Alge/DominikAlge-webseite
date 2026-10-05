@@ -22,11 +22,8 @@ export default function Chat() {
     setIsLoading(true);
 
     try {
-      // HIER DIE URL DEINES RECENT ERSTELLTEN RENDER-BACKENDS EINTRAGEN:
-      // Falls dein Render-Backend z.B. "https://onrender.com" heisst:
-      const backendUrl = "https://DEIN_BACKEND_://onrender.com";
-
-      const response = await fetch(backendUrl, {
+      // Nutzt die Live-URL deines Render-Backends
+      const response = await fetch("https://onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMessage }),
@@ -40,7 +37,7 @@ export default function Chat() {
       console.error(error);
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "Fehler beim Abrufen der Antwort. Bitte stelle sicher, dass das Backend auf Render läuft." }
+        { role: "assistant", content: "Der KI-Server startet gerade im Hintergrund neu. Bitte versuche es in wenigen Sekunden noch einmal." }
       ]);
     } finally {
       setIsLoading(false);
@@ -49,14 +46,14 @@ export default function Chat() {
 
   return (
     <div className="flex flex-col h-[500px] border border-slate-200 rounded-xl overflow-hidden bg-slate-50 shadow-inner">
-      {/* Chatverlauf */}
+      {/* Nachrichtenverlauf */}
       <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4">
         {messages.map((msg, index) => (
           <div
             key={index}
             className={`max-w-[80%] p-3 rounded-xl text-sm ${
               msg.role === "user"
-                ? "bg-slate-900 text-white self-end rounded-br-none"
+                ? "bg-slate-900 text-white self-end rounded-br-none shadow-md"
                 : "bg-white text-slate-800 border border-slate-200 self-start rounded-bl-none shadow-sm"
             }`}
           >
@@ -71,7 +68,7 @@ export default function Chat() {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Eingabefeld */}
+      {/* Eingabebereich */}
       <form onSubmit={handleSend} className="p-3 bg-white border-t border-slate-200 flex gap-2">
         <input
           type="text"
