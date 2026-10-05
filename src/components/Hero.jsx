@@ -57,6 +57,14 @@ export default function Hero({ activeArea, setActiveArea }) {
     }
   ];
 
+  // Zusätzliche Definition für den geschützten AI-Bereich auf der Startseite
+  const aiCategory = {
+    id: "dominikAi",
+    title: "🤖 DominikAI (Beta)",
+    subtitle: "Stelle dem KI-Assistenten direkt Fragen zu meinen Positionen und Projekten.",
+    color: "border-slate-300 bg-slate-50/50 hover:border-violet-500 hover:bg-violet-50/30"
+  };
+
   // WENN EIN BEREICH AKTIV IST: Zeige die kompakte Navigations-Leiste oben an
   if (activeArea !== "home") {
     return (
