@@ -15,7 +15,7 @@ import WhitePaper from "./components/WhitePaper";
 import Engagement from "./components/Engagement";
 
 // Importiere deine DominikAI-Hauptkomponente aus dem neuen Ordner
-import DominikAI from "../DominikAi/app/frontend/DominikAI?v=2"; 
+import DominikAI from "../DominikAi/app/frontend/DominikAI"; 
 
 function App() {
   // Mögliche Zustände: "home", "politik", "kompetenzen", "verbaende", "publikationen", "dominikAi"
