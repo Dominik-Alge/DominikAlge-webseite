@@ -27,50 +27,49 @@ app.add_middleware(
 
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
-# HIER SPEICHERN WIR DAS WISSEN GLOBAL IM ARBEITSSPEICHER (NUR EINMAL LADEN)
+# Hier wird das kompakte Excel-Wissen global im RAM gespeichert
 GLOBAL_KNOWLEDGE_BASE = ""
 
 def build_knowledge_index():
-    """Liest alle Dokumente einmalig beim Serverstart ein"""
+    """Liest AUSSCHLIESSLICH die zentrale Index-Excel ein"""
     global GLOBAL_KNOWLEDGE_BASE
-    print("🚀 Starte Indizierung der Wissensdatenbank...")
+    print("🚀 Starte ultrakompakte Indizierung via knowledge_index.xlsx...")
     
-    knowledge_text = ""
-    possible_paths = ["DominikAi/knowledge/*", "knowledge/*", "app/knowledge/*", "../knowledge/*"]
-    knowledge_files = []
+    excel_content = ""
+    
+    # Mögliche Pfade zur Index-Datei (lokal & Render-Server)
+    possible_paths = [
+        "DominikAi/app/metadaten/knowlege_index.xlsx",
+        "app/metadaten/knowlege_index.xlsx",
+        "metadaten/knowlege_index.xlsx"
+    ]
+    
+    target_file = None
     for path in possible_paths:
-        knowledge_files.extend(glob.glob(path))
-    
-    knowledge_files = list(set(knowledge_files))
+        if os.path.exists(path):
+            target_file = path
+            break
+            
+    if not target_file:
+        print("⚠️ WARNUNG: knowlege_index.xlsx wurde in keinem Pfad gefunden!")
+        return
 
-    for file_path in knowledge_files:
-        file_name = os.path.basename(file_path).lower()
-        try:
-            if file_name.endswith('.md') or file_name.endswith('.txt'):
-                with open(file_path, "r", encoding="utf-8") as f:
-                    knowledge_text += f"\n--- DOKUMENT: {os.path.basename(file_path)} ---\n{f.read()}\n"
-            
-            elif file_name.endswith('.pdf'):
-                reader = PdfReader(file_path)
-                pdf_content = "".join([page.extract_text() or "" for page in reader.pages])
-                knowledge_text += f"\n--- PDF-DOKUMENT: {os.path.basename(file_path)} ---\n{pdf_content}\n"
-            
-            elif file_name.endswith('.xlsx'):
-                wb = openpyxl.load_workbook(file_path, data_only=True)
-                excel_content = ""
-                for sheet in wb.sheetnames:
-                    excel_content += f" Tabellenblatt: {sheet}\n"
-                    for row in wb[sheet].iter_rows(values_only=True):
-                        row_text = " | ".join([str(cell) for cell in row if cell is not None])
-                        if row_text.strip():
-                            excel_content += row_text + "\n"
-                knowledge_text += f"\n--- TABELLE/DATENBANK: {os.path.basename(file_path)} ---\n{excel_content}\n"
+    try:
+        wb = openpyxl.load_workbook(target_file, data_only=True)
+        for sheet in wb.sheetnames:
+            excel_content += f" Rubrik: {sheet}\n"
+            ws = wb[sheet]
+            for row in ws.iter_rows(values_only=True):
+                # Zeilen kompakt mit | trennen, leere Zellen ignorieren
+                row_text = " | ".join([str(cell) for cell in row if cell is not None])
+                if row_text.strip():
+                    excel_content += row_text + "\n"
+        
+        GLOBAL_KNOWLEDGE_BASE = excel_content
+        print(f"✅ Index erfolgreich geladen! {len(GLOBAL_KNOWLEDGE_BASE)} Zeichen im RAM.")
 
-        except Exception as e:
-            print(f"Fehler beim Einlesen von {file_path}: {e}")
-            
-    GLOBAL_KNOWLEDGE_BASE = knowledge_text
-    print(f"✅ Indizierung abgeschlossen! {len(GLOBAL_KNOWLEDGE_BASE)} Zeichen geladen.")
+    except Exception as e:
+        print(f"Fehler beim Einlesen der Excel-Matrix: {e}")
 
 # Event-Trigger: Führt den Code beim Starten des Render-Servers aus
 @app.on_event("startup")
