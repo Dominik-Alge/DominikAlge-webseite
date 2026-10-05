@@ -25,7 +25,7 @@ export default function Hero({ activeArea, setActiveArea }) {
     }
   }, [charIndex, welcomeText]);
 
-  // Definition der 4 Bereiche mit Kurznamen für die Menüleiste
+  // Definition der Bereiche (Jetzt mit DominikAI als 5. Option)
   const categories = [
     {
       id: "politik",
@@ -83,6 +83,8 @@ export default function Hero({ activeArea, setActiveArea }) {
             >
               ← Übersicht
             </button>
+            
+            {/* Die Standard-Kategorien im Menü */}
             {categories.map((cat) => (
               <button
                 key={cat.id}
@@ -96,6 +98,18 @@ export default function Hero({ activeArea, setActiveArea }) {
                 {cat.shortTitle}
               </button>
             ))}
+
+            {/* NEU: Der dedizierte Menü-Button für DominikAI */}
+            <button
+              onClick={() => setActiveArea("dominikAi")}
+              className={`px-3 py-2 text-sm font-bold rounded-xl border transition-all whitespace-nowrap ${
+                activeArea === "dominikAi"
+                  ? "bg-violet-600 text-white border-violet-600 shadow-sm"
+                  : "bg-white text-violet-700 border-violet-200 hover:bg-violet-50"
+              }`}
+            >
+              🤖 DominikAI
+            </button>
           </div>
         </div>
       </header>
@@ -108,7 +122,7 @@ export default function Hero({ activeArea, setActiveArea }) {
       <div className="max-w-7xl mx-auto px-6 w-full">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           
-          {/* Linke Spalte: Slogan & Die 4 Wahlbereiche */}
+          {/* Linke Spalte: Slogan & Die Wahlbereiche */}
           <div className="lg:col-span-7 space-y-8">
             
             {/* Schreibmaschinen-Begrüssung */}
@@ -138,21 +152,39 @@ export default function Hero({ activeArea, setActiveArea }) {
               </p>
             </div>
 
-            {/* Grid-Auswahl (Die 4 Kacheln) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveArea(cat.id)}
-                  className={`text-left p-5 bg-white border-2 border-slate-200/80 rounded-2xl shadow-sm transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md ${cat.color}`}
-                >
-                  <h3 className="text-lg font-bold text-slate-900 mb-1 flex items-center justify-between">
-                    {cat.title}
-                    <span className="text-xs text-slate-400 font-normal">Öffnen →</span>
+            {/* Grid-Auswahl: Die 4 Standard-Kacheln PLUS die neue AI-Kachel unten drunter */}
+            <div className="space-y-4 pt-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {categories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveArea(cat.id)}
+                    className={`text-left p-5 bg-white border-2 border-slate-200/80 rounded-2xl shadow-sm transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md ${cat.color}`}
+                  >
+                    <h3 className="text-lg font-bold text-slate-900 mb-1 flex items-center justify-between">
+                      {cat.title}
+                      <span className="text-xs text-slate-400 font-normal">Öffnen →</span>
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">{cat.subtitle}</p>
+                  </button>
+                ))}
+              </div>
+
+              {/* NEU: DominikAI als breite Kachel über die volle Breite darunter platziert */}
+              <button
+                onClick={() => setActiveArea(aiCategory.id)}
+                className={`w-full text-left p-5 border-2 rounded-2xl shadow-sm transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-2 ${aiCategory.color}`}
+              >
+                <div className="space-y-1">
+                  <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                    {aiCategory.title}
                   </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">{cat.subtitle}</p>
-                </button>
-              ))}
+                  <p className="text-xs text-slate-600 leading-relaxed">{aiCategory.subtitle}</p>
+                </div>
+                <span className="text-xs text-violet-600 font-semibold bg-violet-50 px-3 py-1.5 rounded-xl border border-violet-100 self-start sm:self-center whitespace-nowrap">
+                  Entwicklerzugang →
+                </span>
+              </button>
             </div>
           </div>
 
