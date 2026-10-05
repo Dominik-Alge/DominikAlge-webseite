@@ -22,7 +22,6 @@ export default function Chat() {
     setIsLoading(true);
 
     try {
-      // Nutzt die Live-URL deines Render-Backends
       const response = await fetch("https://onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
