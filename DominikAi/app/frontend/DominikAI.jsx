@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Chat from "./Chat?v=2";
+import Chat from "./Chat";
 
 export default function DominikAI() {
   return (
