@@ -31,7 +31,7 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 GLOBAL_KNOWLEDGE_BASE = ""
 
 def build_knowledge_index():
-    """Liest AUSSCHLIESSLICH die zentrale Index-Excel ein"""
+    """Liest AUSSCHLIESSLICH die zentrale Index-Excel im metadata-Ordner ein"""
     global GLOBAL_KNOWLEDGE_BASE
     print("🚀 Starte ultrakompakte Indizierung via knowledge_index.xlsx...")
     
@@ -39,9 +39,9 @@ def build_knowledge_index():
     
     # Mögliche Pfade zur Index-Datei (lokal & Render-Server)
     possible_paths = [
-        "DominikAi/app/metadaten/knowlege_index.xlsx",
-        "app/metadaten/knowlege_index.xlsx",
-        "metadaten/knowlege_index.xlsx"
+        "DominikAi/app/metadata/knowledge_index.xlsx",
+        "app/metadata/knowledge_index.xlsx",
+        "metadata/knowledge_index.xlsx"
     ]
     
     target_file = None
@@ -51,7 +51,7 @@ def build_knowledge_index():
             break
             
     if not target_file:
-        print("⚠️ WARNUNG: knowlege_index.xlsx wurde in keinem Pfad gefunden!")
+        print("⚠️ WARNUNG: knowledge_index.xlsx wurde im metadata-Pfad nicht gefunden!")
         return
 
     try:
