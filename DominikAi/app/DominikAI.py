@@ -13,14 +13,19 @@ load_dotenv()
 
 app = FastAPI(title="DominikAI API")
 
-# CORS restlos freigeben, damit dein Frontend von jeder Domain aus anfragen darf
+# CORS Konfiguration für deine Live-Webseite anpassen
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=False,  # Muss bei allow_origins=["*"] auf False stehen
+    allow_origins=[
+        "https://www.dominikalge.ch",
+        "https://dominikalge.ch",
+        "http://localhost:5173"  # Für deine lokale Entwicklung am PC
+    ],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Initialisiert den kostenlosen Google Client mit der korrekten Variable
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
