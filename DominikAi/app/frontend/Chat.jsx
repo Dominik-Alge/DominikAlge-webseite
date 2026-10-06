@@ -9,10 +9,10 @@ export default function Chat() {
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
-    requestAnimationFrame(() => {
+    setTimeout(() => {
       messagesEndRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    });
-  }, [messages, isLoading]); // Reagiert jetzt auch, wenn der Lade-Status aufploppt!
+    }, 50);
+  }, [messages]);
 
   const handleSend = async (e) => {
     e.preventDefault();
