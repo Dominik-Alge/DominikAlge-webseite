@@ -45,7 +45,7 @@ export default function Hero({ activeArea, setActiveArea }) {
       id: "verbaende",
       title: "🤝 Verbände & Engagement",
       shortTitle: "🤝 Verbände",
-      subtitle: "GPK, Swissmem, Swissmechanic, SwissSkills, Berufsbildung",
+      subtitle: "GPK, Verwaltungsrat, Berufsbildung, Swissmem, Arbeitsintegration",
       color: "hover:border-emerald-600 hover:bg-emerald-50/30"
     },
     {
@@ -182,7 +182,7 @@ export default function Hero({ activeArea, setActiveArea }) {
                   <p className="text-xs text-slate-600 leading-relaxed">{aiCategory.subtitle}</p>
                 </div>
                 <span className="text-xs text-violet-600 font-semibold bg-violet-50 px-3 py-1.5 rounded-xl border border-violet-100 self-start sm:self-center whitespace-nowrap">
-                  Entwicklerzugang →
+                  Jetzt fragen →
                 </span>
               </button>
             </div>
