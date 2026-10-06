@@ -4,16 +4,17 @@ import Chat from "./Chat";
 export default function DominikAI() {
   return (
     <div className="w-full flex flex-col gap-6">
-      {/* Gewünschter Hinweisbanner für die Entwicklungsphase */}
-      <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-sm">
-        <div className="flex items-start gap-3">
-          <span className="text-xl">⚠️</span>
+      {/* Das neue, geöffnete Intro-Banner */}
+      <div className="bg-slate-50 border-l-4 border-slate-500 p-5 rounded-r-xl shadow-sm">
+        <div className="flex items-start gap-4">
+          <span className="text-2xl animate-pulse">🧠🤖</span>
           <div>
-            <h3 className="text-amber-800 font-semibold md:text-base text-sm">
-              Dominik AI befindet sich aktuell in einer geschlossenen Entwicklungsphase.
+            <h3 className="text-slate-800 font-bold md:text-lg text-base leading-tight">
+              Willkommen bei DominikAI!
             </h3>
-            <p className="text-amber-700 text-xs md:text-sm mt-1">
-              Antworten können unvollständig oder fehlerhaft sein.
+            <p className="text-slate-600 text-xs md:text-sm mt-1 leading-relaxed">
+              Ich habe meine digitale Kopie mit meinen politischen Standpunkten, Meilensteinen und Lebensweisheiten gefüttert. 
+              Frag sie ungeniert aus – sie versucht, genau so zu antworten, wie ich es tun würde!
             </p>
           </div>
         </div>
