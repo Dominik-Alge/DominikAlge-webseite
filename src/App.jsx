@@ -78,35 +78,24 @@ function App() {
           </div>
         )}
 
-        {/* BEREICH 5: 🤖 DominikAI mit PW-Schutz */}
+        {/* BEREICH 5: 🤖 DominikAI (Jetzt vollkommen frei zugänglich) */}
         {activeArea === "dominikAi" && (
-          <div className="max-w-4xl mx-auto my-12 p-6 bg-white rounded-xl shadow-md">
-            {!isAiAuthorized ? (
-              <div className="text-center py-12">
-                <span className="text-5xl">🚧</span>
-                <h2 className="text-2xl font-bold text-slate-800 mt-4 mb-2">DominikAI befindet sich im Aufbau</h2>
-                <p className="text-slate-600 mb-6">Dieser Bereich ist momentan nur für Entwickler zugänglich.</p>
-                
-                <form onSubmit={handlePasswordSubmit} className="max-w-sm mx-auto flex flex-col gap-3">
-                  <input 
-                    type="password" 
-                    placeholder="Entwickler-Passwort eingeben" 
-                    value={passwordInput}
-                    onChange={(e) => setPasswordInput(e.target.value)}
-                    className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-center"
-                  />
-                  <button 
-                    type="submit" 
-                    className="bg-slate-800 text-white py-2 rounded-lg font-semibold hover:bg-slate-700 transition"
-                  >
-                    Freischalten
-                  </button>
-                  {authError && <p className="text-red-500 text-sm mt-1">Falsches Passwort. Zugriff verweigert.</p>}
-                </form>
-              </div>
-            ) : (
-              <DominikAI />
-            )}
+          <div className="max-w-4xl mx-auto my-12 p-6 bg-white rounded-xl shadow-md flex flex-col gap-6">
+            
+            {/* Humorvolles Intro-Banner statt trockenem Baustellenschild */}
+            <div className="text-center py-6 px-4 bg-slate-50 rounded-xl border border-slate-100">
+              <span className="text-4xl inline-block mb-2 animate-bounce">🧠🤖</span>
+              <h2 className="text-2xl font-extrabold text-slate-800 mb-2">
+                Willkommen bei DominikAI!
+              </h2>
+              <p className="text-slate-600 max-w-xl mx-auto text-sm leading-relaxed">
+                Grill mein digitales Ich mit deinen härtesten Fragen! Kennt meine Positionen in- und auswendig. Wenn die Antwort genial ist, war's mein Input – wenn sie Panne ist, war's ein Systemfehler.
+              </p>
+            </div>
+
+            {/* Das eigentliche Chat-Interface */}
+            <DominikAI />
+            
           </div>
         )}
       </div>
