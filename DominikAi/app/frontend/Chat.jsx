@@ -9,8 +9,10 @@ export default function Chat() {
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+    requestAnimationFrame(() => {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+  }, [messages, isLoading]); // Reagiert jetzt auch, wenn der Lade-Status aufploppt!
 
   const handleSend = async (e) => {
     e.preventDefault();
