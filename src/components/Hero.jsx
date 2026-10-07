@@ -28,13 +28,6 @@ export default function Hero({ activeArea, setActiveArea }) {
   // Definition der Bereiche (Jetzt mit DominikAI als 5. Option)
   const categories = [
     {
-      id: "politik",
-      title: "🗳️ Politik",
-      shortTitle: "🗳️ Politik",
-      subtitle: "Kandidat Kantonsrat St. Gallen – Wahlkreis Rheintal / Au",
-      color: "hover:border-orange-500 hover:bg-orange-50/30"
-    },
-    {
       id: "kompetenzen",
       title: "🏭 Kompetenzen & Erfahrung",
       shortTitle: "🏭 Kompetenzen",
@@ -55,6 +48,13 @@ export default function Hero({ activeArea, setActiveArea }) {
       subtitle: "White Paper, Industrieforum-Vorträge, LinkedIn-Artikel, Fachbeiträge",
       color: "hover:border-amber-600 hover:bg-amber-50/30"
     }
+    {
+      id: "politik",
+      title: "🗳️ Politik",
+      shortTitle: "🗳️ Politik",
+      subtitle: "Kandidat Kantonsrat St. Gallen – Wahlkreis Rheintal / Au",
+      color: "hover:border-orange-500 hover:bg-orange-50/30"
+    },
   ];
 
   // Zusätzliche Definition für den geschützten AI-Bereich auf der Startseite
