@@ -4,13 +4,6 @@ export default function WhitePaper() {
   // Pfad zu deinem PDF im public-Ordner
   const pdfPath = "/Beyond%20FactoryAI%20-%20White%20Paper.pdf"; 
 
-  const coreTopics = [
-    "Strategische Vision für den Werkplatz Rheintal",
-    "Praxisnahe Ansätze zur Förderung der dualen Berufsbildung",
-    "Industrie 4.0 & KI: Technologische Chancen für KMU pragmatisch nutzen",
-    "Bürokratieabbau und digitale Effizienz in der kantonalen Verwaltung"
-  ];
-
   return (
     <section id="whitepaper" className="py-24 bg-white border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-6">
@@ -38,7 +31,7 @@ export default function WhitePaper() {
                     Innovation fördern.
                   </h3>
                   <p className="text-slate-400 text-xs mt-2 font-medium tracking-wide uppercase">
-                    Die Vision für St. Gallen
+                    Wissenssicherung &amp; KI für KMU
                   </p>
                 </div>
 
