@@ -47,14 +47,14 @@ export default function Hero({ activeArea, setActiveArea }) {
       shortTitle: "📚 Publikationen",
       subtitle: "White Paper, Industrieforum-Vorträge, LinkedIn-Artikel, Fachbeiträge",
       color: "hover:border-amber-600 hover:bg-amber-50/30"
-    }
+    },
     {
       id: "politik",
       title: "🗳️ Politik",
       shortTitle: "🗳️ Politik",
       subtitle: "Kandidat Kantonsrat St. Gallen – Wahlkreis Rheintal / Au",
       color: "hover:border-orange-500 hover:bg-orange-50/30"
-    },
+    }
   ];
 
   // Zusätzliche Definition für den geschützten AI-Bereich auf der Startseite
