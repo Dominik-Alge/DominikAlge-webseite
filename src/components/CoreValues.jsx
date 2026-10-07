@@ -42,7 +42,7 @@ export default function CoreValues({ setActiveArea }) {
             Wofür ich einstehe – und wie es wirkt
           </h2>
           <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-            Gute Politik und echte Innovation brauchen ein stabiles Fundament aus Praxis, Logik und harten Fakten. 
+            Zukunftsorientierte Führung und echte Innovation brauchen ein stabiles Fundament aus Praxis, Logik und harten Fakten. 
             Wie stark dieser lösungsorientierte Ansatz in der Praxis zündet, zeigte die überwältigende 
             Resonanz auf meinen Vortrag am **Swissmem-Industrieforum**.
           </p>
@@ -137,7 +137,7 @@ export default function CoreValues({ setActiveArea }) {
                   In der industriellen Fertigung tolerieren wir keine Ausreden, sondern fordern Resultate. Diesen unkomplizierten Geist bringe ich in jede meiner Aufgaben ein:
                 </p>
                 <ul className="mt-6 space-y-3 text-slate-700 font-medium">
-                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Messbare Ergebnisse über politisches Taktieren stellen</li>
+                  <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Messbare Ergebnisse über theoretische Konzepte stellen</li>
                   <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Fokus auf machbare, wirtschaftliche Kompromisse für KMUs und das lokale Gewerbe</li>
                   <li className="flex items-start gap-2.5"><span className="text-orange-500">✔</span> Effizienzsteigerung und spürbarer Bürokratieabbau in administrativen Prozessen</li>
                 </ul>
