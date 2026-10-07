@@ -31,7 +31,7 @@ const approachItems = [
   text: "Unser Wohlstand im Rheintal basiert auf einem starken, wettbewerbsfähigen Industrie- und KMU-Standort.",
   bullets: ["Starker Industrie- & KMU-Standort", "Praxisorientierte Innovation", "Bürokratieabbau für Betriebe", "Sicherung von Lieferketten"],
   details: "Als Gruppenleiter in der Präzisionsfertigung kenne ich die Realität des St. Galler Rheintals. Unser Wohlstand basiert auf einem starken Werkplatz. Ich setze mich dafür ein, dass KMU und Industrie von administrativer Last befreit werden und wir durch den gezielten Einsatz moderner Technologien – von CNC-Fertigung bis zu praxisnahen KI-Wissenssystemen – international wettbewerbsfähig bleiben.",
-  }
+  },
   {
     icon: "🎓",
     title: "Bildung & Ausbildung",
