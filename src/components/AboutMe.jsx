@@ -39,7 +39,7 @@ export default function AboutMe() {
         {/* Header-Bereich */}
         <div className="text-center mb-16">
           <span className="text-orange-600 font-semibold tracking-wide uppercase text-sm">
-            Der Kandidat persönlich
+            Zur Person &amp; Werdegang
           </span>
           <h2 className="mt-4 text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">
             Ein Praktiker, der die Realität unserer Industrie und KMU kennt.
@@ -124,7 +124,7 @@ export default function AboutMe() {
                 {activeTab === 'story' && (
                   <div className="space-y-4 text-slate-700 leading-relaxed text-base">
                     <p className="italic font-semibold text-slate-900 bg-orange-50/40 p-4 rounded-2xl border-l-4 border-orange-500">
-                      „Erfolgreiche Wirtschaft und ein starker Kanton entstehen nicht am grünen Tisch, sondern durch echtes Handwerk, starke Bildung und verlässliche KMU.“
+                      „Zukunftsfähige Wertschöpfung entsteht nicht am grünen Tisch, sondern durch echtes Handwerk, moderne Bildung und den Mut zu digitaler Innovation.“
                     </p>
                     <p>
                       Mein Weg führt von der Pike auf durch die Rheintaler Industrie: Gestartet an der Werkbank, durfte ich unser Familienunternehmen fast 17 Jahre lang operativ führen. Heute begleite ich die Firma als Verwaltungsrat bei der Neuausrichtung als immobilienverwaltende AG. Als aktiver KMU-Unternehmer und Vermieter kenne ich die Realität des Immobilienmarktes sowie die Anliegen von Eigentümern und Mietern aus erster Hand.
