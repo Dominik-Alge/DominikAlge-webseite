@@ -136,7 +136,7 @@ export default function Vision({ setActiveArea }) {
               </div>
               <div className="flex-shrink-0">
                 <button
-                  onClick={() => handleNavigation("kompetenzen", "erfahrung")}
+                  onClick={() => handleNavigation("kompetenzen", "ueber-mich")}
                   className="pointer-events-auto inline-block bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-md transition duration-200 text-center cursor-pointer"
                 >
                   Zu meinen Kompetenzen →
