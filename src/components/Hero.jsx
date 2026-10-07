@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export default function Hero({ activeArea, setActiveArea }) {
-  const values = ["Freiheit.", "Solidarität.", "Verantwortung."];
+  const values = ["Zukunft gestalten.", "Innovation treiben.", "Verantwortung übernehmen."];
   const [currentValueIndex, setCurrentValueIndex] = useState(0);
 
   const welcomeText = "Hoi, schüa das du do beasch 👋 Wähle den Bereich, der dich interessiert:";
