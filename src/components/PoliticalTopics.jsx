@@ -8,7 +8,7 @@ const politicalTopics = [
     textColor: "text-slate-900",
     badgeColor: "bg-orange-500 text-white",
     list: ["Starker Industrie- & KMU-Standort", "Technologieoffene Zukunft", "Bürokratieabbau für Betriebe", "Sicherung von Lieferketten"],
-    details: "Als Gruppenleiter in der Präzisionsfertigung kenne ich die Realität des St. Galler Rheintals. Unser Wohlstand basiert auf einem starken Werkplatz. Ich setze mich dafür ein, dass KMU und Industrie von administrativer Last befreit werden und wir durch Technologieoffenheit – von moderner CNC-Fertigung bis zu praxisnahen KI-Wissenssystemen – international wettbewerbsfähig bleiben.",
+    details: "Der Kanton St. Gallen muss regulatorisch vom Bremser zum Beschleuniger werden. Ich fordere einen konsequenten Bürokratie-Stopp bei kantonalen Erlassen, vereinfachte Bewilligungsverfahren für Betriebserweiterungen und staatliche Tech-Förderung, die direkt bei den KMU ankommt, statt in Verwaltungsebenen zu versickern. Nur so bleibt unsere Exportindustrie im Rheintal international konkurrenzfähig.",
   },
   {
     title: "Bildung & Ausbildung",
@@ -17,7 +17,7 @@ const politicalTopics = [
     textColor: "text-slate-900",
     badgeColor: "bg-slate-800 text-white",
     list: ["Duales Bildungssystem stärken", "Moderne Erwachsenenbildung", "Workplace Learning fördern", "Praxisnaher Wissenstransfer"],
-    details: "Als Ausbilder mit eidg. Fachausweis und Student des Wirtschaftsingenieurwesens weiss ich: Lebenslanges Lernen darf kein leeres Schlagwort sein. Ich will die Berufsbildung und das duale System stärken. Wir müssen Ausbildungsmethoden modernisieren, um den demografischen Wandel abzufedern und Fachkräfte genau dort zu entwickeln, wo die Praxis sie braucht.",
+    details: "Die duale Berufsbildung braucht politisch die gleiche Wertschätzung wie akademische Wege. Ich setze mich für eine kantonale Bildungsoffensive ein, die Lehrbetriebe steuerlich entlastet und Berufsfachschulen finanziell so ausstattet, dass sie modernste Technologien (wie Industrie 4.0-Simulatoren) ausbilden können. Zudem müssen flexible, berufsbegleitende Weiterbildungsmodelle unbürokratisch gefördert werden.",
   },
   {
     title: "Staat & Allgemeinwohl",
@@ -26,7 +26,7 @@ const politicalTopics = [
     textColor: "text-slate-900",
     badgeColor: "bg-orange-600 text-white",
     list: ["Finanzpolitische Weitsicht", "Pragmatische Sachpolitik", "Verantwortung als Vermieter", "Erfahrung aus der GPK"],
-    details: "Durch meine mehrjährige Arbeit in der Geschäftsprüfungskommission (GPK) kenne ich die Mechanismen öffentlicher Finanzen und stehe für einen haushälterischen Umgang mit Steuergeldern. Auch als Vermieter und im Alltag verfolge ich das Prinzip: Erst die realen Sachzwänge analysieren, dann pragmatische und faire Lösungen für das Allgemeinwohl schaffen – ohne ideologische Scheuklappen.",
+    details: "Aus meiner langjährigen Erfahrung in der Geschäftsprüfungskommission (GPK) bringe ich das Rüstzeug mit, um kantonale Budgets kritisch zu hinterfragen. Ich fordere absolute Transparenz bei der Kostenüberwälzung vom Kanton auf die Gemeinden. Der Staat muss lernen, innerhalb seiner Ressourcen zu haushalten – durch digitale, schlanke Behördenprozesse statt durch stetig neue Abgaben für die Bürger.",
   },
 ];
 
