@@ -20,7 +20,7 @@ const priorityList = [
     description: "Der Fachkräftemangel wird an der Werkbank gelöst, nicht im Hörsaal. Ich setze mich für die massive Aufwertung des dualen Bildungssystems ein. Höhere Fachschulen (HF) müssen finanziell und gesellschaftlich den Universitäten komplett gleichgestellt werden.",
     actionText: "Zu meinen Kompetenzen", // Text optimiert für Navigation
     targetArea: "kompetenzen",
-    targetElement: "erfahrung"
+    targetElement: "ueber-mich"
   },
   {
     num: "03",
@@ -30,7 +30,7 @@ const priorityList = [
     description: "Die Digitalisierung und der demografische Wandel erfordern intelligente Systeme, keine neuen Regulierungswellen. Ob KI-gestütztes Wissensmanagement auf dem Shopfloor oder moderne Energietechnologien: St. Gallen muss zum Vorreiter für angewandte Innovation werden.",
     actionText: "Zu meinen Publikationen", // Text optimiert für Navigation
     targetArea: "publikationen",
-    targetElement: "artikel" // Oder die entsprechende ID in Articles.jsx (z.B. "articles" oder leer lassen für Top-Scroll)
+    targetElement: "whitepaper" // Oder die entsprechende ID in Articles.jsx (z.B. "articles" oder leer lassen für Top-Scroll)
   }
 ];
 
