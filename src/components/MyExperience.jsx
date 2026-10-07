@@ -72,8 +72,7 @@ export default function MyExperience() {
             Fundierte Erfahrung aus der Praxis
           </h2>
           <p className="mt-6 text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            20 Jahre Industrieerfahrung, echtes KMU-Unternehmertum und politisches Engagement 
-            bilden mein Fundament für eine lösungsorientierte Politik im Kantonsrat.
+            20 Jahre Industrieerfahrung, echtes KMU-Unternehmertum und langjähriges Engagement in der Region bilden mein Fundament für lösungsorientiertes und verantwortungsvolles Handeln.
           </p>
         </div>
 
