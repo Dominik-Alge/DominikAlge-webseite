@@ -58,10 +58,10 @@ export default function Engagement() {
                 <h4 className="text-base font-bold text-slate-900 mt-0.5">Die Mitte Schweiz • Aktiver Milizpolitiker</h4>
                 
                 <div className="mt-2 space-y-2 text-xs text-slate-600">
-                  <p>• <strong>Delegierter Ortspartei Au-Heerbrugg</strong> (2024–Heute): Vertretung kommunaler Interessen an Hauptversammlungen.</p>
-                  <p>• <strong>Kassier Ortspartei Au-Heerbrugg</strong> (2020–2025): Verantwortungsvolle Führung und Überwachung der Finanzbuchhaltung.</p>
-                  <p>• <strong>Kantonsratskandidat St. Gallen</strong> (Wahl 2024): Engagierter Wahlkampf für mehr Bürgernähe, Transparenz und Sachpolitik.</p>
-                  <p>• <strong>Nationalratskandidat</strong> (Wahl 2023): Positionierung regionaler Anliegen auf nationaler Ebene in Bern.</p>
+                  <p>• <strong>Delegierter Ortspartei Au-Heerbrugg</strong> (2024–Heute): Vertretung und Koordination kommunaler Anliegen auf regionaler Ebene.</p>
+                  <p>• <strong>Kassier Ortspartei Au-Heerbrugg</strong> (2020–2025): Verantwortungsvolle operative Führung und Revision der Vereinsbuchhaltung.</p>
+                  <p>• <strong>Kantonsratskandidat St. Gallen</strong> (Wahl 2024): Einbringen von Industrie- und KMU-Themen in den regionalen Diskurs.</p>
+                  <p>• <strong>Nationalratskandidat</strong> (Wahl 2023): Vertretung regionaler Wirtschaftsanliegen im Rahmen der Nationalratswahlen.</p>
                 </div>
               </div>
 
