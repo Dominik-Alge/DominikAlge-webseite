@@ -5,7 +5,7 @@ const approachItems = [
     icon: "⚙️",
     title: "Der Blick aus der Praxis",
     text: "Werkbank statt Elfenbeinturm: Ich kenne den echten Arbeitsalltag.",
-    details: "Als Gruppenleiter in der Präzisionsfertigung stehe ich täglich an der Schnittstelle von Mensch, Technik und Wirtschaft. Ich kenne den Druck im Mehrschichtbetrieb und die Bedürfnisse von Arbeitnehmenden und Familien aus eigener Erfahrung. Diese ungefilterte Praxisperspektive fehlt im Kantonsrat viel zu oft.",
+    details: "In meiner Führungsaufgabe im industriellen Schichtbetrieb stehe ich täglich an der Schnittstelle von Mensch, Technik und Wirtschaft. Ich kenne den Leistungsdruck an der Front sowie die realen Bedürfnisse von Arbeitnehmenden und Familien aus eigener Erfahrung. Diese ungefilterte Praxisperspektive fehlt im Kantonsrat viel zu oft.",
   },
   {
     icon: "🔍",
@@ -96,8 +96,17 @@ export default function WhyICandidate() {
                     isOpen ? "grid-rows-[1fr] opacity-100 mt-6 pt-6 border-t border-slate-100" : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
-                  <div className="overflow-hidden text-slate-700 leading-relaxed bg-slate-50 p-5 rounded-2xl text-sm border border-slate-100">
-                    {item.details}
+                  <div className="overflow-hidden text-slate-700 leading-relaxed bg-slate-50 p-5 rounded-2xl text-sm border border-slate-100 space-y-4">
+                    <p>{item.details}</p>
+                    {item.bullets && (
+                      <ul className="grid grid-cols-2 gap-2 pt-2 border-t border-slate-200/60 text-xs font-semibold text-slate-800">
+                        {item.bullets.map((bullet, i) => (
+                          <li key={i} className="flex items-center gap-1.5">
+                            <span className="text-orange-500">✔</span> {bullet}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               </div>
