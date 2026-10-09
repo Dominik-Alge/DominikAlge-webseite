@@ -24,7 +24,7 @@ export default function Contact() {
     <div id="kontakt" style={styles.container}>
       <h1 style={styles.title}>Kontakt & Unterstützung</h1>
       <p style={styles.subtitle}>
-        Gemeinsam für unseren Kanton. Hier finden Sie alle Möglichkeiten, mich zu kontaktieren oder meine Kampagne finanziell zu unterstützen.
+        Haben Sie Fragen zu meinen Projekten, den Publikationen oder suchen Sie den Austausch zu Wirtschaft, Politik und KI? Ich freue mich auf Ihre Nachricht.
       </p>
 
       <div style={styles.grid}>
@@ -46,15 +46,6 @@ export default function Contact() {
           <h2 style={styles.cardTitle}>📊 Kampagne unterstützen</h2>
           <p style={styles.text}>Jeder Beitrag unterstützt meine Kandidatur für den Kantonsrat St. Gallen und hilft, unsere Anliegen in die Bevölkerung zu tragen.</p>
           
-          {/* TWINT ANPASSUNG: Pragmatischer Hinweistext statt leerem Bild-Platzhalter */}
-          <div style={styles.donationBox}>
-            <h3 style={styles.smallTitle}>✨ Spenden via TWINT</h3>
-            <p style={styles.textSmall}>
-              Die direkte digitale Spendenoption per TWINT-Code befindet sich aktuell in der Freischaltung. 
-              Nutzen Sie in der Zwischenzeit gerne unsere reguläre Bankverbindung oder den Einzahlungsschein. Vielen Dank!
-            </p>
-          </div>
-
           <div style={styles.donationBox}>
             <h3 style={styles.smallTitle}>🏦 Bankverbindung (IBAN)</h3>
             <div style={styles.bankDetails}>
