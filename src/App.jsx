@@ -26,8 +26,9 @@ function App() {
   const [passwordInput, setPasswordInput] = useState("");
   const [authError, setAuthError] = useState(false);
 
-  // ERGÄNZUNG: Google Translate nach dem ersten Rendern initialisieren
+  // DYNAMISCHES LADEN DES TRANSLATE SKRIPTS
   useEffect(() => {
+    // 1. Die Callback-Funktion global bereitstellen
     window.googleTranslateElementInit = () => {
       if (window.google && window.google.translate) {
         new window.google.translate.TranslateElement(
@@ -40,6 +41,15 @@ function App() {
         );
       }
     };
+    // 2. Prüfen, ob das Skript schon existiert, falls nicht -> dynamisch hinzufügen
+    const scriptId = "google-translate-script";
+    if (!document.getElementById(scriptId)) {
+      const addScript = document.createElement("script");
+      addScript.id = scriptId;
+      addScript.type = "text/javascript";
+      addScript.src = "https://google.com";
+      document.body.appendChild(addScript);
+    }
   }, []);
 
   // Einfacher Passwort-Check fürs Frontend
