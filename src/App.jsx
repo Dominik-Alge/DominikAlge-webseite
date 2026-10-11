@@ -26,6 +26,22 @@ function App() {
   const [passwordInput, setPasswordInput] = useState("");
   const [authError, setAuthError] = useState(false);
 
+  // ERGÄNZUNG: Google Translate nach dem ersten Rendern initialisieren
+  useEffect(() => {
+    window.googleTranslateElementInit = () => {
+      if (window.google && window.google.translate) {
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: 'de',
+            includedLanguages: 'de,en,ro,ms',
+            layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          'google_translate_element'
+        );
+      }
+    };
+  }, []);
+
   // Einfacher Passwort-Check fürs Frontend
   const handlePasswordSubmit = (e) => {
     e.preventDefault();
