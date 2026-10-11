@@ -42,7 +42,7 @@ function App() {
       }
     };
     // 2. Prüfen, ob das Skript schon existiert, falls nicht -> dynamisch hinzufügen
-    const scriptId = "google-translate-script";
+    const scriptId = "https://google.com";
     if (!document.getElementById(scriptId)) {
       const addScript = document.createElement("script");
       addScript.id = scriptId;
