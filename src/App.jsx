@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import Hero from "./components/Hero";
 import WhyICandidate from "./components/WhyICandidate";
 import PoliticalTopics from "./components/PoliticalTopics";
