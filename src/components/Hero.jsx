@@ -119,6 +119,8 @@ export default function Hero({ activeArea, setActiveArea }) {
   // WENN DIE STARTSEITE AKTIV IST: Die vollwertige Weichensteller-Landingpage
   return (
     <section className="min-h-screen bg-gradient-to-br from-orange-50/40 via-white to-slate-100/40 flex items-center py-12">
+      <div id="google_translate_element" className="fixed top-4 right-4 z-[9999] bg-white border border-slate-200 rounded-lg p-1 shadow-md"></div>
+
       <div className="max-w-7xl mx-auto px-6 w-full">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           
