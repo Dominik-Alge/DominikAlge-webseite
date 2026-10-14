@@ -26,32 +26,6 @@ function App() {
   const [passwordInput, setPasswordInput] = useState("");
   const [authError, setAuthError] = useState(false);
 
-  // DYNAMISCHES LADEN DES TRANSLATE SKRIPTS
-  useEffect(() => {
-    // 1. Die Callback-Funktion global bereitstellen
-    window.googleTranslateElementInit = () => {
-      if (window.google && window.google.translate) {
-        new window.google.translate.TranslateElement(
-          {
-            pageLanguage: 'de',
-            includedLanguages: 'de,en,ro,ms',
-            layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
-          },
-          'google_translate_element'
-        );
-      }
-    };
-    // 2. Prüfen, ob das Skript schon existiert, falls nicht -> dynamisch hinzufügen
-    const scriptId = "https://google.com";
-    if (!document.getElementById(scriptId)) {
-      const addScript = document.createElement("script");
-      addScript.id = scriptId;
-      addScript.type = "text/javascript";
-      addScript.src = "https://google.com";
-      document.body.appendChild(addScript);
-    }
-  }, []);
-
   // Einfacher Passwort-Check fürs Frontend
   const handlePasswordSubmit = (e) => {
     e.preventDefault();
