@@ -198,15 +198,16 @@ export default function Datenschutz() {
                   </h4>
                   <p className="leading-relaxed">
                     Diese Datenschutzerklärung kann angepasst werden, wenn technische,
-                    organisatorische oder rechtliche Änderungen dies erforderlich machen.
+                    organatorische oder rechtliche Änderungen dies erforderlich machen.
                   </p>
                 </div>
-                
+        
               </div> {/* Schliesst <div className="space-y-6"> */}
-              </div> {/* Schliesst den scrollbaren Inhalt <div className="p-8 ... flex-1"> */}
-            </div> {/* Schliesst das weisse Modal-Fenster <div className="relative ..."> */}
-            </div> {/* Schliesst das Full-Screen-Overlay <div className="fixed ..."> */}
-          )}
-        </>
-    );
-  }
+            </div> {/* Schliesst den scrollbaren Inhalt <div className="p-8 ... flex-1"> */}
+          </div> {/* Schliesst das weisse Modal-Fenster <div className="relative ..."> */}
+        </div> {/* Schliesst das Full-Screen-Overlay <div className="fixed ..."> */}
+      )}
+    </>
+  );
+}
+
