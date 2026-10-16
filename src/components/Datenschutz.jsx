@@ -206,7 +206,6 @@ export default function Datenschutz() {
             </div> {/* 4. Schliesst <div className="border-t border-slate-200 pt-6"> */}
           </div> {/* 3. Schliesst den scrollbaren Inhalt <div className="p-8 ... flex-1"> */}
         </div> {/* 2. Schliesst das weisse Modal-Fenster <div className="relative ..."> */}
-        </div> {/* 1. Schliesst das Full-Screen-Overlay <div className="fixed ..."> */}
       )}
     </>
   );
