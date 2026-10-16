@@ -76,29 +76,150 @@ export default function Datenschutz() {
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Und jetzt der eigentliche Datenschutz</h3>
-                <p className="leading-relaxed">Keine Tracker-Party. Keine Datenverkäufe. Keine versteckten Überraschungen.</p>
-                <p className="leading-relaxed mt-3">Wenn Sie das Kontaktformular nutzen, werden die übermittelten Daten ausschliesslich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  Und jetzt der eigentliche Datenschutz
+                </h3>
+                <p className="leading-relaxed">
+                  Keine Tracker-Party. Keine Datenverkäufe. Keine versteckten Überraschungen.
+                </p>
+                <p className="leading-relaxed mt-3">
+                  Wenn Sie das Kontaktformular nutzen, werden die übermittelten Daten
+                  ausschliesslich zur Bearbeitung Ihrer Anfrage verwendet.
+                </p>
               </div>
+              <div className="border-t border-slate-200 pt-6">
+  <h3 className="text-2xl font-bold text-slate-900 mb-4">
+    Datenschutzerklärung
+  </h3>
 
-              <div className="pt-4 border-t border-slate-200 text-sm text-slate-500 italic">
-                Falls Sie bis hier gelesen haben: Danke für Ihre Neugier. Menschen, die Dinge hinterfragen, sind mir grundsätzlich sympathisch. 😉
-              </div>
-            </div>
+  <div className="space-y-6">
 
-            {/* Footer-Button für mobile User (zusätzliche Sicherheit beim Schliessen) */}
-            <div className="p-4 bg-slate-50 border-t border-slate-100 flex justify-end">
-              <button 
-                onClick={() => setIsOpen(false)}
-                className="px-6 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold rounded-xl transition text-sm cursor-pointer"
-              >
-                Alles klar, schliessen
-              </button>
-            </div>
+    <div>
+      <h4 className="font-bold text-slate-800 mb-2">1. Verantwortliche Stelle</h4>
+      <p className="leading-relaxed">
+        Verantwortlich für die Datenbearbeitung auf dieser Website ist Dominik Alge, Hauptstrasse 71, 9434 Au, Schweiz. 
+        Bei Fragen zum Datenschutz können Sie mich per E-Mail unter dominik.alge@bluewin.ch oder über das Kontaktformular erreichen.
+      </p>
+      <p className="leading-relaxed">
+        Verantwortlich für die Datenbearbeitung auf dieser Website ist
+        Dominik Alge, Betreiber von www.dominikalge.ch.
+      </p>
+      <p className="leading-relaxed">
+        Datenschutzanfragen können über das Kontaktformular dieser Website
+        eingereicht werden.
+      </p>
+    </div>
 
-          </div>
-        </div>
-      )}
-    </>
-  );
-}
+    <div>
+      <h4 className="font-bold text-slate-800 mb-2">
+        2. Nutzung der Website
+      </h4>
+      <p className="leading-relaxed">
+        Beim Besuch dieser Website können durch den Hosting-Anbieter
+        technisch notwendige Verbindungsdaten verarbeitet werden. Dazu
+        gehören insbesondere IP-Adresse, Datum und Uhrzeit des Zugriffs,
+        Browserinformationen sowie technische Systemdaten.
+      </p>
+      <p className="leading-relaxed">
+        Diese Daten dienen ausschliesslich dem sicheren Betrieb und der
+        Bereitstellung der Website.
+      </p>
+    </div>
+
+    <div>
+      <h4 className="font-bold text-slate-800 mb-2">
+        3. Nutzung von DominikAI
+      <h4 className="font-bold text-slate-800 mb-2">3. Nutzung von DominikAI</h4>
+      <p className="leading-relaxed">
+        Die im Chat eingegebenen Inhalte (Prompts) werden an die Server unseres KI-Dienstleisters übermittelt, um die Antwort zu generieren. Die Datenverarbeitung basiert auf unserem berechtigten Interesse, Ihnen einen interaktiven Informationsdienst bereitzustellen. Bitte geben Sie keine sensiblen personenbezogenen Daten ein.
+      </p>
+
+      <p className="leading-relaxed mt-3">
+        Die im Chat eingegebenen Inhalte werden zur Erstellung einer Antwort
+        technisch verarbeitet und an die für den Betrieb des Sprachmodells
+        erforderlichen Systeme übermittelt.
+      </p>
+
+      <p className="leading-relaxed mt-3 font-semibold text-orange-600">
+        Bitte geben Sie keine sensiblen oder vertraulichen personenbezogenen
+        Daten in den Chat ein.
+      </p>
+    </div>
+
+    <div>
+      <h4 className="font-bold text-slate-800 mb-2">
+        4. Empfänger von Daten
+      </h4>
+
+      <h4 className="font-bold text-slate-800 mb-2">4. Empfänger und Datenübermittlung ins Ausland</h4>
+      <p className="leading-relaxed">
+        Für den Betrieb des Chatbots nutzen wir die Programmierschnittstelle (API) von OpenAI (OpenAI Ireland Ltd. / OpenAI, Inc., USA). Die von Ihnen eingegebenen Chat-Inhalte werden an Server von OpenAI in den USA übertragen. 
+        Wir haben mit dem Anbieter eine datenschutzrechtliche Vereinbarung (Data Processing Addendum) inklusive EU-Standardvertragsklauseln abgeschlossen, um ein angemessenes Datenschutzniveau zu gewährleisten.
+      </p>
+    </div>
+
+    <div>
+      <h4 className="font-bold text-slate-800 mb-2">
+        5. Datenübermittlung ins Ausland
+      </h4>
+
+      <h4 className="font-bold text-slate-800 mb-2">5. Speicherung und Modell-Training</h4>
+      <p className="leading-relaxed">
+        Laut Vereinbarung mit unserem KI-Dienstleister werden die über die API eingegebenen Chat-Daten <strong>nicht</strong> zum Trainieren der zugrundeliegenden Sprachmodelle verwendet. Die Prompts werden vom Anbieter temporär (in der Regel maximal 30 Tage) zur Missbrauchserkennung gespeichert und danach gelöscht. Auf unserer Website findet keine dauerhafte Speicherung oder Profilbildung Ihrer Chatverläufe statt.
+      </p>
+    </div>
+
+    <div>
+      <h4 className="font-bold text-slate-800 mb-2">
+        6. Speicherung von Chatdaten
+      </h4>
+
+      <p className="leading-relaxed">
+        Die über den Chatbot eingegebenen Nachrichten werden von dieser
+        Website nicht zu Marketing-, Analyse- oder Profilbildungszwecken
+        gespeichert.
+      </p>
+
+      <p className="leading-relaxed mt-3">
+        Technisch notwendige Protokoll- und Systemdaten können jedoch
+        vorübergehend bei eingesetzten Dienstleistern anfallen.
+      </p>
+    </div>
+
+    <div>
+      <h4 className="font-bold text-slate-800 mb-2">
+        7. Kontaktformular
+      </h4>
+
+      <p className="leading-relaxed">
+        Daten, die über das Kontaktformular übermittelt werden, werden
+        ausschliesslich zur Bearbeitung der jeweiligen Anfrage verwendet.
+      </p>
+    </div>
+
+    <div>
+      <h4 className="font-bold text-slate-800 mb-2">
+        8. Rechte betroffener Personen
+      </h4>
+
+      <p className="leading-relaxed">
+        Betroffene Personen haben im Rahmen des anwendbaren Datenschutzrechts
+        insbesondere das Recht auf Auskunft, Berichtigung und Löschung ihrer
+        personenbezogenen Daten, soweit keine gesetzlichen
+        Aufbewahrungspflichten entgegenstehen.
+      </p>
+    </div>
+
+    <div>
+      <h4 className="font-bold text-slate-800 mb-2">
+        9. Änderungen
+      </h4>
+
+      <p className="leading-relaxed">
+        Diese Datenschutzerklärung kann angepasst werden, wenn technische,
+        organisatorische oder rechtliche Änderungen dies erforderlich machen.
+      </p>
+    </div>
+
+  </div>
+</div>
