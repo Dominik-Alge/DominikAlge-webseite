@@ -5,3 +5,4 @@ python-dotenv==1.0.1
 pypdf==4.3.1
 openpyxl==3.1.5
 google-genai
+slowapi==0.1.9
