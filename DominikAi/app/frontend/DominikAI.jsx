@@ -33,19 +33,13 @@ export default function DominikAI() {
             <p className="text-slate-600 text-[11px] md:text-xs mt-1 leading-relaxed">
               Deine Eingaben werden zur Beantwortung verschlüsselt an OpenAI übermittelt, jedoch{' '}
               <strong className="text-slate-900 font-semibold">nicht</strong> für das KI-Modelltraining verwendet. 
-              Bitte gib keine sensiblen oder vertraulichen persönlichen Daten ein. Mehr Infos findest du in der{' '}
-              <button 
-                type="button"
-                onClick={onOpenDatenschutz} // NEU: Ruft direkt die Funktion auf, wenn sie übergeben wurde
-                className="text-orange-600 hover:text-orange-700 underline font-medium cursor-pointer focus:outline-none"
-              >
-                Datenschutzerklärung
-              </button>.
+              Bitte gib keine sensiblen oder vertraulichen persönlichen Daten ein. Die vollständige{' '}
+              <strong className="text-slate-900 font-semibold">Datenschutzerklärung</strong> findest du ganz unten im Fussbereich dieser Webseite.
             </p>
           </div>
         </div>
       </div>
-     
+    
       {/* NEU: Separater, auffälliger Kasten speziell für Medienschaffende */}
       <div className="bg-slate-50 border-l-4 border-slate-500 p-4 rounded-r-xl shadow-sm flex flex-col gap-2">
         <div className="flex items-start gap-4">
