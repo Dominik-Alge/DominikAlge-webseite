@@ -129,87 +129,84 @@ export default function Datenschutz() {
                 <div>
                   <h4 className="font-bold text-slate-800 mb-2">
                     3. Nutzung von DominikAI
+                  </h4>
                   <p className="leading-relaxed">
                     Die im Chat eingegebenen Inhalte (Prompts) werden an die Server unseres KI-Dienstleisters übermittelt, um die Antwort zu generieren. Die Datenverarbeitung basiert auf unserem berechtigten Interesse, Ihnen einen interaktiven Informationsdienst bereitzustellen. Bitte geben Sie keine sensiblen personenbezogenen Daten ein.
                   </p>
-            
+                  
                   <p className="leading-relaxed mt-3">
-                    Die im Chat eingegebenen Inhalte werden zur Erstellung einer Antwort
-                    technisch verarbeitet und an die für den Betrieb des Sprachmodells
-                    erforderlichen Systeme übermittelt.
+                    Die im Chat eingegebenen Inhalte werden zur Erstellung einer Antwort technisch verarbeitet und an die für den Betrieb des Sprachmodells erforderlichen Systeme übermittelt.
                   </p>
-            
+                  
                   <p className="leading-relaxed mt-3 font-semibold text-orange-600">
-                    Bitte geben Sie keine sensiblen oder vertraulichen personenbezogenen
-                    Daten in den Chat ein.
+                    Bitte geben Sie keine sensiblen oder vertraulichen personenbezogenen Daten in den Chat ein.
                   </p>
                 </div>
-            
-                    <div>
-                      <h4 className="font-bold text-slate-800 mb-2">
-                        4. Empfänger und Datenübermittlung ins Ausland
-                      </h4>
-                      <p className="leading-relaxed">
-                        Für den Betrieb des Chatbots nutzen wir die Programmierschnittstelle (API) von OpenAI (OpenAI Ireland Ltd. / OpenAI, Inc., USA). Die von Ihnen eingegebenen Chat-Inhalte werden an Server von OpenAI in den USA übertragen. 
-                        Wir haben mit dem Anbieter eine datenschutzrechtliche Vereinbarung (Data Processing Addendum) inklusive EU-Standardvertragsklauseln abgeschlossen, um ein angemessenes Datenschutzniveau zu gewährleisten.
-                      </p>
-                    </div>
+
+                <div>
+                  <h4 className="font-bold text-slate-800 mb-2">
+                    4. Empfänger und Datenübermittlung ins Ausland
+                  </h4>
+                  <p className="leading-relaxed">
+                    Für den Betrieb des Chatbots nutzen wir die Programmierschnittstelle (API) von OpenAI (OpenAI Ireland Ltd. / OpenAI, Inc., USA). Die von Ihnen eingegebenen Chat-Inhalte werden an Server von OpenAI in den USA übertragen.
+                    Wir haben mit dem Anbieter eine datenschutzrechtliche Vereinbarung (Data Processing Addendum) inklusive EU-Standardvertragsklauseln abgeschlossen, um ein angemessenes Datenschutzniveau zu gewährleisten.
+                  </p>
+                </div>               
+                <div>
+                  <h4 className="font-bold text-slate-800 mb-2">
+                    5. Speicherung und Modell-Training
+                  </h4>
+                  <p className="leading-relaxed">
+                    Laut Vereinbarung mit unserem KI-Dienstleister werden die über die API eingegebenen Chat-Daten <strong>nicht</strong> zum Trainieren der zugrundeliegenden Sprachmodelle verwendet. Die Prompts werden vom Anbieter temporär (in der Regel maximal 30 Tage) zur Missbrauchserkennung gespeichert und danach gelöscht. Auf unserer Website findet keine dauerhafte Speicherung oder Profilbildung Ihrer Chatverläufe statt.
+                  </p>
+                </div>
                 
-                    <div>
-                      <h4 className="font-bold text-slate-800 mb-2">
-                        5. Speicherung und Modell-Training
-                      </h4>
-                      <p className="leading-relaxed">
-                        Laut Vereinbarung mit unserem KI-Dienstleister werden die über die API eingegebenen Chat-Daten <strong>nicht</strong> zum Trainieren der zugrundeliegenden Sprachmodelle verwendet. Die Prompts werden vom Anbieter temporär (in der Regel maximal 30 Tage) zur Missbrauchserkennung gespeichert und danach gelöscht. Auf unserer Website findet keine dauerhafte Speicherung oder Profilbildung Ihrer Chatverläufe statt.
-                      </p>
-                    </div>
+                <div>
+                  <h4 className="font-bold text-slate-800 mb-2">
+                    6. System- und Protokolldaten
+                  </h4>
+                  <p className="leading-relaxed">
+                    Beim Betrieb der Website und des Chatbots können technisch notwendige Protokoll- und Systemdaten vorübergehend bei eingesetzten Infrastruktur-Dienstleistern anfallen, um die Stabilität und Sicherheit des Systems zu gewährleisten.
+                  </p>
+                </div>
                 
-                    <div>
-                      <h4 className="font-bold text-slate-800 mb-2">
-                        6. System- und Protokolldaten
-                      </h4>
-                      <p className="leading-relaxed">
-                        Beim Betrieb der Website und des Chatbots können technisch notwendige Protokoll- und Systemdaten vorübergehend bei eingesetzten Infrastruktur-Dienstleistern anfallen, um die Stabilität und Sicherheit des Systems zu gewährleisten.
-                      </p>
-                    </div>
+                <div>
+                  <h4 className="font-bold text-slate-800 mb-2">
+                    7. Kontaktformular
+                  </h4>
+                  <p className="leading-relaxed">
+                    Daten, die über das Kontaktformular übermittelt werden, werden
+                    ausschliesslich zur Bearbeitung der jeweiligen Anfrage verwendet.
+                  </p>
+                </div>
                 
-                    <div>
-                      <h4 className="font-bold text-slate-800 mb-2">
-                        7. Kontaktformular
-                      </h4>
-                      <p className="leading-relaxed">
-                        Daten, die über das Kontaktformular übermittelt werden, werden
-                        ausschliesslich zur Bearbeitung der jeweiligen Anfrage verwendet.
-                      </p>
-                    </div>
+                <div>
+                  <h4 className="font-bold text-slate-800 mb-2">
+                    8. Rechte betroffener Personen
+                  </h4>
+                  <p className="leading-relaxed">
+                    Betroffene Personen haben im Rahmen des anwendbaren Datenschutzrechts
+                    insbesondere das Recht auf Auskunft, Berichtigung und Löschung ihrer
+                    personenbezogenen Daten, soweit keine gesetzlichen
+                    Aufbewahrungspflichten entgegenstehen.
+                  </p>
+                </div>
                 
-                    <div>
-                      <h4 className="font-bold text-slate-800 mb-2">
-                        8. Rechte betroffener Personen
-                      </h4>
-                      <p className="leading-relaxed">
-                        Betroffene Personen haben im Rahmen des anwendbaren Datenschutzrechts
-                        insbesondere das Recht auf Auskunft, Berichtigung und Löschung ihrer
-                        personenbezogenen Daten, soweit keine gesetzlichen
-                        Aufbewahrungspflichten entgegenstehen.
-                      </p>
-                    </div>
+                <div>
+                  <h4 className="font-bold text-slate-800 mb-2">
+                    9. Änderungen
+                  </h4>
+                  <p className="leading-relaxed">
+                    Diese Datenschutzerklärung kann angepasst werden, wenn technische,
+                    organisatorische oder rechtliche Änderungen dies erforderlich machen.
+                  </p>
+                </div>
                 
-                    <div>
-                      <h4 className="font-bold text-slate-800 mb-2">
-                        9. Änderungen
-                      </h4>
-                      <p className="leading-relaxed">
-                        Diese Datenschutzerklärung kann angepasst werden, wenn technische,
-                        organisatorische oder rechtliche Änderungen dies erforderlich machen.
-                      </p>
-                    </div>
-                
-                  </div> {/* Schliesst <div className="space-y-6"> */}
-                 </div> {/* Schliesst den scrollbaren Inhalt <div className="p-8 ... flex-1"> */}
-                </div> {/* Schliesst das weisse Modal-Fenster <div className="relative ..."> */}
-                </div> {/* Schliesst das Full-Screen-Overlay <div className="fixed ..."> */}
-              )}
-            </>
-        );
-      }
+              </div> {/* Schliesst <div className="space-y-6"> */}
+              </div> {/* Schliesst den scrollbaren Inhalt <div className="p-8 ... flex-1"> */}
+            </div> {/* Schliesst das weisse Modal-Fenster <div className="relative ..."> */}
+            </div> {/* Schliesst das Full-Screen-Overlay <div className="fixed ..."> */}
+          )}
+        </>
+    );
+  }
