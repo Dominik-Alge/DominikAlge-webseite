@@ -21,6 +21,37 @@ export default function DominikAI() {
           </div>
         </div>
       </div>
+
+      {/* NEU: Transparenter Datenschutz-Hinweis direkt am Widget */}
+      <div className="bg-slate-50 border-l-4 border-orange-400 p-4 rounded-r-xl shadow-sm">
+        <div className="flex items-start gap-4">
+          <span className="text-xl">🔒</span>
+          <div>
+            <h4 className="text-slate-800 font-bold text-xs md:text-sm leading-tight">
+              Hinweis zum Datenschutz:
+            </h4>
+            <p className="text-slate-600 text-[11px] md:text-xs mt-1 leading-relaxed">
+              Deine Eingaben werden zur Beantwortung verschlüsselt an OpenAI übermittelt, jedoch{' '}
+              <strong className="text-slate-900 font-semibold">nicht</strong> für das KI-Modelltraining verwendet. 
+              Bitte gib keine sensiblen oder vertraulichen persönlichen Daten ein. Mehr Infos findest du in der{' '}
+              <button 
+                type="button"
+                onClick={() => {
+                  // Falls du den State global oder per Prop steuern kannst, 
+                  // könntest du hier das Modal direkt öffnen. Ansonsten verweist es 
+                  // elegant auf die Erklärung.
+                  const btn = document.querySelector('button[type="button"]');
+                  if (btn && btn.textContent.includes('Datenschutzerklärung')) btn.click();
+                }}
+                className="text-orange-600 hover:text-orange-700 underline font-medium cursor-pointer"
+              >
+                Datenschutzerklärung
+              </button>.
+            </p>
+          </div>
+        </div>
+      </div>
+     
       {/* NEU: Separater, auffälliger Kasten speziell für Medienschaffende */}
       <div className="bg-slate-50 border-l-4 border-slate-500 p-4 rounded-r-xl shadow-sm flex flex-col gap-2">
         <div className="flex items-start gap-4">
