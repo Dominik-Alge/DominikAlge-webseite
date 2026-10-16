@@ -201,13 +201,14 @@ export default function Datenschutz() {
                     organisatorische oder rechtliche Änderungen dies erforderlich machen.
                   </p>
                 </div>
-                
-              </div> {/* 5. Schliesst <div className="space-y-6"> */}
-            </div> {/* 4. Schliesst <div className="border-t border-slate-200 pt-6"> */}
-          </div> {/* 3. Schliesst den scrollbaren Inhalt <div className="p-8 ... flex-1"> */}
-        </div> {/* 2. Schliesst das weisse Modal-Fenster <div className="relative ..."> */}
+        
+              </div> {/* Schliesst <div className="space-y-6"> */}
+            </div> {/* Schliesst <div className="p-8 space-y-6 text-slate-700 overflow-y-auto flex-1"> */}
+          </div> {/* Schliesst das weisse Modal-Fenster <div className="relative w-full max-w-3xl ..."> */}
+        </div> {/* Schliesst das Full-Screen-Overlay <div className="fixed inset-0 ..."> */}
       )}
     </>
   );
 }
+
 
