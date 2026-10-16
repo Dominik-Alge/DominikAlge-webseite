@@ -97,16 +97,10 @@ export default function Datenschutz() {
                 <div>
                   <h4 className="font-bold text-slate-800 mb-2">1. Verantwortliche Stelle</h4>
                   <p className="leading-relaxed">
-                    Verantwortlich für die Datenbearbeitung auf dieser Website ist Dominik Alge, Hauptstrasse 71, 9434 Au, Schweiz. 
+                    Verantwortlich für die Datenbearbeitung auf dieser Website ist Dominik Alge, Hauptstrasse 71, 9434 Au, Schweiz.
+                  </p>
+                  <p className="leading-relaxed">
                     Bei Fragen zum Datenschutz können Sie mich per E-Mail unter dominik.alge@bluewin.ch oder über das Kontaktformular erreichen.
-                  </p>
-                  <p className="leading-relaxed">
-                    Verantwortlich für die Datenbearbeitung auf dieser Website ist
-                    Dominik Alge, Betreiber von www.dominikalge.ch.
-                  </p>
-                  <p className="leading-relaxed">
-                    Datenschutzanfragen können über das Kontaktformular dieser Website
-                    eingereicht werden.
                   </p>
                 </div>
             
