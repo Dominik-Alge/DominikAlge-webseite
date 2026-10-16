@@ -207,7 +207,7 @@ export default function Datenschutz() {
           </div> {/* Schliesst das weisse Modal-Fenster <div className="relative w-full max-w-3xl ..."> */}
         </div> {/* Schliesst das Full-Screen-Overlay <div className="fixed inset-0 ..."> */}
       )}
-    </>
+    </div>
   );
 }
 
