@@ -196,11 +196,11 @@ export default function Datenschutz() {
                   </p>
                 </div>
           
-              </div> {/* Schliesst das space-y-6 der Datenschutzerklärung */}
-            </div> {/* Schliesst den border-t Block */}
-          </div> {/* Schliesst den scrollbaren Inhalt (p-8 space-y-6...) */}
-        </div> {/* Schliesst das weisse Modal */}
-      </div> {/* Schliesst das Overlay */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     )}
   </>
  );
