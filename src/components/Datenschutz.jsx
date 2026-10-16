@@ -196,14 +196,13 @@ export default function Datenschutz() {
                   </p>
                 </div>
           
-                </div> {/* space-y-6 */}
-              </div> {/* border-t border-slate-200 pt-6 */}
-            </div> {/* p-8 space-y-6 text-slate-700 overflow-y-auto flex-1 */}
-          </div> {/* weisses Modal */}
-        </div> {/* Overlay */}
-      )}
-    </>
+              </div> {/* Schliesst den scrollbaren Inhalt (p-8 space-y-6...) */}
+            </div> {/* Schliesst das weisse Modal */}
+          </div> {/* Schliesst das Overlay */}
+        )}
+      </>
   );
 }
+
 
 
