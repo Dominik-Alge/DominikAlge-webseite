@@ -7,10 +7,28 @@ from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 import openpyxl
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 
 load_dotenv()
 
-app = FastAPI(title="DominikAI API")
+# 1. Limiter initialisieren
+limiter = Limiter(key_func=get_remote_address)
+
+# 2. Prüfen, ob die App auf Render (Production) läuft
+IS_PRODUCTION = os.getenv("ENVIRONMENT") == "production"
+
+if IS_PRODUCTION:
+    # Schaltet Swagger-Doku auf Render ab
+    app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
+else:
+    # Aktiviert Doku für dich lokal am PC beim Entwickeln
+    app = FastAPI(title="DominikAI API")
+
+# 3. Limiter in FastAPI registrieren
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 # CORS restlos freigeben, um jegliche Browser-Blockaden bei Fehlern zu verhindern
 app.add_middleware(
