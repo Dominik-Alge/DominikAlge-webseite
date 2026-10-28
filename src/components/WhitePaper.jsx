@@ -100,7 +100,7 @@ export default function WhitePaper() {
                 <span>Konzept-Leitfaden herunterladen (PDF)</span>
               </a>
               <p className="text-xs text-slate-400 mt-2 ml-1">
-                Kostenloser Download • Vollständiges Dokument (12 Seiten)
+                Kostenloser Download • Vollständiges Dokument (50 Seiten)
               </p>
             </div>
           </div>
